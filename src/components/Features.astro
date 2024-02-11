@@ -1,0 +1,103 @@
+---
+import { Image } from "astro:assets";
+import Isabella from "../../public/images/Isabella.jpg";
+import SunIcon from "./SunIcon.astro";
+import MoonIcon from "./MoonIcon.astro";
+import HDIcon from "./HDIcon.astro";
+
+// Lettertype - Garamond is voor titels en Rubik voor tekst
+const Garamond = "font-serif";
+const Rubik = "font-sans";
+
+// Merk kleurencode. Gebruik bg-brand-white in class om toe te passen.
+// "brand-white": "#F1F1F1",
+// "brand-sage": "#BCBC82",
+// "brand-copper": "#C2783F",
+---
+
+<section class="py-20">
+  <div
+    class="flex justify-center items-center mb-10 text-4xl font-semibold font-heading"
+  >
+    <h2 class=`text-4xl`>De manieren</h2>
+  </div>
+  <div class="container mx-auto px-4">
+    <div class="flex flex-wrap -mx-3 -mb-6">
+      <div class="w-full md:w-1/2 lg:w-1/3 px-3 mb-6">
+        <div class="text-center px-1">
+          <!-- Was eerst bg-yellow-400 -->
+          <span
+            class="flex items-center justify-center mx-auto mb-8 md:mb-12 w-16 h-16 rounded-full bg-gradient-to-r from-brand-orange to-brand-copper"
+          >
+            <SunIcon />
+            <!-- <svg
+              width="18"
+              height="21"
+              viewbox="0 0 18 21"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M8.98457 19.606C8.98457 19.606 16.6566 17.283 16.6566 10.879C16.6566 4.474 16.9346 3.974 16.3196 3.358C15.7036 2.742 9.99057 0.75 8.98457 0.75C7.97857 0.75 2.26557 2.742 1.65057 3.358C1.03457 3.974 1.31257 4.474 1.31257 10.879C1.31257 17.283 8.98457 19.606 8.98457 19.606Z"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+              <path
+                d="M6.38599 9.87463L8.27799 11.7696L12.176 7.86963"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </svg> -->
+          </span>
+          <div>
+            <h3 class=`mb-4 text-2xl font-semibold font-heading `>Tarot</h3>
+            <p class=``>
+              Met tarot kom je lekker snel tot een antwoord. Het enige wat nodig
+              is, is je gevoel of intuïtie de kaarten te laten intrepreteren.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="w-full md:w-1/2 lg:w-1/3 px-3 mb-6">
+        <div class="text-center px-1">
+          <span
+            class="flex items-center justify-center mx-auto mb-8 md:mb-12 w-16 h-16 rounded-full bg-gradient-to-r from-brand-orange to-brand-copper"
+          >
+            <MoonIcon />
+          </span>
+          <div>
+            <h3 class=`mb-4 text-2xl font-semibold font-heading `>Reiki</h3>
+            <p class=``>
+              Met Reiki wordt de universele energie doorgegeven aan jou en
+              worden de gebieden van je lichaam gereinigd. Je komt dan echt tot
+              jezelf en daarmee dichter bij jezelf.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="w-full md:w-1/2 lg:w-1/3 px-3 mb-6">
+        <div class="text-center px-1">
+          <span
+            class="flex items-center justify-center mx-auto mb-8 md:mb-12 w-16 h-16 rounded-full bg-gradient-to-r from-brand-orange to-brand-copper"
+          >
+            <HDIcon />
+          </span>
+          <div>
+            <h3 class=`mb-4 text-2xl font-semibold font-heading `>
+              Human Design
+            </h3>
+            <p class=``>
+              Human Design is je blauwdruk voor op aarde. De manier om erachter
+              te komen wat nou echt van jouw is, wat is geconditioneerd en hoe
+              JIJ het beste keuzes kan maken.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

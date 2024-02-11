@@ -1,0 +1,181 @@
+---
+import { Image } from "astro:assets";
+import heartbeat from "../../public/heartbeat.png";
+import logo_with_no_background from "../../public/images/Logo_zonder_achtergrond.png";
+import HeroBanner from "./HeroBanner.astro";
+import AboutMeHomepage from "./AboutMeHomepage.astro";
+import Testimonials from "./Testimonials.astro";
+import Features from "./Features.astro";
+import { getCollection } from "astro:content";
+
+const allPosts = await getCollection("posts");
+
+// console.log(allPosts);
+
+// Lettertype - Garamond is voor titels en Rubik voor tekst
+const Garamond = "font-serif";
+const Rubik = "font-sans";
+
+// console.log(allPosts);
+
+// Om de blogposts te sorteren op datum. Van jong naar oud
+allPosts.sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
+
+const newestPosts = allPosts.slice(0, 5);
+
+// console.log('5 newest blog posts:', newestPosts);
+
+const newestBlog = allPosts[0];
+const secondBlog = allPosts[1];
+const thirdBlog = allPosts[2];
+const fourBlog = allPosts[3];
+const fiveBlog = allPosts[4];
+
+// !!!!!!!!
+// BLOG GEDEELTE LAAT ENKEL MAAR 2 BLOGS ZIEN. 
+// DIT OM ZO SNEL MOGELIJK LIVE TE GAAN. DE REST KOMT LATER. 
+// IN TOTAAL HEB IK ER 7 NODIG EN DAN KAN ALLES WEER OPENGEGOOID WORDEN.
+// ALS ZE ALLE 7 KLAAR ZIJN DIEN IK DE A TAG TERUG NAAR ALLE BLOGS IN BEIDE SLUGS WEER TE ACTIVEREN.
+// OOK IN DE HEADER DIEN IK BEIDE A TAG VOOR BLOGS WEER TE ACTIVEREN. DAT HET WEER WERKT VOOR GROOT EN KLEIN SCHERM.
+// !!!!!!!!
+
+// Merk kleurencode. Gebruik bg-brand-white in class om toe te passen.
+// "brand-white": "#F1F1F1",
+// "brand-sage": "#BCBC82",
+// "brand-copper": "#C2783F",
+---
+
+<section class="py-20">
+  <div class="container px-4 mx-auto">
+    <div class="flex flex-wrap -mx-4 -mb-16">
+      <div class="w-full lg:w-2/3 px-4 mb-16">
+        <div class="flex h-96 mb-10">
+          <a
+            class="w-full h-full object-cover rounded-xl"
+            href={`${newestBlog.slug}`}
+            ><Image
+              class="w-full h-full object-cover rounded-xl 1e post"
+              src={newestBlog.data.image}
+              alt={newestBlog.data.title}
+            /></a
+          >
+        </div>
+        <span class=`inline-block mb-4 text-xs`
+          >{newestBlog.data.date.toLowerCase()}</span
+        >
+        <h2 class=`mb-4 text-3xl font-semibold font-heading `>
+          {newestBlog.data.title}
+        </h2>
+        <p class=`mb-4 text-xl`>
+          {newestBlog.data.description}
+        </p>
+        <a
+          class=`text-lg font-medium underline text-brand-copper hover:no-underline `
+          href={`${newestBlog.slug}`}>Lees meer</a
+        >
+      </div>
+      <div class="w-full lg:w-1/3 px-4 mb-16">
+        <div class="flex h-96 mb-10">
+          <a
+            class="w-full h-full object-cover rounded-xl"
+            href={`${secondBlog.slug}`}
+            ><Image
+              class="w-full h-full object-cover rounded-xl"
+              src={secondBlog.data.image}
+              alt={secondBlog.data.title}
+            /></a
+          >
+        </div>
+        <span class=`inline-block mb-4 text-xs`
+          >{secondBlog.data.date.toLowerCase()}</span
+        >
+        <h2 class=`mb-4 text-3xl font-semibold font-heading `>
+          {secondBlog.data.title}
+        </h2>
+        <p class=`mb-4 text-xl  `>
+          {secondBlog.data.description}
+        </p>
+        <a
+          class=`text-lg font-medium underline text-brand-copper hover:no-underline `
+          href={`${secondBlog.slug}`}>Lees meer</a
+        >
+      </div>
+      <!-- <div class="w-full lg:w-1/3 px-4 mb-16">
+        <div class="flex h-96 mb-10">
+          <a
+            class="w-full h-full object-cover rounded-xl"
+            href={`${thirdBlog.slug}`}
+            ><Image
+              class="w-full h-full object-cover rounded-xl"
+              src={thirdBlog.data.image}
+              alt={thirdBlog.data.title}
+            /></a
+          >
+        </div>
+        <span class=`inline-block mb-4 text-xs  `
+          >{thirdBlog.data.date.toLowerCase()}</span
+        >
+        <h2 class=`mb-2 text-3xl font-semibold font-heading `>
+          {thirdBlog.data.title}
+        </h2>
+        <p class=`mb-4 text-xl  `>
+          {thirdBlog.data.description}
+        </p>
+        <a
+          class=`text-lg font-medium underline text-brand-copper hover:no-underline `
+          href={`${thirdBlog.slug}`}>Lees meer</a
+        >
+      </div> -->
+      <!-- <div class="w-full lg:w-1/3 px-4 mb-16">
+        <div class="flex h-96 mb-10">
+          <a
+            class="w-full h-full object-cover rounded-xl"
+            href={`${fourBlog.slug}`}
+            ><Image
+              class="w-full h-full object-cover rounded-xl"
+              src={fourBlog.data.image}
+              alt={fourBlog.data.title}
+            /></a
+          >
+        </div>
+        <span class=`inline-block mb-4 text-xs  `
+          >{fourBlog.data.date.toLowerCase()}</span
+        >
+        <h2 class=`mb-4 text-3xl font-semibold font-heading `>
+          {fourBlog.data.title}
+        </h2>
+        <p class=`mb-4 text-xl  `>
+          {fourBlog.data.description}
+        </p>
+        <a
+          class=`text-lg font-medium underline text-brand-copper hover:no-underline `
+          href={`${fourBlog.slug}`}>Lees meer</a
+        >
+      </div> -->
+      <!-- <div class="w-full lg:w-1/3 px-4 mb-16">
+        <div class="flex h-96 mb-10">
+          <a
+            class="w-full h-full object-cover rounded-xl"
+            href={`${fiveBlog.slug}`}
+            ><Image
+              class="w-full h-full object-cover rounded-xl"
+              src={fiveBlog.data.image}
+              alt={fiveBlog.data.title}
+            /></a
+          >
+        </div>
+        <span class=`text-xs  `>{fiveBlog.data.date.toLowerCase()}</span>
+        <h2 class=`mb-4 text-3xl font-semibold font-heading `>
+          {fiveBlog.data.title}
+        </h2>
+        <p class=`mb-4 text-xl  `>
+          {fiveBlog.data.description}
+        </p>
+        <a
+          class=`text-lg font-medium underline text-brand-copper hover:no-underline `
+          href={`${fiveBlog.slug}`}>Lees meer</a
+        >
+      </div> -->
+    </div>
+  </div>
+</section>

@@ -1,0 +1,80 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Main from "../components/Main.astro";
+import Footer from "../components/Footer.astro";
+
+// Lettertype - Garamond is voor titels en Rubik voor tekst
+const Garamond = "font-serif";
+const Rubik = "font-sans";
+
+// Merk kleurencode. Gebruik bg-brand-white in class om toe te passen.
+// "brand-white": "#F1F1F1",
+// "brand-sage": "#BCBC82",
+// "brand-copper": "#C2783F",
+---
+
+<style>
+  .map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+  }
+
+  .google-maps {
+    left: 0;
+    top: 0;
+    height: 450px;
+    width: 100%;
+    /* position: absolute; */
+  }
+</style>
+
+<Layout
+  title="Contactpagina"
+  description="Contactpagina van De kern met Jordi waar mensen contact met mij kunnen opzoeken en eventueel een vraag kunnen stellen. Ook is mijn adres, e-mailadres en telefoonnummer daar te vinden."
+>
+  <Main>
+    <section class="py-20">
+      <div class="container px-4 mx-auto">
+        <div class="flex flex-wrap -mx-4">
+          <div class="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
+            <div class="max-w-md">
+              <h2 class="mb-8 text-3xl font-semibold font-heading">
+                Voor al je opmerkingen en vragen nodig ik je graag uit om het
+                contact formulier in te vullen. Ook als je op een dag of tijd
+                wilt komen die niet in de openingstijden valt. Vaak valt er wel
+                wat te regelen ;). <br> <br> Tot snel!
+              </h2>
+              <h3 class="mb-4 text-2xl font-semibold">Adres</h3>
+              <p class="">Professor Piersonstraat 22</p>
+              <p class="mb-10 ">5142 EM Waalwijk</p>
+              <h3 class="mb-4 text-2xl font-semibold">Contact</h3>
+              <p class="">info@dekernmetjordi.com</p>
+              <p class="">+31 6 39556179</p>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2 px-4 mb-8">
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSfXztcGQLtbAp5vxqBtyrbAIWcDTPbEUf6TOlxD0HQ6ywaI0g/viewform?embedded=true"
+              width="640"
+              height="1450"
+              frameborder="0"
+              marginheight="0"
+              marginwidth="0">Laden…</iframe
+            >
+          </div>
+        </div>
+        <div class=".map-responsive">
+          <iframe
+            class="google-maps"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2473.2193687983!2d5.080035677649447!3d51.69243059716817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c693c8d57f2651%3A0x39a381fa1634814a!2sProfessor%20Piersonstraat%2022%2C%205142%20EM%20Waalwijk!5e0!3m2!1snl!2snl!4v1704197143626!5m2!1snl!2snl"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </Main>
+  <Footer />
+</Layout>

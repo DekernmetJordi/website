@@ -1,0 +1,117 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "@fontsource/cabin";
+import { ViewTransitions } from "astro:transitions";
+
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+}
+
+const {
+  title = "de kern met Jordi",
+  description = "Coachen op een unieke manier zonder poespas daar gaat het om bij De kern met Jordi. De naam zegt het al. Samen gaan wij naar de kern. Alleen de waarheid en niets anders. Samen voor jou. Coachen op onze manier",
+  image = "/images/Logo_zonder_achtergrond",
+} = Astro.props;
+
+// Merk kleurencode. Gebruik bg-brand-white in class om toe te passen.
+// "brand-white": "#F1F1F1",
+// "brand-sage": "#BCBC82",
+// "brand-copper": "#C2783F",
+---
+
+<style is:global>
+  * {
+    color: #333;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #111827;
+  }
+  a {
+    font-size: 1.125;
+    line-height: 1.35;
+  }
+
+  p {
+    /* font-family: 'Times New Roman', Times, serif; */
+    font-size: 1.125rem;
+    line-height: 1.35;
+    /* color: #333; */
+  }
+  .small-caps {
+    font-variant: small-caps;
+    font-weight: 600;
+  }
+
+  .gradient-btn {
+    position: relative;
+    /* min-height: 200px; */
+    background-image: linear-gradient(to right, #e28f50, #c2783f);
+    z-index: 1;
+  }
+
+  .gradient-btn::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #c2783f, #c2783f);
+    z-index: -1;
+    transition: opacity 0.5s linear;
+    opacity: 0;
+  }
+  .gradient-btn:hover::before {
+    opacity: 1;
+  }
+</style>
+
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
+    <!-- Zelf toegevoegd van favicon.io-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <!--  -->
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <!-- Elke pagina komt en gaat nu vloeiend -->
+    <!-- <ViewTransitions/> -->
+    <ViewTransitions transition:animate="slide" />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:image:alt" content={description} />
+
+    <!-- Open Graph / Twitter -->
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={image} />
+    <meta property="twitter:image:alt" content={title} />
+  </head>
+  <body class="min-h-screen grid grid-rows-[auto,1fr,auto] bg-brand-white">
+    <Header />
+    <slot />
+    <!-- Footer nog goedmaken!! -->
+    <!-- <Footer /> -->
+  </body>
+</html>

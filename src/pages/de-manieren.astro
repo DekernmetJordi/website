@@ -1,0 +1,185 @@
+---
+import { Image } from "astro:assets";
+import JordiHumanDesign from "../../public/images/Jordi_van_Ravesteijn_Human_Design_Chart.jpg";
+import Tarot from "../../public/images/Tarot.jpg";
+import Reiki_met_Alexander from "../../public/images/Reiki_met_Alexander.jpg";
+
+import Layout from "../layouts/Layout.astro";
+import Main from "../components/Main.astro";
+import Footer from "../components/Footer.astro";
+
+import Section from "../components/Section.astro";
+import PaddingTopForPages from "../components/PaddingTopForPages.astro";
+
+// Lettertype - Garamond is voor titels en Rubik voor tekst
+const Garamond = "font-serif";
+const Rubik = "font-sans";
+
+// Merk kleurencode. Gebruik bg-brand-white in class om toe te passen.
+// "brand-white": "#F1F1F1",
+// "brand-sage": "#BCBC82",
+// "brand-copper": "#C2783F",
+---
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+  a {
+    /* color: #C2783F; */
+    /* text-decoration: underline; */
+  }
+  /* a:link {
+    color: blue;
+    text-decoration: underline;
+  }
+  a:visited {
+    color: purple;
+    text-decoration: underline;
+  } */
+</style>
+
+<Layout
+  title="De manieren"
+  description="De tools dei wij hier gebruiken. Op deze pagina is te lezen welke manieren worden toegepast bij De kern met Jordi voor het coachen van mensen."
+>
+  <Section>
+    <PaddingTopForPages>
+      <section class="mb-8">
+        <div class="">
+          <div class="max-w-2xl mx-auto">
+            <h2 class="mb-10 text-4xl font-semibold font-heading">
+              De tools die wij hier gebruiken.
+            </h2>
+            <p class="mb-6">
+              Het is belangrijk om te weten dat bij mij niets vast staat als
+              beton. Het gaat er namelijk om dat je vragen beantwoord worden. Je
+              echte vragen. Wij moeten namelijk naar de kern. De diverse
+              manieren kunnen ook samen of wisselend met elkaar gebruikt worden.
+              Om echt antwoord te krijgen gebruik ik de volgende technieken:
+            </p>
+            <h3 class="mb-10 text-3xl font-semibold font-heading" id="tarot">
+              Tarot
+            </h3>
+            <p class="mb-6">
+              Tarot vind ik iets heel geweldig. Vooral omdat de persoon die de
+              vraag stelt dan meteen met zijn neus op de feiten wordt gedrukt op
+              een goede manier. Niet door een mening van een ander of wat een
+              persoon tegen zichzelf zegt, maar door wat de kaarten zeggen tegen
+              de persoon. Als de persoon namelijk eerlijk is naar zichzelf weet
+              hij direct wat de kaarten zeggen. De naakte ik spreekt dan tegen
+              de persoon wat zijn of haar gevoelens of intuïtie al langer
+              zeggen. Het mooie bij tarot kaarten is dat je daarin wordt
+              geholpen door boven. Het is een beetje als de inktvlekken die
+              psychologen laten zien aan hun patienten maar dan spiritueler. Het
+              gaat er vooral om wat de persoon er zelf in ziet, de echte zelf.
+              Echt een aanrader als je snel en accuraat antwoord wilt. Het is
+              ook lekker vrij en speels.<br /><br /> Bij tarot gebruik ik diverse
+              legvormen naar aanleiding van het soort vraag die jij beantwoord wilt
+              hebben.
+            </p>
+            <figure class="mb-6">
+              <Image
+                class="mx-auto mt-10 lg:mt-0 object-cover rounded-lg"
+                src={Tarot}
+                alt="Tarot bij De kern met Jordi"
+              />
+              <figcaption>Fig. 1 - Tarotkaarten</figcaption>
+            </figure>
+            <h3 class="mb-10 text-3xl font-semibold font-heading" id="reiki">
+              Reiki
+            </h3>
+            <p class="mb-6">
+              Reiki is ook een hele fijne. Vooral omdat je even tot jezelf komt.
+              als behandelaar geef ik je de universele energie. De energie komt
+              dus niet direct van mij, ik ben simpel een doorgeefluik. De
+              energie die je krijgt is daarmee zuiver en liefdevol. Het zorgt
+              dat je het pad van heling en bewustzijn opgaat en vooral blijft.<br
+              /><br /> Via handopleggingen zal ik je de universele energie geven.
+              Ik laat mij daarbij leiden door mijn intuïtie en ga naar de plekken
+              waar de energie hoort te zijn. Op die plekken is het namelijk het hardst
+              nodig. De plekken geven dan ook vaak symbolisch aan waar de oorzaak
+              van de klachten zitten. Dit zullen wij dan tijdens maar vooral na de
+              behandeling bespreken. Tijdens de behandeling kunnen namelijk zaken
+              bij je naar boven komen die belangrijk zijn.<br /><br />Het gaat
+              er namelijk om dat de klachten worden aangekaart en de natuurlijke
+              energie weer gaat stromen. Hiervoor dient wel naar de oorzaak
+              gegaan te worden en niet enkel naar de symptomen.
+            </p><p class="mb-6">
+              Lees <a
+                href="./reiki/wat-is-reiki"
+                class="text-lg font-medium underline text-brand-copper hover:no-underline"
+                >hier</a
+              > meer over Reiki.
+            </p>
+            <figure class="mb-6">
+              <Image
+                class="mx-auto mt-10 lg:mt-0 object-cover rounded-lg"
+                src={Reiki_met_Alexander}
+                alt="Reiki bij De kern met Jordi"
+              />
+              <figcaption>Fig. 2 - Reiki bij De kern bij Jordi</figcaption>
+            </figure>
+            <h3
+              class="mb-10 text-3xl font-semibold font-heading"
+              id="human-design"
+            >
+              Human Design
+            </h3>
+            <p class="mb-6">
+              Dit is de meest praktische van alle manieren maar wel een waarbij
+              het belangrijk is om alles holistisch te benaderen. Het is
+              namelijk fout om enkel maar op 1 centrum te focussen. <br /><br />
+              Human Design is namelijk een systeem waarbij jouw "blauwdruk" wordt
+              gemaakt op basis van je geboortegegevens en helder laat zien wie je
+              echt bent, waar je krachten en valkuilen liggen en wat je hier te leren
+              hebt plus te doen hebt.<br /><br /> Elk design bestaat uit 9 centrums
+              en zijn gekoppeld aan de manier hoe jij denkt, welk centrum je authoriteit
+              is (op basis daarvan dien jij keuzes te maken) en wat wel en niet van
+              jouw is. Ja, je leest het goed, niet alles wat je ervaart is van jouw!
+              Dat maakt in mijn ogen Human Design zo interessant en nodig voor iedereen.
+              Wij worden namelijk allemaal geconditioneerd en dat zit onze gave in
+              de weg.<br /><br />Human Design is dus echt voor jou als je wilt
+              weten hoe alles binnen jou samenhangt en als je eindelijk wilt
+              weten of iets wat je denkt of voelt wel überhaupt van jou is. Voor
+              de praktische onderons een echte aanrader om te ontdekken. Ik help
+              je graag op weg.
+            </p>
+            <p class="mb-6">
+              Zie hieronder mijn eigen design. Elk design is anders dus die van
+              jou kan er weer helemaal anders uit zien. Maar dan heb je wel
+              meteen een voorbeeld.
+            </p>
+            <p class="mb-6">
+              Je hebt bij deze dus ook niet meer een excuus om mijn verjaardag
+              te vergeten :P.
+            </p>
+            <figure>
+              <Image
+                class="mx-auto mt-10 lg:mt-0 object-cover rounded-lg"
+                src={JordiHumanDesign}
+                alt="Human Design Jordi van Ravesteijn"
+              />
+              <figcaption>Fig. 3 - Voorbeeld Human Design</figcaption>
+            </figure>
+            <hr class="h-px my-8 bg-gray-500 border-0" />
+            <p class="mb-6">
+              Voor de zekerheid zeg ik het hieronder nog maar een keer. De
+              technieken kunnen samen en wisselend van elkaar gebruikt worden.
+              Dus lees je dit en wil je ze eigenlijk allemaal gebruiken dan kan
+              dat. Het is vaak nog het beste ook. Zo weet je namelijk het snelst
+              wat het beste bij je past en het beste werkt. Bij vragen hoor ik
+              je natuurlijk ook heel graag ;).
+            </p>
+            <a
+              class="small-caps CTA-button inline-block px-6 py-4 mb-3 mr-4 leading-normal rounded gradient-btn"
+              href="https://calendar.app.google/oHow2Z6mhSpUVwQUA"
+              >Maak een afspraak</a
+            >
+          </div>
+        </div>
+      </section>
+    </PaddingTopForPages>
+  </Section>
+  <Footer />
+</Layout>

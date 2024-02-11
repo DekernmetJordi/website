@@ -1,0 +1,187 @@
+---
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon";
+import heartbeat from "../../public/heartbeat.png";
+// import logo_with_no_background from "../../public/images/Logo_zonder_achtergrond(1).svg";
+// import logo_with_no_background from "../../public/images/Logo_zonder_achtergrond.png";
+import Logo from "./Logo.astro";
+import Section from "./Section.astro";
+
+// Lettertype - Garamond is voor titels en Rubik voor tekst
+const Garamond = "font-serif";
+const Rubik = "font-sans";
+
+// Merk kleurencode. Gebruik bg-brand-white in class om toe te passen.
+// "brand-white": "#F1F1F1",
+// "brand-sage": "#BCBC82",
+// "brand-copper": "#C2783F",
+// "brand-orange": "#E28F50",
+---
+
+<!-- Script voor de nav bar -->
+<script>
+  // Burger menus
+  document.addEventListener("DOMContentLoaded", function () {
+    // open
+    const burger = document.querySelectorAll(".navbar-burger");
+    const menu = document.querySelectorAll(".navbar-menu");
+
+    if (burger.length && menu.length) {
+      for (var i = 0; i < burger.length; i++) {
+        burger[i].addEventListener("click", function () {
+          for (var j = 0; j < menu.length; j++) {
+            menu[j].classList.toggle("hidden");
+          }
+        });
+      }
+    }
+
+    // close
+    const close = document.querySelectorAll(".navbar-close");
+    const backdrop = document.querySelectorAll(".navbar-backdrop");
+
+    if (close.length) {
+      for (var i = 0; i < close.length; i++) {
+        close[i].addEventListener("click", function () {
+          for (var j = 0; j < menu.length; j++) {
+            menu[j].classList.toggle("hidden");
+          }
+        });
+      }
+    }
+
+    if (backdrop.length) {
+      for (var i = 0; i < backdrop.length; i++) {
+        backdrop[i].addEventListener("click", function () {
+          for (var j = 0; j < menu.length; j++) {
+            menu[j].classList.toggle("hidden");
+          }
+        });
+      }
+    }
+  });
+</script>
+
+<style>
+  .small-caps {
+    font-variant: small-caps;
+    font-weight: 600;
+  }
+</style>
+
+<Section>
+  <nav class="flex flex-row justify-between items-center">
+    <a class="text-lg font-semibold basis-1/4" href="/" title="Logo De kern met Jordi">
+      <div class=""><Logo title="Logo De kern met Jordi"/></div>
+    </a>
+    <a class="text-lg font-semibold basis-1/2" href="/"
+      ><h2 class="text-1xl lg:text-2xl" id="bedrijfsnaam">
+        De kern met Jordi
+      </h2></a
+    >
+    <!-- <h2 class="text-1xl lg:text-2xl basis-1/2" id="bedrijfsnaam">
+      De kern met Jordi
+    </h2> -->
+    <!-- <div>
+      <h2 class="text-1xl lg:text-2xl" id="bedrijfsnaam">De kern met Jordi</h2>
+    </div> -->
+    <div class="lg:hidden">
+      <button
+        class="navbar-burger flex items-center p-3 hover:bg-gray-50 rounded"
+      >
+        <svg
+          class="block h-4 w-4"
+          viewbox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>Mobile menu</title>
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+        </svg>
+      </button>
+    </div>
+    <ul
+      class="hidden lg:flex lg:ml-auto lg:mr-12 lg:items-center lg:w-auto lg:space-x-12"
+    >
+      <li><a class="text-sm font-medium" href="/de-manieren">De manieren</a></li>
+      <li><a class="text-sm font-medium" href="/over-jordi">Over Jordi</a></li>
+      <li>
+        <a class="text-sm font-medium" href="/afspraak-maken">Afspraak maken</a>
+      </li>
+      <!-- <li><a class="text-sm font-medium" href="/blog">Blog</a></li> -->
+    </ul>
+    <div class="hidden lg:block">
+      <a
+        class="inline-block py-3 px-8 text-sm leading-normal font-medium rounded gradient-btn"
+        href="/contact">Contact</a
+      >
+    </div>
+  </nav>
+  <div
+    class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50"
+  >
+    <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+    <nav
+      class="relative flex flex-col py-6 px-6 w-full h-full bg-white border-r overflow-y-auto"
+    >
+      <div class="flex items-center mb-8">
+        <a class="mr-auto text-lg font-semibold leading-none" href="/">
+          <Logo alt="Logo De kern met Jordi"/>
+        </a>
+        <button class="navbar-close">
+          <svg
+            class="h-6 w-6 text-gray-500 cursor-pointer hover:text-gray-500"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewbox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div>
+        <ul>
+          <li class="mb-1">
+            <a
+              class="block p-4 text-sm font-medium text-gray-900 hover:bg-gray-50 rounded"
+              href="/de-manieren">De manieren</a
+            >
+          </li>
+          <li class="mb-1">
+            <a
+              class="block p-4 text-sm font-medium text-gray-900 hover:bg-gray-50 rounded"
+              href="/over-jordi">Over Jordi</a
+            >
+          </li>
+          <li class="mb-1">
+            <a
+              class="block p-4 text-sm font-medium text-gray-900 hover:bg-gray-50 rounded"
+              href="/afspraak-maken">Afspraak maken</a
+            >
+          </li>
+          <li class="mb-1">
+            <!-- <a
+              class="block p-4 text-sm font-medium text-gray-900 hover:bg-gray-50 rounded"
+              href="/blog">Blog</a
+            > -->
+          </li>
+        </ul>
+      </div>
+      <div class="mt-auto">
+        <div class="pt-6">
+          <a
+            class="block py-3 text-center text-sm leading-normal font-semibold rounded gradient-btn"
+            href="/contact">Contact</a
+          >
+        </div>
+        <p class="mt-6 mb-4 text-sm text-center text-gray-500">
+          <span>© 2024 All rights reserved.</span>
+        </p>
+      </div>
+    </nav>
+  </div>
+</Section>

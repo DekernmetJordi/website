@@ -1,0 +1,19 @@
+---
+import { Image } from "astro:assets";
+import heartbeat from "../../public/heartbeat.png";
+import logo_with_no_background from "../../public/images/Logo_zonder_achtergrond.png";
+import HeroBanner from "./HeroBanner.astro";
+import AboutMeHomepage from "./AboutMeHomepage.astro";
+import Testimonials from "./Testimonials.astro";
+import Features from "./Features.astro";
+
+// Lettertype - Garamond is voor titels en Rubik voor tekst
+const Garamond = "font-serif";
+const Rubik = "font-sans";
+
+// <!-- container px-4 mx-auto -->
+---
+
+<section class="container px-4 mx-auto">
+  <slot />
+</section>

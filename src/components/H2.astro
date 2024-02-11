@@ -1,0 +1,26 @@
+---
+// import "@fontsource/twinkle-star";
+// import 'eb-garamond';
+
+// import "@fontsource-variable/eb-garamond";
+import "@fontsource-variable/rubik";
+
+type Props = {
+  text: string;
+  class: string;
+};
+
+const { text, class: className, ...rest } = Astro.props;
+
+// Lettertype - Garamond is voor titels en Rubik voor tekst
+const Garamond = "font-serif";
+const Rubik = "font-sans";
+---
+
+<style>
+  h2 {
+    font-family: "rubik";
+  }
+</style>
+
+<h2 class={className} {...rest}>{text}</h2>

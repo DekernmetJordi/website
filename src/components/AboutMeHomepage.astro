@@ -1,0 +1,98 @@
+---
+import { Image } from "astro:assets";
+import Jordi_over_mij from "../../public/images/Jordi_over_mij.jpg";
+
+// Lettertype - Garamond is voor titels en Rubik voor tekst
+const Garamond = "font-serif";
+const Rubik = "font-sans";
+
+// Merk kleurencode. Gebruik bg-brand-white in class om toe te passen.
+// "brand-white": "#F1F1F1",
+// "brand-sage": "#BCBC82",
+// "brand-copper": "#C2783F",
+// "prose-text-color": "#374151",
+---
+
+<style>
+  .wavy {
+    --mask: radial-gradient(67.08px at 50% 90px, #000 99%, #0000 101%)
+        calc(50% - 60px) 0/120px 51% repeat-x,
+      radial-gradient(67.08px at 50% -60px, #0000 99%, #000 101%) 50% 30px/120px
+        calc(51% - 30px) repeat-x,
+      radial-gradient(67.08px at 50% calc(100% - 90px), #000 99%, #0000 101%)
+        calc(50% - 60px) 100%/120px 51% repeat-x,
+      radial-gradient(67.08px at 50% calc(100% + 60px), #0000 99%, #000 101%)
+        50% calc(100% - 30px) / 120px calc(51% - 30px) repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+  }
+  .small-caps {
+    font-variant: small-caps;
+    font-weight: 600;
+  }
+
+  .gradient-btn {
+    position: relative;
+    /* min-height: 200px; */
+    background-image: linear-gradient(to right, #e28f50, #c2783f);
+    z-index: 1;
+  }
+
+  .gradient-btn::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #c2783f, #c2783f);
+    z-index: -1;
+    transition: opacity 0.5s linear;
+    opacity: 0;
+  }
+  .gradient-btn:hover::before {
+    opacity: 1;
+  }
+</style>
+
+<!-- wavy bg-brand-sage -->
+<!-- sm:pb-10 -mx-4 -mb-4 -->
+<section class="relative pt-10 lg:py-4 bg-brand-sage wavy">
+  <div class="container px-4 mx-auto">
+    <div class="flex flex-wrap items-center -mx-4">
+      <div class="relative w-full lg:w-5/12 px-4 order-last lg:order-first">
+        <Image
+          class="mx-auto mt-10 lg:mt-0 h-96 lg:h-112 object-cover rounded-lg"
+          src={Jordi_over_mij}
+          alt="Isabella"
+        />
+      </div>
+      <div class="w-full lg:w-7/12 px-4">
+        <div class="max-w-xl lg:ml-auto">
+          <h2 class=`mb-10 mt-4 text-4xl leading-tight font-semibold font-heading`>
+            Hej hej, Jordi hier.
+          </h2>
+          <p class=`mb-6`>
+            Sinds ik bij Debbie Bergmann ben geweest en in de loop der tijd
+            mijzelf heb geheeld met diverse manieren, weet ik hoe het is om je
+            pijn te ontdekken en aan te pakken. Ik ben zelf naar de pijnlijke
+            kern gegaan. Nu alles is schoongemaakt is het eindelijk een fijne
+            plek geworden.
+          </p>
+          <p class=`mb-6`>
+            Ik wil daarom ook dat meer mensen door de innerlijke pijn gaan en
+            hun ware aard ontdekken. De maatschappij maar vooral jij hebt het
+            nodig. Ook al verdienen zij het niet. Maar dat maakt niet uit. De
+            maatschappij moet je toch loslaten.
+          </p>
+          <!-- block py-3 text-center text-sm leading-normal font-semibold rounded gradient-btn -->
+          <!-- small-caps CTA-button inline-block px-6 py-4 mb-3 mr-4 leading-normal rounded gradient-btn -->
+          <a
+            class="small-caps px-10 py-4 inline-block rounded gradient-btn"
+            href="/over-jordi">Meer over Jordi</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

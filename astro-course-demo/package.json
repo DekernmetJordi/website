@@ -1,0 +1,27 @@
+{
+  "name": "astro-course-demo",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/rss": "^3.0.0",
+    "@astrojs/tailwind": "^5.0.0",
+    "@fontsource/cabin": "^5.0.8",
+    "@types/markdown-it": "^13.0.5",
+    "@types/sanitize-html": "^2.9.3",
+    "astro": "^3.1.0",
+    "date-fns": "^2.30.0",
+    "markdown-it": "^13.0.2",
+    "sanitize-html": "^2.11.0",
+    "tailwindcss": "^3.3.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.10"
+  }
+}

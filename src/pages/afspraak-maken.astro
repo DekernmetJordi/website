@@ -1,0 +1,67 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Main from "../components/Main.astro";
+import Footer from "../components/Footer.astro";
+
+import Section from "../components/Section.astro";
+import PaddingTopForPages from "../components/PaddingTopForPages.astro";
+
+// Lettertype - Garamond is voor titels en Rubik voor tekst
+const Garamond = "font-serif";
+const Rubik = "font-sans";
+
+// Merk kleurencode. Gebruik bg-brand-white in class om toe te passen.
+// "brand-white": "#F1F1F1",
+// "brand-sage": "#BCBC82",
+// "brand-copper": "#C2783F",
+---
+
+<Layout
+  title="Afspraak maken"
+  description="Afspraak maken is zo gedaan. Vul in wanneer je kan komen in de beschikbare tijdsloten en ik zie je snel."
+>
+  <Section>
+    <PaddingTopForPages>
+      <section class="mb-8">
+        <div class="">
+          <div class="max-w-2xl mx-auto">
+            <h2 class="mb-10 text-4xl font-semibold font-heading">
+              Mooi dat je komt.
+            </h2>
+            <p class="mb-6">
+              Om een afspraak te maken kun je hier beneden de agenda invullen.
+              Je zal via de mail een bevestiging krijgen en 1 dag van te voren
+              krijg je ook een herinneringsmail van de afspraak.
+            </p>
+            <p class="mb-6">
+              Mocht het zijn dat je op een dag of tijd wilt komen die niet in de
+              agenda staat dan kun je mij altijd bellen, whatsappen of mailen.
+              Bij appen krijg je het snelste antwoord omdat ik vaak wel bezig
+              ben :P. Hetzelfde geldt voor als je iets eerder of later wilt
+              komen. Je kan mij natuurlijk ook contacteren als je
+              verdiepingsvragen hebt over hoe ik te werk ga of wat dan ook. De
+              vraag kan niet te gek zijn, dus schroom niet.
+              <br />
+              <br />
+              Telefoonnummer: +31 6 39556179 <br />mail: info@dekernmetjordi.com
+            </p>
+            <p class="mb-6">Ik ben heel benieuwd naar je.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="flex items-center justify-center">
+        <!-- Google Calendar Appointment Scheduling begin -->
+        <iframe
+          src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1RqXAwNAsA76oBke9JBGntlNudQKUK-dsCiw5Fts7hbO2fVX-4psCATxl4oMc-l104h45nT0e0?gv=true"
+          style="border: 0"
+          width="70%"
+          height="850px"
+          frameborder="0"
+          class="flex items-center justify-center"></iframe>
+        <!-- end Google Calendar Appointment Scheduling -->
+      </div>
+    </PaddingTopForPages>
+  </Section>
+  <Footer />
+</Layout>

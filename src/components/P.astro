@@ -1,0 +1,13 @@
+---
+type Props = {
+  text: string;
+};
+
+const { text } = Astro.props;
+
+// Lettertype - Garamond is voor titels en Rubik voor tekst
+const Garamond = "font-serif";
+const Rubik = "font-sans";
+---
+
+<p class={Rubik}>{text}</p>

@@ -1,0 +1,89 @@
+---
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+
+import {Image, getImage} from "astro:assets"
+
+import Layout from "../layouts/Layout.astro";
+import Main from "../components/Main.astro";
+import H1 from "../components/H1.astro";
+import TableOfContents from "../components/TableOfContents.astro";
+import Share from "../components/Share.astro";
+import Section from "../components/Section.astro";
+import PaddingTopForPages from "../components/PaddingTopForPages.astro";
+
+export const getStaticPaths = async () => {
+  const posts = await getCollection("posts");
+
+  const paths = posts.map((post) => {
+    return {
+      params: {
+        slug: post.slug,
+      },
+      props: {
+        post,
+      },
+    };
+  });
+
+  return paths;
+};
+
+type Props = {
+  post: CollectionEntry<"posts">;
+};
+
+const { post } = Astro.props;
+
+const { Content, headings } = await post.render();
+
+const coverImageSource = (await getImage({src: post.data.image})).src
+
+// Lettertype - Garamond is voor titels en Rubik voor tekst
+const Garamond = "font-serif";
+const Rubik = "font-sans";
+
+// 
+// a tag terug naar alle blogs later weer activeren!!! 
+// niet vergeten!!!
+// 
+
+---
+
+<!-- <style>
+  p {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+
+  }
+</style> -->
+
+
+<Layout
+  title={post.data.title}
+  image={coverImageSource}
+  description={post.data.description}
+>
+  <Section>
+    <PaddingTopForPages>
+      <!-- <a href="/blog" class="text-2xl mb-16 underline block"
+        >← Terug naar alle blogs</a
+      > -->
+      <!-- <H1 text={post.data.title} /> -->
+      <h1 class="text-5xl font-bold mb-5 font-heading">{post.data.title}</h1>
+      <Image
+        src={post.data.image}
+        alt={post.data.title}
+        class="rounded-2xl shadow-xl mb-28 aspect-thumbnail object-cover"
+      />
+      <div>
+        <TableOfContents headings={headings} />
+      </div>
+      <div class="relative">
+        <Share post={post} />
+        <!-- prose prose-2xl -->
+        <div class=`prose prose-lg overflow-visible relative`><Content /></div>
+      </div>
+    </PaddingTopForPages>
+  </Section>
+</Layout>

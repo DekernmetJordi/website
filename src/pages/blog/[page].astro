@@ -1,0 +1,55 @@
+---
+import type { GetStaticPathsOptions, Page } from "astro";
+import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
+import H1 from "../../components/H1.astro";
+import Main from "../../components/Main.astro";
+import PostList from "../../components/PostList.astro";
+import Layout from "../../layouts/Layout.astro";
+import Pagination from "../../components/Pagination.astro";
+import CategoryList from "../../components/CategoryList.astro";
+import Section from "../../components/Section.astro";
+import PaddingTopForPages from "../../components/PaddingTopForPages.astro";
+
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+  const allPosts = await getCollection("posts");
+  return paginate(allPosts, { pageSize: 6 });
+}
+
+type Props = {
+  page: Page;
+};
+
+const { page } = Astro.props;
+const posts = page.data as CollectionEntry<"posts">[];
+const postsForCategories = (await getCollection("posts"));
+const allCategories = postsForCategories.flatMap((post) => post.data.categories);
+const categories = Array.from(new Set(allCategories));
+---
+
+<Layout
+  title="Blog - De kern met Jordi"
+  description="Lees alles over spiritualiteit in deze blog bij De kern met Jordi"
+>
+  <Section>
+    <PaddingTopForPages>
+      <h1 class="text-5xl font-bold mb-5 font-heading">Blog - De kern met Jordi</h1>
+      <p class="text-2xl mb-24 max-sm:mb-14">
+        Lees alles over spiritualiteit in deze blog bij De kern met Jordi
+      </p>
+      <div
+        class="grid grid-cols-[auto,1fr] gap-x-14 gap-y-3 mb-16 max-lg:grid-cols-1"
+      >
+        <h2 class="font-bold text-5xl">Tags</h2>
+        <CategoryList categories={categories} />
+      </div>
+      <div class="mb-12">
+        <Pagination prevURL={page.url.prev} nextURL={page.url.next} />
+      </div>
+      <PostList posts={posts} />
+      <div class="mb-36">
+        <Pagination prevURL={page.url.prev} nextURL={page.url.next} />
+      </div>
+    </PaddingTopForPages>
+  </Section>
+</Layout>

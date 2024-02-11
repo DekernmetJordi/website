@@ -1,0 +1,142 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Main from "../components/Main.astro";
+import Footer from "../components/Footer.astro";
+
+import Section from "../components/Section.astro";
+import PaddingTopForPages from "../components/PaddingTopForPages.astro";
+
+import { Image } from "astro:assets";
+// import Isabella from "../../public/images/Isabella.jpg";
+import Jordi from "../../public/images/Jordi_coachen.jpg";
+import Signature from "../components/Signature.astro";
+
+// Lettertype - Garamond is voor titels en Rubik voor tekst
+const Garamond = "font-serif";
+const Rubik = "font-sans";
+
+// Merk kleurencode. Gebruik bg-brand-white in class om toe te passen.
+// "brand-white": "#F1F1F1",
+// "brand-sage": "#BCBC82",
+// "brand-copper": "#C2783F",
+---
+
+<Layout
+  title="Over Jordi"
+  description="Op deze pagina vertel ik je meer over mij en waar ik vandaan kom en voor sta. Je zal er waarschijnlijk om lachen ^^."
+>
+  <Section>
+    <PaddingTopForPages>
+      <section class="mb-8 lg:flex">
+        <div class="max-w-2xl mx-auto mr-10">
+          <h2 class="mb-10 text-4xl font-semibold font-heading">
+            Nieuwsgierige ;),
+          </h2>
+          <p class="mb-6">
+            Leuk dat je meer van mij wilt weten. Snap ik. Je zal zien dat een
+            paar dingen gewoon zijn en een paar dingen apart. Zeker voor bij een
+            spirituele coach. Mijn verleden laat je ook zien dat iedereen ervan
+            kan leren en veranderen. Het maakt mij dan ook echt niet uit waar je
+            vandaan komt en waar je met plezier naar toe wilt.
+          </p>
+          <p class="mb-6">Jij vult het in.</p>
+          <p class="mb-6">
+            Zoals je wellicht al weet heet ik Jordi. Mijn volledige naam is
+            Jordi van Ravesteijn, geboren in 1991. Samen met mijn tweeling-broer
+            ben ik opgegroeid in Kaatsheuvel en daar heb ik tot mijn eind 20ste
+            gewoond. Nu woon ik met mijn lieve kat Isabella in Waalwijk.
+          </p>
+          <p class="mb-6">
+            Na de HAVO ben ik Economie en Accoutancy gaan studeren en na de
+            eerste 2 jaar heb ik gekozen voor Accountancy.
+            "Huh, wat, Accountancy?!!?" Ja, je leest het goed, Accountancy.
+            "Accountancy?!" Jep. Ik zei toch dat iedereen ergens vandaan kan
+            komen en helemaal ergens anders naar toe kan gaan. Dit is de reden. Ik heb
+            ook 4/5 jaar in de Accountancy gewerkt en heb de 2 jarige
+            Theoretische Post Bachelor opleiding AA Accountancy behaald. Ik was
+            er alleen diep ongelukkig. Vooral door de cultuur en bepaalde
+            (soort) mensen. Daarna bij de ABN AMRO terecht gekomen als
+            CDD-analist en het was stukken beter. Werk daar nog steeds met super
+            mensen maar hoor dit te doen, coachen!
+          </p>
+          <p class="mb-6">
+            Wij horen namelijk te doen waarvoor wij hier zijn en niet iets wat
+            wordt verwacht of toevallig voor zijn opgeleid. Na het traject bij
+            Debbie Bergmann, van Tian Tang, ben ik uit mijn schaduw gestapt en
+            is de echte Jordi opgestaan. Ik weet dus hoe het is vastgebonden te
+            zitten aan oude patronen en kwellingen. Het komt allemaal ergens
+            vandaan. Ik ben erachter gekomen waar vandaan en het heeft mij
+            lichter gemaakt.
+          </p>
+          <p class="mb-6">
+            Bij Debbie heb ik dan ook mijn passie voor spiritualiteit laten
+            groeien en heeft het praktische vormen aangenomen. Zo heb ik met
+            plezier Human-Design en Tarot bij haar geleerd.
+          </p>
+          <p class="mb-6">
+            Reiki, ohhh, mijn Reiki, heb ik geleerd bij Eleonora Klerx, van
+            Yindee Puur Ontspanning, en gebruik ik nog elke dag. Soms wel 2x per
+            dag :O. Met Reiki heb ik mijzelf verder schoongemaakt en spiritueel geijkt.
+          </p>
+          <p class="mb-6">
+            Dus wil jij ook je verhaal kwijt en antwoorden krijgen kom dan naar
+            mij toe. Je zal zien dat je triggers een verhaal hebben die je
+            wellicht niet meer weet. Of je weet het diep van binnen maar bent er
+            bang voor. Begrijpelijk. Iets zit je dwars en moet los komen. Kom
+            dus maar. Wij gaan naar de echte reden. Met zachtheid zal je
+            erachter komen wat je te leren hebt dit leven. Wij gaan naar de
+            kern.
+          </p>
+          <p class="mb-6">De oorzaak ligt namelijk nooit aan jou.</p>
+          <p class="mb-6">
+            Je verhaal of vraagstelling hoeft ook niet ergens aan te voldoen.
+            Ook al denk je dat jij jezelf aanstelt of dat het vanzelf wel
+            overgaat kun je gewoon komen. Vaak kom je dan wijzer eruit dan je
+            erin bent gegaan.
+          </p>
+          <p class="mb-6">
+            Jij kent nu mijn verhaal. Maar ik ben nu nog nieuwsgieriger geworden
+            naar jouw verhaal. Mensen die namelijk iemand willen begrijpen zijn
+            namelijk mijn type mensen.
+          </p>
+          <p class="mb-6">Met vriendelijke groet,</p>
+          <div class="mb-4">
+            <Signature />
+          </div>
+          <a
+            class=`small-caps CTA-button inline-block px-6 py-4 mb-3 mr-4 leading-normal rounded gradient-btn`
+            href="https://calendar.app.google/oHow2Z6mhSpUVwQUA
+            "
+            >Ja, ik wil graag mijn verhaal kwijt</a
+          >
+        </div>
+        <div class="container px-4 mx-auto">
+          <Image
+            class="mx-auto mt-10 mb-6 lg:mt-0 object-cover rounded-lg"
+            src={Jordi}
+            alt="Isabella"
+          />
+          <h3 class="mb-10 text-3xl font-semibold font-heading">
+            Gevolgde opleidingen of trajecten
+          </h3>
+          <ul class="mb-6 list-disc">
+            <li>Human Design - bij Debbie Bergmann</li>
+            <li>Tarot Reading - bij Debbie Bergmann</li>
+            <li>Reiki 1 - bij Eleonora Klerx</li>
+          </ul>
+          <h3 class="mb-10 text-3xl font-semibold font-heading">
+            Zaken op de bucket-list of mee bezig
+          </h3>
+          <ul class="mb-6 list-disc">
+            <li>Gene Keys (mee bezig) - Bij Debbie Bergmann</li>
+            <li>Medische Basiskennis (mee bezig) - bij Con Amore</li>
+            <li>Reiki 2 (volgt in april 2024) - bij Eleonora Klerx</li>
+            <li>EHBO</li>
+            <li>Qi gong</li>
+          </ul>
+        </div>
+      </section>
+    </PaddingTopForPages>
+  </Section>
+  <Footer />
+</Layout>
