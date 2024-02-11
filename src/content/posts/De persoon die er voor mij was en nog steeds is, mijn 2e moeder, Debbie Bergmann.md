@@ -2,7 +2,8 @@
 author: jordi van ravesteijn
 # slug is hoofdthema + title zonder hoofdletter
 # de hoofdthema's zijn tarot, reiki, Human Design, Persoonlijk, Community
-slug: persoonlijk/de-persoon-die-er-voor-mij-was-en-nog-steeds-is-mijn-2e-moeder-debbie-bergmann
+# slug: persoonlijk/de-persoon-die-er-voor-mij-was-en-nog-steeds-is-mijn-2e-moeder-debbie-bergmann
+slug: persoonlijk
 categories: ["persoonlijk"]
 date: 02/08/2024
 featured: false

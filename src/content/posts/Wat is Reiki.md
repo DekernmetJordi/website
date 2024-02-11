@@ -2,7 +2,8 @@
 author: jordi van ravesteijn
 # slug is hoofdthema + title zonder hoofdletter
 # de hoofdthema's zijn tarot, reiki, Human Design
-slug: reiki/wat-is-reiki
+# slug: reiki/wat-is-reiki
+slug: reiki
 categories: ["reiki"]
 date: 01/24/2024
 featured: false
