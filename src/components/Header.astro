@@ -21,7 +21,8 @@ const Rubik = "font-sans";
 <!-- Script voor de nav bar -->
 <script>
   // Burger menus
-  document.addEventListener("DOMContentLoaded", function () {
+  // was eerst DOMContentLoaded
+  document.addEventListener("astro:page-load", function () {
     // open
     const burger = document.querySelectorAll(".navbar-burger");
     const menu = document.querySelectorAll(".navbar-menu");
