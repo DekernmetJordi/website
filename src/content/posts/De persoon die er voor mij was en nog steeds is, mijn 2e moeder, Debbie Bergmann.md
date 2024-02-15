@@ -164,7 +164,7 @@ Ook kun je natuurlijk een afspraak maken, spreek je mij meteen 😜.
 ## Wat andere ook lezen
 <ul>
   <li>
-    <a class="text-lg font-medium underline text-brand-copper hover:no-underline" href=../de-manieren>De manieren
+    <a class="text-lg font-medium underline text-brand-copper hover:no-underline" href=.../de-manieren>De manieren
     </a>
   </li>
   <li>
