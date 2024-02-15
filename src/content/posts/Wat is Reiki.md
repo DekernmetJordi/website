@@ -90,7 +90,7 @@ Tot snel!
 <!-- - [De manieren](../de-manieren) -->
 <ul>
   <li>
-    <a class="text-lg font-medium underline text-brand-copper hover:no-underline" href=../de-manieren>De manieren
+    <a class="text-lg font-medium underline text-brand-copper hover:no-underline" href=../../de-manieren>De manieren
     </a>
   </li>
 </ul>
