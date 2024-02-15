@@ -168,7 +168,7 @@ Ook kun je natuurlijk een afspraak maken, spreek je mij meteen 😜.
     </a>
   </li>
   <li>
-    <a class="text-lg font-medium underline text-brand-copper hover:no-underline" href=../../wat-is-reiki/>Wat is Reiki
+    <a class="text-lg font-medium underline text-brand-copper hover:no-underline" href=../../reiki/wat-is-reiki/>Wat is Reiki
     </a>
   </li>
 </ul>
