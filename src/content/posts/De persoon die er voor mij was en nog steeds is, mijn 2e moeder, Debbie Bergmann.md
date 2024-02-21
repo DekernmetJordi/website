@@ -99,7 +99,7 @@ Met belangrijke zaken natuurlijk :P.
 
 Op dit moment zijn wij bezig met Gene Keys.
 
-Gene Keys gaat verder op Human Design. De focus ligt vooral op de poorten en gaat heel diep. Het gouden pad hebben wij net bij mij afgerond en bestaat voor iedereen uit zijn levenswerk, evolutie, uitstraling en doel.
+Gene Keys gaat verder op Human Design. De focus ligt vooral op de poorten en gaat heel diep. De activatiereeks hebben wij net bij mij afgerond en bestaat voor iedereen uit zijn levenswerk, evolutie, uitstraling en doel.
 
 Het levenswerk is zelf zeggend en gaat over wat iemand hier te doen heeft en op welke manier hij naar buiten treedt. De evolutie is hetgeen wat weer daaronder zit. Wat moet evolueren, wat heeft iemand te leren, om vervolgens de levenswerk ten volste aan te wakkeren. Het levenswerk is dan ook de zon en de evolutie de aarde, beide zijn nodig en zijn elkaars programmeer maatje. Ze versterken elkaar, ten goede of ten kwade.
 
@@ -119,7 +119,7 @@ Wel even een tip tussendoor. Gene Keys kan af en toe een beetje theatraal zijn e
 
 Laat de teksten dan ook vooral mijmeren in jezelf met gevoel. Het is ook belangrijk om de schaduwen te accepteren, nogmaals, wel op eigen voorwaarden en niet die van een andere. Het mag er allemaal zijn.
 
-Nadat wij het gouden pad hebben gelopen zijn wij doorgegaan naar de venusreeks. Dit is de reeds die begint bij je doel en het doel van je doel. Relaties staan hierbij centraal en vrouwelijke energie. Deze reeds kun je dan ook NOOIT overhaasten. Het komt wanneer het komt en wordt met andere bewandelt.
+Nadat wij de activatiereeks hebben gelopen zijn wij doorgegaan naar de venusreeks. Dit is de reeds die begint bij je doel en het doel van je doel. Relaties staan hierbij centraal en vrouwelijke energie. Deze reeds kun je dan ook NOOIT overhaasten. Het komt wanneer het komt en wordt met andere bewandelt.
 
 Hier zijn wij net begonnen en kan maar wil ik vooral ook niet te veel over zeggen.
 
