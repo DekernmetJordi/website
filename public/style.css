@@ -1,4 +1,4 @@
-body, html {
+body, html, .smilejet-general-content {
     font-family: "eb-garamond";
     font-size: 1.125rem;
     line-height: 1.35;
@@ -10,8 +10,6 @@ input, select, textarea {
     font-size: 1.125rem;
     color: #333;
 }
-
-
 
 .prod-primary-button {
     position: relative;
