@@ -15,6 +15,7 @@ module.exports = {
       // backgroundColor
       colors: {
         "brand-white": "#F1F1F1",
+        "contact-white": "#f7f7f7",
         "brand-sage": "#BCBC82",
         "brand-copper": "#C2783F",
         "brand-orange": "#E28F50",
