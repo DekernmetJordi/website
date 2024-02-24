@@ -1,4 +1,4 @@
-body, html, .smilejet-general-content {
+.smilejet-general-content {
     font-family: "eb-garamond";
     /* font-size: 1.125rem; */
     font-size: 1.125rem !important;
@@ -6,7 +6,7 @@ body, html, .smilejet-general-content {
     color: #333;
 }
 
-input, select, textarea {
+.smilejet-general-content input, .smilejet-general-content select, .smilejet-general-content textarea {
     font-family: "eb-garamond";
     font-size: 1.125rem;
     color: #333;
