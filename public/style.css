@@ -1,0 +1,37 @@
+body, html {
+    font-family: eb-garamond;
+    font-size: 1.125rem;
+    line-height: 1.35;
+    color: #333;
+}
+
+input, select, textarea {
+    font-family: eb-garamond;
+    font-size: 1.125rem;
+    color: #333;
+}
+
+
+
+.gradient-btn {
+    position: relative;
+    /* min-height: 200px; */
+    background-image: linear-gradient(to right, #e28f50, #c2783f);
+    z-index: 1;
+  }
+
+  .gradient-btn::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #c2783f, #c2783f);
+    z-index: -1;
+    transition: opacity 0.5s linear;
+    opacity: 0;
+  }
+  .gradient-btn:hover::before {
+    opacity: 1;
+  }
