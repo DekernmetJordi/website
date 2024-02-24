@@ -12,6 +12,11 @@ input, select, textarea {
     color: #333;
 }
 
+.smilejet-general-content h1 {
+    color: #333;
+    font-size: 33.75px;
+}
+
 .prod-primary-button {
     position: relative;
     /* min-height: 200px; */
