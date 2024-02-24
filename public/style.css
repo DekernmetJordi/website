@@ -1,12 +1,12 @@
 body, html {
-    font-family: eb-garamond;
+    font-family: "eb-garamond";
     font-size: 1.125rem;
     line-height: 1.35;
     color: #333;
 }
 
 input, select, textarea {
-    font-family: eb-garamond;
+    font-family: "eb-garamond";
     font-size: 1.125rem;
     color: #333;
 }
