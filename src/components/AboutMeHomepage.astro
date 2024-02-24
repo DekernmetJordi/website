@@ -14,7 +14,7 @@ const Rubik = "font-sans";
 ---
 
 <style>
-  .wavy {
+  /* .wavy {
     --mask: radial-gradient(67.08px at 50% 90px, #000 99%, #0000 101%)
         calc(50% - 60px) 0/120px 51% repeat-x,
       radial-gradient(67.08px at 50% -60px, #0000 99%, #000 101%) 50% 30px/120px
@@ -25,7 +25,16 @@ const Rubik = "font-sans";
         50% calc(100% - 30px) / 120px calc(51% - 30px) repeat-x;
     -webkit-mask: var(--mask);
     mask: var(--mask);
+  } */
+  .wavy {
+    --mask: radial-gradient(67.08px at 50% 90px, #000 99%, #0000 101%)
+        calc(50% - 60px) 0/120px 100%,
+      radial-gradient(67.08px at 50% -60px, #0000 99%, #000 101%) 50% 30px/120px
+        100% repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
   }
+
   .small-caps {
     font-variant: small-caps;
     font-weight: 600;
@@ -60,16 +69,18 @@ const Rubik = "font-sans";
 <section class="relative pt-10 lg:py-4 bg-brand-sage wavy">
   <div class="container px-4 mx-auto">
     <div class="flex flex-wrap items-center -mx-4">
-      <div class="relative w-full lg:w-5/12 px-4 order-last lg:order-first">
+      <div class="relative mt-1 w-full lg:w-5/12 px-4 order-last lg:order-first">
         <Image
-          class="mx-auto mt-10 lg:mt-0 h-96 lg:h-112 object-cover rounded-lg"
+          class="mx-auto lg:mt-0 h-96 lg:h-112 object-cover rounded-lg"
           src={Jordi_over_mij}
-          alt="Isabella"
+          alt="Foto van Jordi die uitleg geeft over Human Design"
         />
       </div>
       <div class="w-full lg:w-7/12 px-4">
         <div class="max-w-xl lg:ml-auto">
-          <h2 class=`mb-10 mt-4 text-4xl leading-tight font-semibold font-heading`>
+          <h2
+            class=`mb-10 mt-4 text-4xl leading-tight font-semibold font-heading`
+          >
             Hej hej, Jordi hier.
           </h2>
           <p class=`mb-6`>
