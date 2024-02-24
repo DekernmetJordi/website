@@ -13,15 +13,15 @@ input, select, textarea {
 
 
 
-.gradient-btn {
+.prod-primary-button {
     position: relative;
     /* min-height: 200px; */
     background-image: linear-gradient(to right, #e28f50, #c2783f);
     z-index: 1;
   }
 
-  .gradient-btn::before {
-    position: absolute;
+  .prod-primary-button::before {
+    /* position: absolute; */
     content: "";
     top: 0;
     right: 0;
@@ -32,6 +32,6 @@ input, select, textarea {
     transition: opacity 0.5s linear;
     opacity: 0;
   }
-  .gradient-btn:hover::before {
+  .prod-primary-button:hover::before {
     opacity: 1;
   }
