@@ -1,6 +1,7 @@
 body, html, .smilejet-general-content {
     font-family: "eb-garamond";
-    font-size: 1.125rem;
+    /* font-size: 1.125rem; */
+    font-size: 1.125rem !important;
     line-height: 1.35;
     color: #333;
 }
