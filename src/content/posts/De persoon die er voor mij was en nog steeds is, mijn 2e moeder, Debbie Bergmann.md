@@ -7,7 +7,7 @@ slug: persoonlijk/de-persoon-die-er-voor-mij-was-en-nog-steeds-is-mijn-2e-moeder
 categories: ["persoonlijk"]
 date: 02/08/2024
 featured: false
-image: ./Debbie.jpg
+image: ./Debbie_kleiner.jpg
 title: De persoon die er voor mij was en nog steeds is, mijn 2e moeder, Debbie Bergmann
 description: In deze blog vertel ik meer over mijn 2e moeder, Debbie Bergmann. Zij zorgt ervoor dat ik spiritueel het meeste groei. De moeite waard om te lezen.
 ---
