@@ -23,6 +23,7 @@ const Rubik = "font-sans";
   // Burger menus
   // was eerst DOMContentLoaded
   document.addEventListener("astro:page-load", function () {
+    console.log("pagina is geladen");
     // open
     const burger = document.querySelectorAll(".navbar-burger");
     const menu = document.querySelectorAll(".navbar-menu");
@@ -72,8 +73,12 @@ const Rubik = "font-sans";
 
 <Section>
   <nav class="flex flex-row justify-between items-center">
-    <a class="text-lg font-semibold basis-1/4" href="/" title="Logo De kern met Jordi">
-      <div class=""><Logo title="Logo De kern met Jordi"/></div>
+    <a
+      class="text-lg font-semibold basis-1/4"
+      href="/"
+      title="Logo De kern met Jordi"
+    >
+      <div class=""><Logo title="Logo De kern met Jordi" /></div>
     </a>
     <a class="text-lg font-semibold basis-1/2" href="/"
       ><h2 class="text-1xl lg:text-2xl" id="bedrijfsnaam">
@@ -97,7 +102,9 @@ const Rubik = "font-sans";
     <ul
       class="hidden lg:flex lg:ml-auto lg:mr-12 lg:items-center lg:w-auto lg:space-x-12"
     >
-      <li><a class="text-sm font-medium" href="/de-manieren">De manieren</a></li>
+      <li>
+        <a class="text-sm font-medium" href="/de-manieren">De manieren</a>
+      </li>
       <li><a class="text-sm font-medium" href="/over-jordi">Over Jordi</a></li>
       <li>
         <a class="text-sm font-medium" href="/afspraak-maken">Afspraak maken</a>
@@ -119,7 +126,7 @@ const Rubik = "font-sans";
     >
       <div class="flex items-center mb-8">
         <a class="mr-auto text-lg font-semibold leading-none" href="/">
-          <Logo alt="Logo De kern met Jordi"/>
+          <Logo alt="Logo De kern met Jordi" />
         </a>
         <button class="navbar-close">
           <svg
@@ -157,8 +164,7 @@ const Rubik = "font-sans";
               href="/afspraak-maken">Afspraak maken</a
             >
           </li>
-          <li class="mb-1">
-          </li>
+          <li class="mb-1"></li>
         </ul>
       </div>
       <div class="mt-auto">
