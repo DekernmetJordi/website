@@ -18,8 +18,7 @@ const Rubik = "font-sans";
 // "brand-orange": "#E28F50",
 ---
 
-<!-- Script voor de nav bar -->
-<script>
+<!-- Script voor de nav bar --><!-- <script>
   // Burger menus
   // was eerst DOMContentLoaded
   document.addEventListener("astro:page-load", function () {
@@ -60,6 +59,33 @@ const Rubik = "font-sans";
           }
         });
       }
+    }
+  });
+</script> -->
+<script>
+  document.addEventListener("astro:page-load", function () {
+    // Select elements
+    const burger = document.querySelector(".navbar-burger");
+    const menu = document.querySelector(".navbar-menu");
+    const close = document.querySelector(".navbar-close");
+    const backdrop = document.querySelector(".navbar-backdrop");
+
+    // Toggle menu function
+    function toggleMenu() {
+      menu.classList.toggle("hidden");
+    }
+
+    // Event listeners
+    if (burger) {
+      burger.addEventListener("click", toggleMenu);
+    }
+
+    if (close) {
+      close.addEventListener("click", toggleMenu);
+    }
+
+    if (backdrop) {
+      backdrop.addEventListener("click", toggleMenu);
     }
   });
 </script>
