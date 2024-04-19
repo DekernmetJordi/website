@@ -63,7 +63,9 @@ const Rubik = "font-sans";
   });
 </script> -->
 <script>
-  document.addEventListener("astro:page-load", function () {
+  // console.log("header script");
+  // astro:page-load
+  document.addEventListener("DOMContentLoaded", function () {
     // Select elements
     const burger = document.querySelector(".navbar-burger");
     const menu = document.querySelector(".navbar-menu");
@@ -73,7 +75,7 @@ const Rubik = "font-sans";
     // Toggle menu function
     function toggleMenu() {
       menu.classList.toggle("hidden");
-      console.log("Burger icon clicked");
+      // console.log("Burger icon clicked");
     }
 
     // Event listeners
@@ -92,7 +94,7 @@ const Rubik = "font-sans";
     window.addEventListener("resize", function () {
       // const burger = document.querySelector(".navbar-burger");
       if (window.innerWidth < 410) {
-        console.log("scherm kleiner dan 410");
+        // console.log("scherm kleiner dan 410");
         burger.addEventListener("click", toggleMenu);
       }
     });
@@ -186,7 +188,7 @@ const Rubik = "font-sans";
           <li class="mb-1">
             <a
               class="block p-4 text-sm font-medium text-gray-900 hover:bg-gray-50 rounded"
-              href="/de-manieren">De manieren1</a
+              href="/de-manieren">De manieren</a
             >
           </li>
           <li class="mb-1">

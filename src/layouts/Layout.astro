@@ -2,7 +2,7 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "@fontsource/cabin";
-import { ViewTransitions } from "astro:transitions";
+// import { ViewTransitions } from "astro:transitions";
 
 interface Props {
   title: string;
@@ -110,7 +110,7 @@ const {
     <title>{title}</title>
     <!-- Elke pagina komt en gaat nu vloeiend -->
     <!-- <ViewTransitions transition:persist/> -->
-    <ViewTransitions transition:animate="slide" />
+    <!-- <ViewTransitions transition:animate="slide" /> -->
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={Astro.url} />
@@ -159,10 +159,10 @@ const {
     <slot />
     <!-- Footer nog goedmaken!! -->
     <!-- <Footer /> -->
-    <!-- <script
+    <script
       async
       src="https://smilejet.com/app/staging-environment/tag.js"
       data-smj-id="1112PcsogmJ4Vg"
-      crossorigin="anonymous"></script> -->
+      crossorigin="anonymous"></script>
   </body>
 </html>
