@@ -4,6 +4,7 @@ import Isabella from "../../public/images/Isabella.jpg";
 import logo_with_no_background from "../../public/images/Logo_zonder_achtergrond.png";
 import Logo from "./Logo.astro";
 import DiscordIcon from "./DiscordIcon.astro";
+import Privacy_statement from "../../public/images/privacy_statement_14-02-2024.pdf";
 
 // Lettertype - Garamond is voor titels en Rubik voor tekst
 const Garamond = "font-serif";
@@ -73,7 +74,8 @@ const Rubik = "font-sans";
               <li class="mb-4">
                 <a
                   class=`hover:text-neutral-500`
-                  href="#" target="_blank">Privacy</a
+                  href={Privacy_statement}
+                  target="_blank">Privacy</a
                 >
               </li>
               <li>
