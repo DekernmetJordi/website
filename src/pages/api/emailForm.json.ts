@@ -6,7 +6,7 @@ export const prerender = false;
 
 export const POST: APIRoute = async ({ request }) => {
   const key = import.meta.env.API_TOKEN;
-  console.log("De key is: " + key);
+  // console.log("De key is: " + key);
   const data = await request.json();
   console.log(data);
 
@@ -42,13 +42,15 @@ export const POST: APIRoute = async ({ request }) => {
 
   const res = await fetch("https://connect.mailerlite.com/api/subscribers", {
     method: "POST",
-    body: JSON.stringify(data.email),
+    body: JSON.stringify(data),
     headers: {
       "Content-type": "application/json; charset=UTF-8",
-      "Accept": "application/json",
+      Accept: "application/json",
       Authentication: `Bearer ${key}`,
     },
   });
+
+  // console.log(res);
 
   const output = await res.json();
   console.log("output is: " + JSON.stringify(output));
