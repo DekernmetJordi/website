@@ -58,7 +58,7 @@ const Rubik = "font-sans";
     const values = Object.fromEntries(formData);
     console.log(values);
     // Bij deze stap wordt het naar de server gestuurd/ de backend
-    const res = await fetch("/api/emailForm", {
+    const res = await fetch("/api/emailForm.json", {
       method: "POST",
       body: JSON.stringify(values),
     });
