@@ -50,11 +50,11 @@ export const POST: APIRoute = async ({ request }) => {
   //   },
   // });
 
-  // const output = await res.json();
-  // console.log("output is: " + JSON.stringify(output));
-  // return new Response(
-  //   JSON.stringify({
-  //     message: output.id ? "success" : "failure",
-  //   })
-  // );
+  const output = await res.json();
+  console.log("output is: " + JSON.stringify(output));
+  return new Response(
+    JSON.stringify({
+      message: output.id ? "success" : "failure",
+    })
+  );
 };
