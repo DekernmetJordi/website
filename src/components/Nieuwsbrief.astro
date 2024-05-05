@@ -13,85 +13,62 @@ const Rubik = "font-sans";
 // "brand-orange": "#E28F50",
 
 // background: linear-gradient(to right, #3a190c, #8b4b2a, #C2783F, #8b4b2a, #3a190c);
+
+// For ECMAScript (ESM)
+// import MailerLite from "@mailerlite/mailerlite-nodejs";
+
+// const params = {
+//   email: "dummy1@example.com",
+//   groups: ["118882712635311623"],
+//   status: "active", // possible statuses: active, unsubscribed, unconfirmed, bounced or junk.
+// };
+
+// // addEventListener("submit", (event) => {
+// //   mailerlite.subscribers
+// //     .createOrUpdate(params)
+// //     .then((response) => {
+// //       console.log(response.data);
+// //     })
+// //     .catch((error) => {
+// //       if (error.response) console.log(error.response.data);
+// //     });
+// // });
+
+// mailerlite.subscribers
+//   .createOrUpdate(params)
+//   .then((response) => {
+//     console.log(response.data);
+//   })
+//   .catch((error) => {
+//     if (error.response) console.log(error.response.data);
+//   });
+
+// type Props = {
+//   mailerlite?: string;
+// };
+
+// const { mailerlite } = Astro.props;
 ---
 
-<!-- <style>
-  /* h1 {
-    color: red;
-  } */
-  #mlb2-14100582.ml-form-embedContainer
-    .ml-form-embedWrapper
-    .ml-form-embedBody
-    .ml-form-embedContent
-    h4,
-  #mlb2-14100582.ml-form-embedContainer
-    .ml-form-embedWrapper
-    .ml-form-successBody
-    .ml-form-successContent
-    h4 {
-    color: #111827;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    font-size: 36px;
-    font-weight: 700;
-    margin: 0 0 10px 0;
-    text-align: left;
-    word-break: break-word;
-  }
-</style> -->
+<script>
+  const newPostForm = document.querySelector("#add-post") as HTMLFormElement;
+  newPostForm?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const formData = new FormData(newPostForm);
+    const values = Object.fromEntries(formData);
+    console.log(values);
+    // Bij deze stap wordt het naar de server gestuurd/ de backend
+    const res = await fetch("/api/emailForm.json", {
+      method: "POST",
+      body: JSON.stringify(values),
+    });
 
-<!-- <script>
-  console.log("Broek");
-  window.onload = function(){
-    console.log("tas")
-    const brief = document.querySelectorAll(".brief");
-    const h4 = document.querySelectorAll("h4");
-    const p = document.querySelectorAll("p");
-    const button = document.querySelector(".primary");
-    const span = document.querySelectorAll("span");
-    const div = document.querySelectorAll("div");
-    const input = document.querySelectorAll("input");
-
-    // brief.style.fontFamily = "font-sans";
-    // h4.style.fontFamily = "font-sans";
-    // p.style.fontFamily = "font-sans";
-    button.style.fontFamily = "font-sans";
-    // span.style.fontFamily = "font-sans";
-    // div.style.fontFamily = "font-sans";
-
-    console.log(button);
-
-    h4.forEach(element => {
-      // console.log(element)
-      element.style.fontFamily = "font-sans";
-    })
-
-    p.forEach(element => {
-      // console.log(element)
-      element.style.fontFamily = "font-sans";
-    })
-
-    span.forEach(element => {
-      // console.log(element)
-      element.style.fontFamily = "font-sans";
-    })
-
-    // button.forEach(element => {
-    //   console.log(element)
-    //   element.style.fontFamily = "font-sans";
-    // })
-
-    div.forEach(element => {
-      // console.log(element)
-      element.style.fontFamily = "font-sans";
-    })
-
-    input.forEach(element => {
-      // console.log(element)
-      element.style.fontFamily = "font-sans";
-    })
-
-  }
-</script> -->
+    console.log(res);
+    // Bericht wat komt van de backend/server
+    const { message } = await res.json();
+    console.log("🚀 ~ newPostForm?.addEventListener ~ message:", message);
+  });
+</script>
 
 <section class="relative font-sans brief">
   <div class="container px-2 mx-auto">
@@ -101,7 +78,16 @@ const Rubik = "font-sans";
       <div class=`rounded-xl bg-brand-white`>
         <div class="flex flex-wrap -mx-4">
           <div class="w-full px-4 mb-4 lg:mb-0">
-            <!-- <div class="ml-embedded" data-form="wySunU"></div> -->
+            <!-- action api/emailForm weggehaald -->
+            <form class="max-w-md grid gap-4" id="add-post">
+              <div class="grid">
+                <label for="title">Email</label>
+                <input type="text" name="email" id="email" />
+              </div>
+              <button type="submit" class="text-blue-50 bg-blue-500 p-2"
+                >Submit</button
+              >
+            </form>
           </div>
         </div>
       </div>
