@@ -10,26 +10,26 @@ export const POST: APIRoute = async ({ request }) => {
   const data = await request.json();
   console.log(data);
 
-  const mailerlite = new MailerLite({
-    api_key: key,
-  });
+  // const mailerlite = new MailerLite({
+  //   api_key: key,
+  // });
 
-  const params = {
-    email: data.email,
-    groups: ["118882712635311623"],
-    status: "active", // possible statuses: active, unsubscribed, unconfirmed, bounced or junk.
-  };
+  // const params = {
+  //   email: data.email,
+  //   groups: ["118882712635311623"],
+  //   status: "active", // possible statuses: active, unsubscribed, unconfirmed, bounced or junk.
+  // };
 
-  console.log(params);
+  // console.log(params);
 
-  mailerlite.subscribers
-    .createOrUpdate(params)
-    .then((response) => {
-      console.log(response.data);
-    })
-    .catch((error) => {
-      if (error.response) console.log(error.response.data);
-    });
+  // mailerlite.subscribers
+  //   .createOrUpdate(params)
+  //   .then((response) => {
+  //     console.log(response.data);
+  //   })
+  //   .catch((error) => {
+  //     if (error.response) console.log(error.response.data);
+  //   });
 
   // const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
   //   method: "POST",
@@ -40,12 +40,12 @@ export const POST: APIRoute = async ({ request }) => {
   //     Authentication: `Bearer ${key}`,
   //   },
 
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
+  const res = await fetch("https://connect.mailerlite.com/api/subscribers", {
     method: "POST",
-    body: JSON.stringify(data),
+    body: JSON.stringify(data.email),
     headers: {
       "Content-type": "application/json; charset=UTF-8",
-      // "Accept": "application/json",
+      "Accept": "application/json",
       Authentication: `Bearer ${key}`,
     },
   });
