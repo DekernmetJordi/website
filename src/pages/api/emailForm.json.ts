@@ -36,7 +36,7 @@ export const POST: APIRoute = async ({ request }) => {
       if (error.response) console.log(error.response.data);
       return new Response(
         JSON.stringify({
-          message: error.response,
+          message: error.response.data,
         }))
     });
 
