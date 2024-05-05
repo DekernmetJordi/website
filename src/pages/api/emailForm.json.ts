@@ -15,7 +15,8 @@ export const POST: APIRoute = async ({ request }) => {
   });
 
   const params = {
-    email: data.email,
+    // email: data.email,
+    email: "mjavson@gmail.com",
     groups: ["118882712635311623"],
     status: "active", // possible statuses: active, unsubscribed, unconfirmed, bounced or junk.
   };
