@@ -44,19 +44,19 @@ export const POST: APIRoute = async ({ request }) => {
     method: "POST",
     body: JSON.stringify(data),
     headers: {
-      "Content-type": "application/json; charset=UTF-8",
+      "Content-type": "application/json",
       Accept: "application/json",
-      Authentication: `Bearer ${key}`,
+      Authorization: `Bearer ${key}`,
     },
   });
 
-  // console.log(res);
+  console.log(res);
 
   const output = await res.json();
   console.log("output is: " + JSON.stringify(output));
   return new Response(
     JSON.stringify({
-      message: output.id ? "success" : "failure",
+      message: output ? "success" : "failure",
     })
   );
 };
