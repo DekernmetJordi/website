@@ -15,8 +15,7 @@ export const POST: APIRoute = async ({ request }) => {
   });
 
   const params = {
-    // email: data.email,
-    email: "mjavson@gmail.com",
+    email: data.email,
     groups: ["118882712635311623"],
     status: "active", // possible statuses: active, unsubscribed, unconfirmed, bounced or junk.
   };
@@ -41,21 +40,21 @@ export const POST: APIRoute = async ({ request }) => {
   //     Authentication: `Bearer ${key}`,
   //   },
 
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
-    method: "POST",
-    body: JSON.stringify(data),
-    headers: {
-      "Content-type": "application/json; charset=UTF-8",
-      // "Accept": "application/json",
-      Authentication: `Bearer ${key}`,
-    },
-  });
+  // const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
+  //   method: "POST",
+  //   body: JSON.stringify(data),
+  //   headers: {
+  //     "Content-type": "application/json; charset=UTF-8",
+  //     // "Accept": "application/json",
+  //     Authentication: `Bearer ${key}`,
+  //   },
+  // });
 
-  const output = await res.json();
-  console.log("output is: " + JSON.stringify(output));
-  return new Response(
-    JSON.stringify({
-      message: output.id ? "success" : "failure",
-    })
-  );
+  // const output = await res.json();
+  // console.log("output is: " + JSON.stringify(output));
+  // return new Response(
+  //   JSON.stringify({
+  //     message: output.id ? "success" : "failure",
+  //   })
+  // );
 };
