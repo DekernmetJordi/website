@@ -26,9 +26,18 @@ export const POST: APIRoute = async ({ request }) => {
     .createOrUpdate(params)
     .then((response) => {
       console.log(response.data);
+      return new Response(
+        JSON.stringify({
+          message: response.data,
+        })
+      );
     })
     .catch((error) => {
       if (error.response) console.log(error.response.data);
+      return new Response(
+        JSON.stringify({
+          message: error.response,
+        }))
     });
 
   // const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
@@ -50,11 +59,11 @@ export const POST: APIRoute = async ({ request }) => {
   //   },
   // });
 
-  const output = await res.json();
-  console.log("output is: " + JSON.stringify(output));
-  return new Response(
-    JSON.stringify({
-      message: output.id ? "success" : "failure",
-    })
-  );
+  // const output = await res.json();
+  // console.log("output is: " + JSON.stringify(output));
+  // return new Response(
+  //   JSON.stringify({
+  //     message: output.id ? "success" : "failure",
+  //   })
+  // );
 };
