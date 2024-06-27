@@ -1,5 +1,6 @@
 ---
 import Main from "../components/Main.astro";
+import Html_tag_for_lang_tag from "../components/Html_tag_for_lang_tag.astro";
 import Layout from "../layouts/Layout.astro";
 
 import HeroBanner from "../components/HeroBanner.astro";
@@ -13,18 +14,20 @@ import Footer from "../components/Footer.astro";
 import CallToAction from "../components/CallToAction.astro";
 ---
 
-<Layout
-  title="De kern met Jordi - Unieke Coach in Waalwijk"
-  description="Coachen op een unieke manier zonder poespas daar gaat het om bij De kern met Jordi. De naam zegt het al. Samen gaan wij naar de kern. Alleen de waarheid en niets anders. Samen voor jou. Coachen op onze manier"
->
-  <Main />
-  <HeroBanner />
-  <AboutMeHomepage />
-  <Testimonials />
-  <Features />
-  <BlogsHomepage />
-  <Nieuwsbrief/>
-  <PricingHomepage />
-  <CallToAction />
-  <Footer />
-</Layout>
+<Html_tag_for_lang_tag>
+  <Layout
+    title="De kern met Jordi - Unieke Coach in Waalwijk"
+    description="Coachen op een unieke manier zonder poespas daar gaat het om bij De kern met Jordi. De naam zegt het al. Samen gaan wij naar de kern. Alleen de waarheid en niets anders. Samen voor jou. Coachen op onze manier"
+  >
+    <Main />
+    <HeroBanner />
+    <AboutMeHomepage />
+    <Testimonials />
+    <Features />
+    <BlogsHomepage />
+    <Nieuwsbrief />
+    <PricingHomepage />
+    <CallToAction />
+    <Footer />
+  </Layout>
+</Html_tag_for_lang_tag>

@@ -73,65 +73,64 @@ const {
     opacity: 1;
   }
 </style>
+<!-- Eerst stond hier de html tag met lang attribute, maar is een seperate component geworden. Beetje raar, maar prima -->
+<head>
+  <link rel="sitemap" href="/sitemap-index.xml" />
+  <!-- Google tag (gtag.js) -->
+  <script
+    type="text/partytown"
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-BBBWM7MP0C"></script>
+  <script type="text/partytown">
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-<html lang="nl">
-  <head>
-    <link rel="sitemap" href="/sitemap-index.xml" />
-    <!-- Google tag (gtag.js) -->
-    <script
-      type="text/partytown"
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-BBBWM7MP0C"></script>
-    <script type="text/partytown">
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+    gtag("config", "G-BBBWM7MP0C");
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="description" content={description} />
+  <meta name="viewport" content="width=device-width" />
+  <!-- <meta name="viewport" content="width=device-width initial-scale=1.0" /> -->
+  <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
+  <!-- Zelf toegevoegd van favicon.io-->
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /> -->
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /> -->
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /> -->
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /> -->
+  <!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" /> -->
+  <!--  -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <!--  -->
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="generator" content={Astro.generator} />
+  <title>{title}</title>
+  <!-- Elke pagina komt en gaat nu vloeiend -->
+  <!-- <ViewTransitions transition:persist/> -->
+  <!-- <ViewTransitions transition:animate="slide" /> -->
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={Astro.url} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={image} />
+  <meta property="og:image:alt" content={description} />
 
-      gtag("config", "G-BBBWM7MP0C");
-    </script>
-    <meta charset="UTF-8" />
-    <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width" />
-    <!-- <meta name="viewport" content="width=device-width initial-scale=1.0" /> -->
-    <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
-    <!-- Zelf toegevoegd van favicon.io-->
-    <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /> -->
-    <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /> -->
-    <!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /> -->
-    <!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /> -->
-    <!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" /> -->
-    <!--  -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <!--  -->
-    <link rel="manifest" href="/site.webmanifest" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-    <!-- Elke pagina komt en gaat nu vloeiend -->
-    <!-- <ViewTransitions transition:persist/> -->
-    <!-- <ViewTransitions transition:animate="slide" /> -->
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={Astro.url} />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content={image} />
-    <meta property="og:image:alt" content={description} />
+  <!-- Open Graph / Twitter -->
 
-    <!-- Open Graph / Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content={Astro.url} />
+  <meta property="twitter:title" content={title} />
+  <meta property="twitter:description" content={description} />
+  <meta property="twitter:image" content={image} />
+  <meta property="twitter:image:alt" content={title} />
+  <!--      -->
+  <link rel="stylesheet" href="https://www.dekernmetjordi.nl/style.css" />
 
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={Astro.url} />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={image} />
-    <meta property="twitter:image:alt" content={title} />
-    <!--      -->
-    <link rel="stylesheet" href="https://www.dekernmetjordi.nl/style.css" />
-
-    <!-- MailerLite Universal -->
-    <!-- <script>
+  <!-- MailerLite Universal -->
+  <!-- <script>
       (function (w, d, e, u, f, l, n) {
         (w[f] =
           w[f] ||
@@ -152,17 +151,16 @@ const {
       );
       ml("account", "913490");
     </script> -->
-    <!-- End MailerLite Universal -->
-  </head>
-  <body class="min-h-screen grid grid-rows-[auto,1fr,auto] bg-brand-white">
-    <Header />
-    <slot />
-    <!-- Footer nog goedmaken!! -->
-    <!-- <Footer /> -->
-    <script
-      async
-      src="https://smilejet.com/app/staging-environment/tag.js"
-      data-smj-id="1112PcsogmJ4Vg"
-      crossorigin="anonymous"></script>
-  </body>
-</html>
+  <!-- End MailerLite Universal -->
+</head>
+<body class="min-h-screen grid grid-rows-[auto,1fr,auto] bg-brand-white">
+  <Header />
+  <slot />
+  <!-- Footer nog goedmaken!! -->
+  <!-- <Footer /> -->
+  <script
+    async
+    src="https://smilejet.com/app/staging-environment/tag.js"
+    data-smj-id="1112PcsogmJ4Vg"
+    crossorigin="anonymous"></script>
+</body>
