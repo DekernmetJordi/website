@@ -18,50 +18,6 @@ const Rubik = "font-sans";
 // "brand-orange": "#E28F50",
 ---
 
-<!-- Script voor de nav bar --><!-- <script>
-  // Burger menus
-  // was eerst DOMContentLoaded
-  document.addEventListener("astro:page-load", function () {
-    console.log("pagina is geladen");
-    // open
-    const burger = document.querySelectorAll(".navbar-burger");
-    const menu = document.querySelectorAll(".navbar-menu");
-
-    if (burger.length && menu.length) {
-      for (var i = 0; i < burger.length; i++) {
-        burger[i].addEventListener("click", function () {
-          for (var j = 0; j < menu.length; j++) {
-            menu[j].classList.toggle("hidden");
-          }
-        });
-      }
-    }
-
-    // close
-    const close = document.querySelectorAll(".navbar-close");
-    const backdrop = document.querySelectorAll(".navbar-backdrop");
-
-    if (close.length) {
-      for (var i = 0; i < close.length; i++) {
-        close[i].addEventListener("click", function () {
-          for (var j = 0; j < menu.length; j++) {
-            menu[j].classList.toggle("hidden");
-          }
-        });
-      }
-    }
-
-    if (backdrop.length) {
-      for (var i = 0; i < backdrop.length; i++) {
-        backdrop[i].addEventListener("click", function () {
-          for (var j = 0; j < menu.length; j++) {
-            menu[j].classList.toggle("hidden");
-          }
-        });
-      }
-    }
-  });
-</script> -->
 <script>
   // console.log("header script");
   // astro:page-load
@@ -142,7 +98,7 @@ const Rubik = "font-sans";
       <li>
         <a class="text-sm font-medium" href="/de-manieren">De manieren</a>
       </li>
-      <li><a class="text-sm font-medium" href="/over-jordi">Over Jordi</a></li>
+      <li><a class="text-sm font-medium" href="/over-jordi">Over mij</a></li>
       <li>
         <a class="text-sm font-medium" href="/afspraak-maken">Afspraak maken</a>
       </li>
@@ -194,7 +150,7 @@ const Rubik = "font-sans";
           <li class="mb-1">
             <a
               class="block p-4 text-sm font-medium text-gray-900 hover:bg-gray-50 rounded"
-              href="/over-jordi">Over Jordi</a
+              href="/over-jordi">Over mij</a
             >
           </li>
           <li class="mb-1">
