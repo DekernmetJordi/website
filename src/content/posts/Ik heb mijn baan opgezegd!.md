@@ -116,6 +116,13 @@ Vet hè. Het zijn rije van kostbare data.
 
 De vorm staat nog open, maar dat komt wel goed. Het voelt op dit moment goed om er een boek van te maken en bepaalde stukken te delen via de nieuwsbrief. Wellicht ooit ook een aparte pagina op mijn website waar je de data in kan zien via een dashboard. Wie weet. 
 
+<div
+              class="smj-embed px-3 text-4xl leading-tight font-semibold font-heading"
+              data-deploymentid="embed"
+              data-surveyid="205593"
+            >
+</div>
+
 Het beginwerk hiervan is al gelegd en het is 28-6-2024 gelukt om alle benodigde datapunten te verzamelen en in Excel te krijgen. Wanneer ik verder ben met het verzamelen van de data zal ik het combineren met de bevolkingsgroei en -sterfte. Zo krijg je een nog beter beeld van het geheel. 
 
 Dit is een lang project waar ik af en toe tijd aan zal besteden. Op dit moment staat de basis en wordt de data verzameld. Dus het loopt als waar van zelf. Hier en daar zal ik het proberen te versnellen. Wanneer je hier iets van ziet weet ik niet. Voor mij maakt het ook niet uit of dat over 6 maanden is of pas over 18 maanden. 
@@ -133,7 +140,6 @@ De toekomst is rooskleurig en ik zal bezig zijn met leuke dingen. Jullie zullen 
 Bedankt voor het lezen en geniet van het mooie weer.
 
 Tot snel!
-
 
 ## Wat andere ook lezen
 <ul>
