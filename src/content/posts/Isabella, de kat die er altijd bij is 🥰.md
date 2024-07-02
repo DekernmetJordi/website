@@ -60,7 +60,7 @@ Zoals je ook in het filmpje kan zien doet ze geen vlieg kwaad en is zij ideaal.
 
 Je kan het 🙂.
 
-Meld je aan voor de nieuwsbrief en blijf ook op de hoogte van Isabella!
+Meld je aan voor de nieuwsbrief en blijf ook op de hoogte van Isabella! Ook krijg je het uitgewerkt Hoofdcentrum ongedefinieerd van Human Design dan van mij cadeau. Ga je leuk vinden. Echt wel.
 
 <div
               class="smj-embed px-3 text-4xl leading-tight font-semibold font-heading"

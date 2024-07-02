@@ -114,7 +114,7 @@ Het wordt geweldig.
 
 Vet hè. Het zijn rije van kostbare data. 
 
-De vorm staat nog open, maar dat komt wel goed. Het voelt op dit moment goed om er een boek van te maken en bepaalde stukken te delen via de nieuwsbrief. Wellicht ooit ook een aparte pagina op mijn website waar je de data in kan zien via een dashboard. Wie weet. 
+De vorm staat nog open, maar dat komt wel goed. Het voelt op dit moment goed om er een boek van te maken en bepaalde stukken te delen via de nieuwsbrief (bij aanmelding krijg je ook het Hoofdcentrum ongedefinieerd van Human Design van mij cadeau). Wellicht ooit ook een aparte pagina op mijn website waar je de data in kan zien via een dashboard. Wie weet. 
 
 <div
               class="smj-embed px-3 text-4xl leading-tight font-semibold font-heading"
