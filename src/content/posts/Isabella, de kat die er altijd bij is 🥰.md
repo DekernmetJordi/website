@@ -53,10 +53,8 @@ Zie hieronder voor het leuke filmpje van Isabella.
 
 <!-- ![Filmpje van Isabella, de kat](./Filmpje_van_Isabella.mp4) -->
 
-<!-- <div style="transform: rotate(90deg); width: 515px; height: 760px; overflow: hidden;"> -->
 <iframe 
- width="560" height="315" src="/src/content/posts/Filmpje_van_Isabella.mp4" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<!-- </div> -->
+ width="560" height="315" src="https://www.youtube.com/embed/6ojp7UqiRn0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Het zou natuurlijk geweldig zijn als je toch durft te komen. Dan ben je namelijk verder dan de meeste.
 
