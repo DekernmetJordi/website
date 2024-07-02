@@ -28,7 +28,7 @@ Btw: Als ze slaapt wilt dat gewoon zeggen dat ze moe is, verder niets 🤣.
 
 Niet lang geleden was er een klant die echt letterlijk net voor haar afspraak dit vroeg "Is die in de buurt?". Zie foto hieronder voor bewijsmateriaal.
 
-![Isabella, de kat](./Isabella.jpg)
+![Whatsapp contact met klant over Isabella](./Whatsapp_contact_met_klant_over_Isabella.jpg)
 
 Ik voelde hem al aankomen natuurlijk maar gaf antwoord. Zij reageerde en gaf aan dat ze niets van katten moet hebben en niet kan komen als de kat aanwezig is. Ik natuurlijk een beetje in paniek, maar oké, het is voor 1 uur. Het voelde alleen helemaal niet goed. Dus net voordat de klant kwam heb ik de kat in de wc gestopt zodat ze niet zou gaan rondlopen tijdens de sessie. 
 
@@ -50,8 +50,6 @@ Dus ben je helaas bang of heel erg allergisch voor katten dan kan ik je via een 
 De kat was er namelijk eerst.
 
 Zie hieronder voor het leuke filmpje van Isabella.
-
-<!-- ![Filmpje van Isabella, de kat](./Filmpje_van_Isabella.mp4) -->
 
 <iframe 
  width="560" height="315" src="https://www.youtube.com/embed/6ojp7UqiRn0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
