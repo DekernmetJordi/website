@@ -32,7 +32,7 @@ Niet lang geleden was er een klant die echt letterlijk net voor haar afspraak di
 
 Ik voelde hem al aankomen natuurlijk maar gaf antwoord. Zij reageerde en gaf aan dat ze niets van katten moet hebben en niet kan komen als de kat aanwezig is. Ik natuurlijk een beetje in paniek, maar oké, het is voor 1 uur. Het voelde alleen helemaal niet goed. Dus net voordat de klant kwam heb ik de kat in de wc gestopt zodat ze niet zou gaan rondlopen tijdens de sessie. 
 
-Isabella voelde het aankomen. Ik pakte haar op en liet haar los in de wc. Zij sprong meteen de wc uit.... Het voelde toen helemaal niet goed. Toch ging ik door en stopte ik haar weer in de wc. dit keer met tijdnood. Ik moest moeite doen want zij wilde eruit alsof ik haar in de grot wilde gooien. Ze gooide haar lichaam tegen de grond en begon haar klauwen te gebruiken als ankers zoals een berg klimmer. Tijdens   de sessie huilde ze ook 5 minuten zoals katten dat doen. 
+Isabella voelde het aankomen. Ik pakte haar op en liet haar los in de wc. Zij sprong meteen de wc uit.... Het voelde toen helemaal niet goed. Toch ging ik door en stopte ik haar weer in de wc. dit keer met tijdnood. Ik moest moeite doen want zij wilde eruit alsof ik haar in de grot wilde gooien. Ze gooide haar lichaam tegen de grond en begon haar klauwen te gebruiken als ankers zoals een berg klimmer. Aan het begin van de sessie huilde ze ook zoals katten dat doen.
 
 Het voelde heel slecht.....
 
