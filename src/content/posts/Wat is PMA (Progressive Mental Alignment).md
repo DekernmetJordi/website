@@ -104,7 +104,7 @@ Thuis komen.
 Zie hieronder voor het filmpje over PMA. Wellicht vind je video fijner dan geschreven tekst.
 
 <iframe 
- width="560" height="315" src="https://youtu.be/4KAGQZ0Zp48?si=iaJDh2AorsvqcXYW" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ width="560" height="315" src="https://www.youtube.com/embed/4KAGQZ0Zp48?si=WQJF86jav_zVU9Br" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Conclusie
 
