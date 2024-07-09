@@ -69,7 +69,7 @@ Onder de intimidatie voor de vrouw met mannelijke trekjes zat dus verdriet en wo
 
 Zie hier de reactie van mijn broer via Whatsapp.
 
-![Whatsapp bericht naar mijn broer over de badcluster](./Voorbeeld_PMA_whatsapp_naar_Alexander.png)
+![Whatsapp bericht naar mijn broer over de badcluster](./Voorbeeld_PMA.png)
 
 PMA gebruiken kan dus ook zeker wel iets geinigs hebben.
 
