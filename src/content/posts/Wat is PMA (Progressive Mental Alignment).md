@@ -61,11 +61,11 @@ Bij het duiken gingen wij naar de basisschool, maar ook naar Selena maar vooral 
 
 “Zij heeft je niet geslagen maar wel het stuipen op het lijf gejaagd.” Is hetgeen wat ik doorkreeg. Nou mooi, dat scheelt 😆.
 
-Ik zag ook ineens haar zwarte gedaante die mij heeft vast gepakt. Wij waren te druk en zij zei "Niet doen. Ophouden kwajongen!" Ze was gewoon moe gaven ze boven aan. Vandaar dat ze geïrriteerd was. Ze mochten alleen wel spelen. Ik wilde gewoon spelen. Alexander was ook gewoon aan het spelen maar die sprak ze niet aan en ook niet de andere kinderen. Ze maakte onderscheid tussen ons en haar eigen kroos. Daar was zij liever voor. 
+Ik zag ook ineens haar zwarte gedaante die mij heeft vast gepakt. Wij waren te druk en zij zei "Niet doen. Ophouden kwajongen!" Ze was gewoon moe gaven ze boven aan. Vandaar dat ze geïrriteerd was. Ze mochten alleen wel spelen. Ik wilde gewoon spelen. Mijn broertje was ook gewoon aan het spelen maar die sprak ze niet aan en ook niet de andere kinderen. Ze maakte onderscheid tussen ons en haar eigen kroos. Daar was zij liever voor. 
 
-Ik zag ons ook ineens in hun keuken zitten bij Sinterklaas. Iedereen van haar kleinkinderen kreeg cadeaus behalve wij. Daar zat de pijn. Ik voelde vooral de pijn die Alexander toen voelde. Dat maakte mij zo kwaad en verdrietig. Ze had nooit onderscheid moeten maken. Wij hoorde daar helemaal niet bij te zijn. 
+Ik zag ons ook ineens in hun keuken zitten bij Sinterklaas. Iedereen van haar kleinkinderen kreeg cadeaus behalve wij. Daar zat de pijn. Ik voelde vooral de pijn die mijn broertje toen voelde. Dat maakte mij zo kwaad en verdrietig. Ze had nooit onderscheid moeten maken. Wij hoorde daar helemaal niet bij te zijn. 
 
-Onder de intimidatie voor de vrouw met mannelijke trekjes zat dus verdriet en woede naar Adjes voor het maken van onderscheid en het ons waardeloos doen voelen. Het verdriet en woede was voor mij maar eigenlijk nog meer voor mijn lieve broertje Alexander. Want daar was ik vooral kwaad om, om het verdriet van mijn broer Alexander. Ik heb haar natuurlijk wel even vuil kut wijf genoemd, maar dat was ze zeker. Zo boers en a empathisch.
+Onder de intimidatie voor de vrouw met mannelijke trekjes zat dus verdriet en woede naar Adjes voor het maken van onderscheid en het ons waardeloos doen voelen. Het verdriet en woede was voor mij maar eigenlijk nog meer voor mijn lieve broertje. Want daar was ik vooral kwaad om, om het verdriet van mijn broer. Ik heb haar natuurlijk wel even vuil kut wijf genoemd, maar dat was ze zeker. Zo boers en a empathisch.
 
 Zie hier de reactie van mijn broer via Whatsapp.
 
