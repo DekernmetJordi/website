@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import Jordi_over_mij from "../../public/images/Jordi_over_mij_kleiner.jpg";
+import Avatar_Jordi from "../../public/images/Avatar_Jordi_compressed.png";
 
 // Lettertype - Garamond is voor titels en Rubik voor tekst
 const Garamond = "font-serif";
@@ -11,6 +11,20 @@ const Rubik = "font-sans";
 // "brand-sage": "#BCBC82",
 // "brand-copper": "#C2783F",
 // "prose-text-color": "#374151",
+
+
+const {
+  titleAboutMe,
+  descriptionAboutMe1,
+  descriptionAboutMe2,
+  descriptionAboutMe3,
+  descriptionAboutMe4,
+  descriptionAboutMe5,
+  descriptionAboutMe6,
+  AboutMeCTA,
+} = Astro.props;
+
+
 ---
 
 <style>
@@ -69,11 +83,12 @@ const Rubik = "font-sans";
 <section class="relative pt-10 lg:py-4 bg-brand-sage wavy">
   <div class="container px-4 mx-auto">
     <div class="flex flex-wrap items-center -mx-4">
+      <!-- 5/12 -->
       <div class="relative mt-1 w-full lg:w-5/12 px-4 order-last lg:order-first">
         <Image
-          class="mx-auto lg:mt-0 h-96 lg:h-112 object-cover rounded-lg"
-          src={Jordi_over_mij}
-          alt="Foto van Jordi die uitleg geeft over Human Design"
+          class="mx-auto lg:mt-0 h-112 object-cover rounded-lg"
+          src={Avatar_Jordi}
+          alt="Avatar van Jordi"
           loading="lazy"
         />
       </div>
@@ -82,26 +97,31 @@ const Rubik = "font-sans";
           <h2
             class=`mb-10 mt-10 text-4xl leading-tight font-semibold font-heading`
           >
-            Hej hej, Jordi hier.
+            {titleAboutMe}
           </h2>
           <p class=`mb-6`>
-            Sinds ik bij Debbie Bergmann ben geweest en in de loop der tijd
-            mijzelf heb geheeld met diverse manieren, weet ik hoe het is om je
-            pijn te ontdekken en aan te pakken. Ik ben zelf naar de pijnlijke
-            kern gegaan. Nu alles is schoongemaakt is het eindelijk een fijne
-            plek geworden.
+            {descriptionAboutMe1}
           </p>
           <p class=`mb-6`>
-            Ik wil daarom ook dat meer mensen door de innerlijke pijn gaan en
-            hun ware aard ontdekken. De maatschappij maar vooral jij hebt het
-            nodig. Ook al verdienen zij het niet. Maar dat maakt niet uit. De
-            maatschappij moet je toch loslaten.
+            {descriptionAboutMe2}
+          </p>
+          <p class=`mb-6`>
+            {descriptionAboutMe3}
+          </p>
+          <p class=`mb-6`>
+            {descriptionAboutMe4}
+          </p>
+          <p class=`mb-6`>
+            {descriptionAboutMe5}
+          </p>
+          <p class=`mb-6`>
+            {descriptionAboutMe6}
           </p>
           <!-- block py-3 text-center text-sm leading-normal font-semibold rounded gradient-btn -->
           <!-- small-caps CTA-button inline-block px-6 py-4 mb-3 mr-4 leading-normal rounded gradient-btn -->
           <a
             class="small-caps px-10 py-4 mb-2 inline-block rounded gradient-btn"
-            href="/over-mij">Meer over mij</a
+            href="/over-mij">{AboutMeCTA}</a
           >
         </div>
       </div>
