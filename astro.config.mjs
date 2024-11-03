@@ -15,7 +15,7 @@ export default defineConfig({
   }), partytown()
   // compress()
   ],
-  site: "https://dekernmetjordi.com",
+  site: "https://dekernmetjordi.nl",
   output: "hybrid",
   adapter: netlify(),
   redirects: {
