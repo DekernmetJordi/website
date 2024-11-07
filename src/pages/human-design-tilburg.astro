@@ -9,16 +9,12 @@ import PaddingTopForPages from "../components/PaddingTopForPages.astro";
 import { Image } from "astro:assets";
 // import Isabella from "../../public/images/Isabella.jpg";
 import Jordi from "../../public/images/Jordi_coachen_kleiner.jpg";
-
 import AvatarGoogleReviewHDBibi from "../../public/images/Avatar_Google_Review_HD_Bibi.png";
 import AvatarGoogleReviewHDMieke from "../../public/images/Avatar_Google_Review_HD_Mieke.png";
 import AvatarGoogleReviewHDHilde from "../../public/images/Avatar_Google_Review_HD_Hilde.png";
 import AvatarGoogleReviewHDLoes from "../../public/images/Avatar_Google_Review_HD_Loes.png";
 import AvatarGoogleReviewHDUndine from "../../public/images/Avatar_Google_Review_HD_Undine.png";
 import AvatarGoogleReviewHDRob from "../../public/images/Avatar_Google_Review_HD_Rob.png";
-import AvatarGoogleReviewHDMirna from "../../public/images/Avatar_Google_Review_HD_Mirna.png";
-import AvatarGoogleReviewHDAnnemieke from "../../public/images/Avatar_Google_Review_HD_Annemieke.png";
-
 
 import Signature from "../components/Signature.astro";
 import HeroBannerForPages from "../components/HeroBannerForPages.astro";
@@ -31,6 +27,7 @@ import SocialProofHD from "../components/SocialProofHD.astro";
 import FeaturesForPages from "../components/FeaturesForPages.astro";
 import FAQForPages from "../components/FAQForPages.astro";
 import BenefitsForPages from "../components/BenefitsForPages.astro";
+import ContactForPages from "../components/ContactForPages.astro";
 
 // Lettertype - Garamond is voor titels en Rubik voor tekst
 const Garamond = "font-serif";
@@ -42,36 +39,37 @@ const Rubik = "font-sans";
 // "brand-copper": "#C2783F",
 
 // variable voor hero banner
-const targetKeyword = "Human Design Reading";
+const targetKeyword = "Human Design Tilburg";
 const description =
-  "Kom je echte zelf te weten via een Human Design Reading. face-to-face of online. Laat de lotusbloem bloeien.";
+  "Kom tot je diepste zelf via een Human Design Reading. Praktijk zit in de buurt van Tilburg. Vele uit Tilburg zijn al gekomen. Sessie kan face-to-face of online.";
 const cta = "Geef mij inzichten";
 
 // variable voor de feature gedeelte
 const headTitleFeatures = "De Human Design Reading";
-const titleFeature1 = "Elke reading is uniek";
+const titleFeature1 = "Elke reading is op maat gemaakt";
 const descriptionFeature1 =
-  "Elke Human Design Reading zal 1 uur zijn en wordt aangepast naar jouw wensen. Dus wil je een algemeen beeld krijgen of juist specifiek inzoomen op een centrum dan kan dat. Geef je wensen van te voren aan en het komt helemaal goed.";
-const titleFeature2 = "Je mag met meerdere komen";
+  "Tijdens een Human Design Reading van 1 uur kun je zelf aangeven waar je de focus op wilt leggen. Wil je een algemeen overzicht, of juist diepgaand inzicht in een specifiek centrum? Laat vooraf je voorkeuren weten, zodat we alles precies kunnen afstemmen op jouw wensen.";
+const titleFeature2 = "Je mag anderen meenemen";
 const descriptionFeature2 =
-  "Als jij iemand wilt meenemen mag dat. Als de anderen ook een lezing willen over hun Human Design kun je dat aangeven. Als meerdere personen komen voor een Human Design sessie zal 1 uur extra gereserveerd worden voor de sessie.";
-const titleFeature3 = "De sessie kan op locatie of online";
+  "Wil iemand anders ook een persoonlijke Human Design lezing ontvangen? Dan kun je dit van tevoren aangeven. Bij extra personen zal een extra uur aan de sessie toegevoegd worden om voldoende tijd te hebben voor alle lezingen.";
+const titleFeature3 = "Fysiek of online is geen probleem";
 const descriptionFeature3 =
-  "De sessie kan plaatsvinden in mijn praktijk in Waalwijk of hij kan via videobellen online plaatsvinden. Wat jij het makkelijkste vindt en daar gaan wij voor.";
+  "Je bent welkom in mijn praktijk in Waalwijk, of we kunnen elkaar online ontmoeten via videobellen, net wat jij het prettigst vindt.";
 
 // variable voor de benefite gedeelte
-const headTitleBenefits = "De redenen waarom";
-const titleBenefite1 = "Je gaat leven hoe je echt hoort te leven";
+const headTitleBenefits = "De redenen";
+const titleBenefite1 =
+  "Je gaat kunnen onderscheiden wat van jou is en van een ander";
 const descriptionBenefite1 =
-  "De foto geeft het weer, maar het is echt zo. Je ontwaakt en beklimt de berg op weg naar je hoogste zelf. Je gaat niet langer meer een product zijn van je omgeving maar je eigen weg vinden in het leven. Jouw leven.";
-const titleBenefite2 = "Je gaat weten wat van jouw is en wat van een ander is";
+  "Iedereen heeft gedefinieerde en ongedefinieerde centrums. De ongedefinieerde centrums zijn voor het waarnemen van de energie van buiten. Buiten de persoon in kwestie. Ze zijn echter wel gevoeliger voor invloed. Het voordeel is wel dat ze gaaf zijn. Er zitten namelijk gaven verborgen in de open centrums. Je zal op jouw manier superkrachten krijgen 😄.";
+const titleBenefite2 =
+  "Je Human Design geeft je een dieper gevoel van vertrouwen en stabiliteit";
 const descriptionBenefite2 =
-  "Iedereen heeft gedefinieerde en ongedefinieerde centrums. De ongedefinieerde centrums zijn voor het voelen en ervaren van de energie buiten jezelf, maar ze zijn wel gevoeliger voor invloed. Ze hebben echter wel geweldige gaven en door je bewust te worden van Human Design en jouw design zal je van last naar kracht gaan. De gaven zullen je nog plezieren ook :D.";
-const titleBenefite3 =
-  "Je Human Design geeft je meer vertrouwen en stabiliteit";
-const descriptionBenefite3 =
-  "Door het leren van je design weet je wat je hoort te doen en ook kom je te weten waar je talenten liggen. Dit zorgt voor vertrouwen. Je zal minder gaan twijfelen over jezelf. Ook zal je veel meer jezelf en het leven accepteren. Je weet namelijk waar het vandaan komt.";
+  "Door over je design te weten te komen weet je wat je hoort te doen en waar je talenten liggen. Dit zorgt voor vertrouwen en geloof in jezelf. De zelfsabotage zal verminderen. Hiermee ga je veel meer jezelf en het leven accepteren. Je weet namelijk wat de oorsprong is.";
 const CTA = "Laten wij beginnen";
+const titleBenefite3 = "Je gaat leven zoals het hoort voor jou";
+const descriptionBenefite3 =
+  "Het is echt mogelijk. De foto geeft het mooi weer. Je ontwaakt en beklimt de berg op weg naar je ideale zelf. Je gaat niet langer meer een product zijn van je omgeving maar je eigen weg vinden in het leven.";
 
 // variable voor about me gedeelte
 const titleAboutMe = "Hoi, Jordi hier. Je schattige Human Design coach.";
@@ -90,29 +88,29 @@ const AboutMeCTA = "Meer over mij";
 
 // variable Social Proof - AvatarGoogleReviews zijn te vinden in specifieke component omdat het anders niet werkt via de link en om het simpel te houden.
 const GoogleReview1 =
-  "Jordi heeft een enorme passie voor alles waar Human Design voor staat. Hij kan je op een hele fijne manier uitleggen wat het allemaal betekent en hoe je het kan gebruiken/zien in jouw leven. Zeker een aanrader als je wat meer wilt weten over jou persoonlijke design!";
-  const AvatarGoogleReview1 = AvatarGoogleReviewHDBibi;
-  const NameCustomer1 = "Bibi";
+  "Ik ben net bij Jordi geweest en ben meer te weten gekomen over mijzelf via human design. Hij heeft mij heel veel verteld. Jordi vertelt het op een prettige en kundige manier. Een aanrader dus! Ik kan  ermee vooruit. Dankjewel Jordi😃";
+const AvatarGoogleReview1 = AvatarGoogleReviewHDMieke;
+const NameCustomer1 = "Mieke de Vriend";
 const GoogleReview2 =
-  "Jordi kon me veel meer vertellen over human design en mijn chart dan ik van te voren had kunnen bedenken. Aan de hand van voorbeelden en met zijn aanstekelijke enthousiasme en humor wist hij heldere uitleg en concrete tips te geven. Zeer interessant hoe bepaalde eigenschappen terug te zien zijn in zo'n chart. En fijn die bevestiging dat niet alles wat je ervaart van jezelf is. Ik kijk uit naar onze vervolgsessie en kan Jordi zeker aanbevelen als je meer wilt weten over jouw Kern!";
-  const AvatarGoogleReview2 = AvatarGoogleReviewHDMirna;
-  const NameCustomer2 = "Mirna";
+  "Jordi heeft een enorme passie voor alles waar Human Design voor staat. Hij kan je op een hele fijne manier uitleggen wat het allemaal betekent en hoe je het kan gebruiken/zien in jouw leven. Zeker een aanrader als je wat meer wilt weten over jou persoonlijke design!";
+const AvatarGoogleReview2 = AvatarGoogleReviewHDBibi;
+const NameCustomer2 = "Bibi";
 const GoogleReview3 =
-  "Een hele fijne human design reading gehad van Jordi! Ik had al wat ervaring met human design, maar heb van Jordi op een leuke en inspirerende manier nieuwe inzichten gekregen in mijn design. Je merkt dat hij veel kennis heeft en de verschillende onderdelen van jouw design in context kan plaatsen en voorbeelden gebruikt, op een persoonlijke (en gezellige) wijze, met ruimte en aandacht voor het stellen van vragen.";
-  const AvatarGoogleReview3 = AvatarGoogleReviewHDHilde;
-  const NameCustomer3 = "Hilde van Kessel";
+  "Bij Jordi stilgestaan bij mijn Human design. Hij legt dit met enthousiasme, kennis en praktische voorbeelden uit. Ik ga zeker nog eens terug om verder te verdiepen.";
+const AvatarGoogleReview3 = AvatarGoogleReviewHDRob;
+const NameCustomer3 = "Rob Timmers";
 const GoogleReview4 =
-  "Jordi is een hele aardige betrokken jonge man met heel veel kennis over Human Design wat hij helder weet uit te leggen. Zeker een aanrader!";
-  const AvatarGoogleReview4 = AvatarGoogleReviewHDAnnemieke;
-  const NameCustomer4 = "Annemieke Drent";
+  "Human design sessie gehad bij Jordi. Hij heeft veel kennis en kan duidelijk en leuk vertellen hoe jou design werkt. Ook een tarot legging gehad. Ook die was heel waardevol.";
+const AvatarGoogleReview4 = AvatarGoogleReviewHDLoes;
+const NameCustomer4 = "Loes van Kempen";
 const GoogleReview5 =
   "I recently had a fantastic session with Jordi delving into human design. His explanations were not only knowledgeable but also incredibly easy to understand, making the topic accessible and engaging. If you're interested in learning more about human design, I highly recommend giving one of his sessions a try. Additionally, Jordi also provided coaching on tarot cards in a fun and approachable manner, all while maintaining a high level of expertise. I'm definitely looking forward to scheduling another session with him soon!";
-  const AvatarGoogleReview5 = AvatarGoogleReviewHDUndine;
-  const NameCustomer5 = "Undine Millere";
+const NameCustomer5 = "Undine Millere";
+const AvatarGoogleReview5 = AvatarGoogleReviewHDUndine;
 const GoogleReview6 =
-  "Bij Jordi stilgestaan bij mijn Human design. Hij legt dit met enthousiasme, kennis en praktische voorbeelden uit. Ik ga zeker nog eens terug om verder te verdiepen.";
-  const AvatarGoogleReview6 = AvatarGoogleReviewHDRob;
-  const NameCustomer6 = "Rob Timmers";
+  "Een hele fijne human design reading gehad van Jordi! Ik had al wat ervaring met human design, maar heb van Jordi op een leuke en inspirerende manier nieuwe inzichten gekregen in mijn design. Je merkt dat hij veel kennis heeft en de verschillende onderdelen van jouw design in context kan plaatsen en voorbeelden gebruikt, op een persoonlijke (en gezellige) wijze, met ruimte en aandacht voor het stellen van vragen.";
+const AvatarGoogleReview6 = AvatarGoogleReviewHDHilde;
+const NameCustomer6 = "Hilde van Kessel";
 
 // variable voor Pricing/Product gedeelte
 const titleProduct1 = "Human Design Sessie";
@@ -159,11 +157,14 @@ const descriptionQuestion4 =
 const titleQuestion5 = "Mag ik je even snel iets vragen...?";
 const descriptionQuestion5 =
   "Zeker. Geen probleem. Ook al ben jij nog niet bij mij geweest. Je kan mij mailen op info@dekernmetjordi.com of whatsappen op +31 6 39556179.";
+
+// variable voor contact gedeelte
+const descriptionContactForPages = "De kern met Jordi zit in Waalwijk";
 ---
 
 <Layout
-  title="Human Design Reading"
-  description="Op deze pagina is alles te vinden over de Human Design Reading bij De kern met Jordi."
+  title="Human Design Tilburg"
+  description="Op deze pagina is alles te vinden over de Human Design reading bij De kern met Jordi. In de buurt van Tilburg en de sessie kan face-to-face of online."
 >
   <!-- <Section> -->
   <PaddingTopForPages>
@@ -256,6 +257,7 @@ const descriptionQuestion5 =
       titleQuestion5={titleQuestion5}
       descriptionQuestion5={descriptionQuestion5}
     />
+    <ContactForPages descriptionContactForPages={descriptionContactForPages} />
     <CallToActionForPages
       titleCTA={titleCTA}
       descriptionUnderCTATitle={descriptionUnderCTATitle}

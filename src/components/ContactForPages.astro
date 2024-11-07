@@ -1,0 +1,64 @@
+---
+import { Image } from "astro:assets";
+import Avatar_Jordi from "../../public/images/Avatar_Jordi_compressed.png";
+
+// Lettertype - Garamond is voor titels en Rubik voor tekst
+const Garamond = "font-serif";
+const Rubik = "font-sans";
+
+// Merk kleurencode. Gebruik bg-brand-white in class om toe te passen.
+// "brand-white": "#F1F1F1",
+// "brand-sage": "#BCBC82",
+// "brand-copper": "#C2783F",
+// "prose-text-color": "#374151",
+
+const { descriptionContactForPages } = Astro.props;
+---
+
+<style>
+  .map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+  }
+
+  .google-maps {
+    left: 0;
+    top: 0;
+    height: 450px;
+    width: 100%;
+    /* position: absolute; */
+  }
+</style>
+
+<section class="pt-20">
+  <div class="container px-4 mx-auto mb-20">
+    <div class="flex flex-wrap items-center justify-between -mx-4">
+      <div class="w-full lg:w-auto px-4 mb-12 lg:mb-0">
+        <div class="max-w-lg">
+          <h2 class="mb-4 text-4xl font-semibold font-heading">
+            {descriptionContactForPages}
+          </h2>
+          <p class="text-gray-500">De praktijk is gelegen in het mooie Waalwijk en zit heel dichtbij de snelweg (max 20 min), dus je bent zo bij mij ;).</p>
+        </div>
+      </div>
+      <div class="w-full lg:w-auto px-4">
+        <h3 class="mb-4 text-2xl font-semibold font-heading">Adres</h3>
+        <p class="text-gray-500">Professor Piersonstraat 22</p>
+        <p class="mb-10 lg:mb-8 text-gray-500">5142 EM Waalwijk</p>
+        <h3 class="mb-4 text-2xl font-semibold font-heading">Contact</h3>
+        <p class="text-gray-500">info@dekernmetjordi.com</p>
+        <p class="text-gray-500">+31 6 39556179</p>
+      </div>
+    </div>
+  </div>
+  <div class="mb-20 relative .map-responsive">
+    <iframe
+      class="google-maps"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2473.2193687983!2d5.080035677649447!3d51.69243059716817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c693c8d57f2651%3A0x39a381fa1634814a!2sProfessor%20Piersonstraat%2022%2C%205142%20EM%20Waalwijk!5e0!3m2!1snl!2snl!4v1704197143626!5m2!1snl!2snl"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
