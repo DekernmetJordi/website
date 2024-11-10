@@ -9,12 +9,12 @@ import PaddingTopForPages from "../components/PaddingTopForPages.astro";
 import { Image } from "astro:assets";
 // import Isabella from "../../public/images/Isabella.jpg";
 import Jordi from "../../public/images/Jordi_coachen_kleiner.jpg";
-import AvatarGoogleReviewHDBibi from "../../public/images/Avatar_Google_Review_HD_Bibi.png";
-import AvatarGoogleReviewHDMieke from "../../public/images/Avatar_Google_Review_HD_Mieke.png";
-import AvatarGoogleReviewHDHilde from "../../public/images/Avatar_Google_Review_HD_Hilde.png";
-import AvatarGoogleReviewHDLoes from "../../public/images/Avatar_Google_Review_HD_Loes.png";
-import AvatarGoogleReviewHDUndine from "../../public/images/Avatar_Google_Review_HD_Undine.png";
-import AvatarGoogleReviewHDRob from "../../public/images/Avatar_Google_Review_HD_Rob.png";
+import AvatarGoogleReviewHDBibi from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Bibi.png";
+import AvatarGoogleReviewHDMieke from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Mieke.png";
+import AvatarGoogleReviewHDHilde from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Hilde.png";
+import AvatarGoogleReviewHDLoes from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Loes.png";
+import AvatarGoogleReviewHDUndine from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Undine.png";
+import AvatarGoogleReviewHDRob from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Rob.png";
 
 import Signature from "../components/Signature.astro";
 import HeroBannerForPages from "../components/HeroBannerForPages.astro";
@@ -23,7 +23,7 @@ import PricingForPages from "../components/PricingForPages.astro";
 import CallToActionForPages from "../components/CallToActionForPages.astro";
 import Testimonials from "../components/Testimonials.astro";
 import AboutMeForPages from "../components/AboutMeForPages.astro";
-import SocialProofHD from "../components/SocialProofHD.astro";
+import SocialProof from "../components/SocialProof.astro";
 import FeaturesForPages from "../components/FeaturesForPages.astro";
 import FAQForPages from "../components/FAQForPages.astro";
 import BenefitsForPages from "../components/BenefitsForPages.astro";
@@ -87,6 +87,7 @@ const descriptionAboutMe6 = "Ik vind het oprecht leuk om te coachen.";
 const AboutMeCTA = "Meer over mij";
 
 // variable Social Proof - AvatarGoogleReviews zijn te vinden in specifieke component omdat het anders niet werkt via de link en om het simpel te houden.
+const Subtitle = "Degenen die je voorgingen:";
 const GoogleReview1 =
   "Ik ben net bij Jordi geweest en ben meer te weten gekomen over mijzelf via human design. Hij heeft mij heel veel verteld. Jordi vertelt het op een prettige en kundige manier. Een aanrader dus! Ik kan  ermee vooruit. Dankjewel Jordi😃";
 const AvatarGoogleReview1 = AvatarGoogleReviewHDMieke;
@@ -203,7 +204,8 @@ const descriptionContactForPages = "De kern met Jordi zit in Waalwijk";
       AboutMeCTA={AboutMeCTA}
     />
     <!-- <Testimonials /> -->
-    <SocialProofHD
+    <SocialProof
+    Subtitle={Subtitle}
       GoogleReview1={GoogleReview1}
       AvatarGoogleReview1={AvatarGoogleReview1}
       NameCustomer1={NameCustomer1}

@@ -10,15 +10,14 @@ import { Image } from "astro:assets";
 // import Isabella from "../../public/images/Isabella.jpg";
 import Jordi from "../../public/images/Jordi_coachen_kleiner.jpg";
 
-import AvatarGoogleReviewHDBibi from "../../public/images/Avatar_Google_Review_HD_Bibi.png";
-import AvatarGoogleReviewHDMieke from "../../public/images/Avatar_Google_Review_HD_Mieke.png";
-import AvatarGoogleReviewHDHilde from "../../public/images/Avatar_Google_Review_HD_Hilde.png";
-import AvatarGoogleReviewHDLoes from "../../public/images/Avatar_Google_Review_HD_Loes.png";
-import AvatarGoogleReviewHDUndine from "../../public/images/Avatar_Google_Review_HD_Undine.png";
-import AvatarGoogleReviewHDRob from "../../public/images/Avatar_Google_Review_HD_Rob.png";
-import AvatarGoogleReviewHDMirna from "../../public/images/Avatar_Google_Review_HD_Mirna.png";
-import AvatarGoogleReviewHDAnnemieke from "../../public/images/Avatar_Google_Review_HD_Annemieke.png";
-
+import AvatarGoogleReviewHDBibi from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Bibi.png";
+import AvatarGoogleReviewHDMieke from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Mieke.png";
+import AvatarGoogleReviewHDHilde from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Hilde.png";
+import AvatarGoogleReviewHDLoes from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Loes.png";
+import AvatarGoogleReviewHDUndine from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Undine.png";
+import AvatarGoogleReviewHDRob from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Rob.png";
+import AvatarGoogleReviewHDMirna from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Mirna.png";
+import AvatarGoogleReviewHDAnnemieke from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Annemieke.png";
 
 import Signature from "../components/Signature.astro";
 import HeroBannerForPages from "../components/HeroBannerForPages.astro";
@@ -27,7 +26,7 @@ import PricingForPages from "../components/PricingForPages.astro";
 import CallToActionForPages from "../components/CallToActionForPages.astro";
 import Testimonials from "../components/Testimonials.astro";
 import AboutMeForPages from "../components/AboutMeForPages.astro";
-import SocialProofHD from "../components/SocialProofHD.astro";
+import SocialProof from "../components/SocialProof.astro";
 import FeaturesForPages from "../components/FeaturesForPages.astro";
 import FAQForPages from "../components/FAQForPages.astro";
 import BenefitsForPages from "../components/BenefitsForPages.astro";
@@ -89,30 +88,31 @@ const descriptionAboutMe6 = "Ik vind het oprecht leuk om te coachen.";
 const AboutMeCTA = "Meer over mij";
 
 // variable Social Proof - AvatarGoogleReviews zijn te vinden in specifieke component omdat het anders niet werkt via de link en om het simpel te houden.
+const Subtitle = "Degenen die je voorgingen:";
 const GoogleReview1 =
   "Jordi heeft een enorme passie voor alles waar Human Design voor staat. Hij kan je op een hele fijne manier uitleggen wat het allemaal betekent en hoe je het kan gebruiken/zien in jouw leven. Zeker een aanrader als je wat meer wilt weten over jou persoonlijke design!";
-  const AvatarGoogleReview1 = AvatarGoogleReviewHDBibi;
-  const NameCustomer1 = "Bibi";
+const AvatarGoogleReview1 = AvatarGoogleReviewHDBibi;
+const NameCustomer1 = "Bibi";
 const GoogleReview2 =
   "Jordi kon me veel meer vertellen over human design en mijn chart dan ik van te voren had kunnen bedenken. Aan de hand van voorbeelden en met zijn aanstekelijke enthousiasme en humor wist hij heldere uitleg en concrete tips te geven. Zeer interessant hoe bepaalde eigenschappen terug te zien zijn in zo'n chart. En fijn die bevestiging dat niet alles wat je ervaart van jezelf is. Ik kijk uit naar onze vervolgsessie en kan Jordi zeker aanbevelen als je meer wilt weten over jouw Kern!";
-  const AvatarGoogleReview2 = AvatarGoogleReviewHDMirna;
-  const NameCustomer2 = "Mirna";
+const AvatarGoogleReview2 = AvatarGoogleReviewHDMirna;
+const NameCustomer2 = "Mirna";
 const GoogleReview3 =
   "Een hele fijne human design reading gehad van Jordi! Ik had al wat ervaring met human design, maar heb van Jordi op een leuke en inspirerende manier nieuwe inzichten gekregen in mijn design. Je merkt dat hij veel kennis heeft en de verschillende onderdelen van jouw design in context kan plaatsen en voorbeelden gebruikt, op een persoonlijke (en gezellige) wijze, met ruimte en aandacht voor het stellen van vragen.";
-  const AvatarGoogleReview3 = AvatarGoogleReviewHDHilde;
-  const NameCustomer3 = "Hilde van Kessel";
+const AvatarGoogleReview3 = AvatarGoogleReviewHDHilde;
+const NameCustomer3 = "Hilde van Kessel";
 const GoogleReview4 =
   "Jordi is een hele aardige betrokken jonge man met heel veel kennis over Human Design wat hij helder weet uit te leggen. Zeker een aanrader!";
-  const AvatarGoogleReview4 = AvatarGoogleReviewHDAnnemieke;
-  const NameCustomer4 = "Annemieke Drent";
+const AvatarGoogleReview4 = AvatarGoogleReviewHDAnnemieke;
+const NameCustomer4 = "Annemieke Drent";
 const GoogleReview5 =
   "I recently had a fantastic session with Jordi delving into human design. His explanations were not only knowledgeable but also incredibly easy to understand, making the topic accessible and engaging. If you're interested in learning more about human design, I highly recommend giving one of his sessions a try. Additionally, Jordi also provided coaching on tarot cards in a fun and approachable manner, all while maintaining a high level of expertise. I'm definitely looking forward to scheduling another session with him soon!";
-  const AvatarGoogleReview5 = AvatarGoogleReviewHDUndine;
-  const NameCustomer5 = "Undine Millere";
+const AvatarGoogleReview5 = AvatarGoogleReviewHDUndine;
+const NameCustomer5 = "Undine Millere";
 const GoogleReview6 =
   "Bij Jordi stilgestaan bij mijn Human design. Hij legt dit met enthousiasme, kennis en praktische voorbeelden uit. Ik ga zeker nog eens terug om verder te verdiepen.";
-  const AvatarGoogleReview6 = AvatarGoogleReviewHDRob;
-  const NameCustomer6 = "Rob Timmers";
+const AvatarGoogleReview6 = AvatarGoogleReviewHDRob;
+const NameCustomer6 = "Rob Timmers";
 
 // variable voor Pricing/Product gedeelte
 const titleProduct1 = "Human Design Sessie";
@@ -202,7 +202,8 @@ const descriptionQuestion5 =
       AboutMeCTA={AboutMeCTA}
     />
     <!-- <Testimonials /> -->
-    <SocialProofHD
+    <SocialProof
+      Subtitle={Subtitle}
       GoogleReview1={GoogleReview1}
       AvatarGoogleReview1={AvatarGoogleReview1}
       NameCustomer1={NameCustomer1}

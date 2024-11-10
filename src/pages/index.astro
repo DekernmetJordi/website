@@ -12,6 +12,47 @@ import BlogsHomepage from "../components/BlogsHomepage.astro";
 import PricingHomepage from "../components/PricingHomepage.astro";
 import Footer from "../components/Footer.astro";
 import CallToAction from "../components/CallToAction.astro";
+
+import AvatarGoogleReviewHDBibi from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Bibi.png";
+import AvatarGoogleReviewMieke from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Mieke.png";
+import AvatarGoogleReviewHilde from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Hilde.png";
+import AvatarGoogleReviewLoes from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Loes.png";
+import AvatarGoogleReviewUndine from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Undine.png";
+import AvatarGoogleReviewRob from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Rob.png";
+import AvatarGoogleReviewMirna from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Mirna.png";
+import AvatarGoogleReviewAnnemieke from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Annemieke.png";
+import AvatarGoogleReviewKatrien from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Katrien.png";
+import AvatarGoogleReviewSydney from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Sydney.png";
+import AvatarGoogleReviewManouk from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Manouk.png";
+
+import SocialProof from "../components/SocialProof.astro";
+
+// variable Social Proof - AvatarGoogleReviews zijn te vinden in specifieke component omdat het anders niet werkt via de link en om het simpel te houden.
+const Subtitle = "Degenen die je voorgingen:";
+const GoogleReview1 =
+  "I recently had a fantastic session with Jordi delving into human design. His explanations were not only knowledgeable but also incredibly easy to understand, making the topic accessible and engaging. If you're interested in learning more about human design, I highly recommend giving one of his sessions a try. Additionally, Jordi also provided coaching on tarot cards in a fun and approachable manner, all while maintaining a high level of expertise. I'm definitely looking forward to scheduling another session with him soon!";
+const AvatarGoogleReview1 = AvatarGoogleReviewUndine;
+const NameCustomer1 = "Undine Millere";
+const GoogleReview2 =
+  "Jordi brengt inzicht in je eigen leven. Hij is enorm sympathiek en neemt de tijd om zijn kennis te delen en te bespreken. Normaal schrijf ik geen reviews, maar voor jordi maak ik een uitzondering. Zeker 5/5 sterren waard en de moeite om er een uur voor naartoe te rijden. Ik kom alvast terug.";
+const AvatarGoogleReview2 = AvatarGoogleReviewKatrien;
+const NameCustomer2 = "Katrien";
+const GoogleReview3 =
+  "Samen met twee vriendinnen voor het eerst een tarotkaarten lezing gehad. Super leuke eerste ervaring. Jordi was erg vriendelijk en stelde ons erg op ons gemak. Ook nam hij de tijd voor ons, we waren iets uitgelopen. Al met al een fijne ervaring!";
+const AvatarGoogleReview3 = AvatarGoogleReviewSydney;
+const NameCustomer3 = "Sydney Kamstra";
+const GoogleReview4 =
+  "Jordi heeft een enorme passie voor alles waar Human Design voor staat. Hij kan je op een hele fijne manier uitleggen wat het allemaal betekent en hoe je het kan gebruiken/zien in jouw leven. Zeker een aanrader als je wat meer wilt weten over jou persoonlijke design!";
+const AvatarGoogleReview4 = AvatarGoogleReviewHDBibi;
+const NameCustomer4 = "Bibi";
+const GoogleReview5 =
+  "Bij Jordi stilgestaan bij mijn Human design. Hij legt dit met enthousiasme, kennis en praktische voorbeelden uit. Ik ga zeker nog eens terug om verder te verdiepen.";
+const AvatarGoogleReview5 = AvatarGoogleReviewRob;
+const NameCustomer5 = "Rob Timmers";
+const GoogleReview6 =
+  "Mijn moeder en ik hadden onlangs een reiki- en tarot-sessie bij Jordi. We zijn heel tevreden! Hij was vriendelijk en zorgzaam, en stelde ons direct op ons gemak. De ruimte was rustig en ontspannen, wat hielp om te ontspannen. Tijdens de reiki-sessie voelden we ons beide ontspannen. De tarot-sessie gaf ons veel inzicht en nuttige adviezen. Hij legde alles duidelijk uit en nam de tijd voor ons. We voelden ons gehoord en begrepen. We zouden hem zeker aanraden voor reiki en tarot. Bedankt, Jordi, voor deze bijzondere ervaring!";
+const AvatarGoogleReview6 = AvatarGoogleReviewManouk;
+const NameCustomer6 = "Manouk";
 ---
 
 <Html_tag_for_lang_tag>
@@ -23,6 +64,27 @@ import CallToAction from "../components/CallToAction.astro";
     <HeroBanner />
     <AboutMeHomepage />
     <Testimonials />
+    <SocialProof
+      Subtitle={Subtitle}
+      GoogleReview1={GoogleReview1}
+      AvatarGoogleReview1={AvatarGoogleReview1}
+      NameCustomer1={NameCustomer1}
+      GoogleReview2={GoogleReview2}
+      AvatarGoogleReview2={AvatarGoogleReview2}
+      NameCustomer2={NameCustomer2}
+      GoogleReview3={GoogleReview3}
+      AvatarGoogleReview3={AvatarGoogleReview3}
+      NameCustomer3={NameCustomer3}
+      GoogleReview4={GoogleReview4}
+      AvatarGoogleReview4={AvatarGoogleReview4}
+      NameCustomer4={NameCustomer4}
+      GoogleReview5={GoogleReview5}
+      AvatarGoogleReview5={AvatarGoogleReview5}
+      NameCustomer5={NameCustomer5}
+      GoogleReview6={GoogleReview6}
+      AvatarGoogleReview6={AvatarGoogleReview6}
+      NameCustomer6={NameCustomer6}
+    />
     <Features />
     <BlogsHomepage />
     <Nieuwsbrief />

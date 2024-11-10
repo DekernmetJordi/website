@@ -3,12 +3,12 @@ import { Image } from "astro:assets";
 import Avatar_Jordi from "../../public/images/Avatar_Jordi_compressed.png";
 
 import GoogleLogoTransparent from "../../public/images/google-logo-transparent.png";
-import AvatarGoogleReviewHDBibi from "../../public/images/Avatar_Google_Review_HD_Bibi.png";
-import AvatarGoogleReviewHDMirna from "../../public/images/Avatar_Google_Review_HD_Mirna.png";
-import AvatarGoogleReviewHDHilde from "../../public/images/Avatar_Google_Review_HD_Hilde.png";
-import AvatarGoogleReviewHDAnnemieke from "../../public/images/Avatar_Google_Review_HD_Annemieke.png";
-import AvatarGoogleReviewHDUndine from "../../public/images/Avatar_Google_Review_HD_Undine.png";
-import AvatarGoogleReviewHDRob from "../../public/images/Avatar_Google_Review_HD_Rob.png";
+import AvatarGoogleReviewHDBibi from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_HD_Bibi.png";
+import AvatarGoogleReviewHDMirna from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_HD_Mirna.png";
+import AvatarGoogleReviewHDHilde from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_HD_Hilde.png";
+import AvatarGoogleReviewHDAnnemieke from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_HD_Annemieke.png";
+import AvatarGoogleReviewHDUndine from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_HD_Undine.png";
+import AvatarGoogleReviewHDRob from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_HD_Rob.png";
 
 // Lettertype - Garamond is voor titels en Rubik voor tekst
 const Garamond = "font-serif";
@@ -21,6 +21,7 @@ const Rubik = "font-sans";
 // "prose-text-color": "#374151",
 
 const {
+  Subtitle,
   GoogleReview1,
   // AvatarGoogleReview1 = "https://lh3.googleusercontent.com/a-/ALV-UjU7McNgfJ7-J9uXHw6knj8ZIPqxOi1bYOVVKpUEiqvDsnVgM0Ns=w60-h60-p-rp-mo-br100",
   AvatarGoogleReview1,
@@ -62,7 +63,7 @@ console.log(AvatarGoogleReview1);
         <div class="text-xl">(+30 reviews)</div>
       </div>
       <p class="text-xl text-gray-500">
-        Wat andere over de Human Design sessies zeggen.
+        {Subtitle}
       </p>
     </div>
     <div class="flex flex-wrap justify-around -m-3">
