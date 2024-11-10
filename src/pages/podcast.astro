@@ -1,0 +1,398 @@
+---
+import { Image } from "astro:assets";
+import JordiHumanDesign from "../../public/images/Jordi_van_Ravesteijn_Human_Design_Chart_kleiner.jpg";
+import Tarot from "../../public/images/Tarot_kleiner.jpg";
+import Reiki_met_Alexander from "../../public/images/Reiki_met_Alexander_klein.jpg";
+import DiscordIcon from "../components/DiscordIcon.astro";
+import SpotifyIcon from "../components/SpotifyIcon.astro";
+import YoutubeIcon from "../components/YoutubeIcon.astro";
+
+import Layout from "../layouts/Layout.astro";
+import Main from "../components/Main.astro";
+import Footer from "../components/Footer.astro";
+
+import Section from "../components/Section.astro";
+import PaddingTopForPages from "../components/PaddingTopForPages.astro";
+
+// Lettertype - Garamond is voor titels en Rubik voor tekst
+const Garamond = "font-serif";
+const Rubik = "font-sans";
+
+// Merk kleurencode. Gebruik bg-brand-white in class om toe te passen.
+// "brand-white": "#F1F1F1",
+// "brand-sage": "#BCBC82",
+// "brand-copper": "#C2783F",
+---
+
+<script>
+  // document.addEventListener("DOMContentLoaded", function () {
+  //   //   // Selecteer het element
+  //   const text = document.getElementById("textContent");
+  //   console.log(text);
+
+  //   // function clickFunction() {
+  //   //   console.log("Ik heb geklikt op de specifieke tekst.");
+  //   // }
+
+  //   // // Voeg de event-listener toe aan elk element met de klasse 'TextUnpacked'
+  //   // text.forEach((element) => {
+  //   //   element.addEventListener("click", clickFunction());
+  //   // });
+  // });
+
+  // function toggleText() {
+  //   const text = document.getElementById("textContent");
+  //   console.log(text);
+  //   text.classList.toggle("line-clamp-2");
+  // }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    // Select all <p> tags
+    const paragraphs = document.querySelectorAll(".TextUnpacked");
+
+    // Add click event listener to each <p> tag
+    paragraphs.forEach((paragraph) => {
+      paragraph.addEventListener("click", () => {
+        console.log("Paragraph clicked!");
+        paragraph.classList.toggle("line-clamp-2");
+      });
+    });
+  });
+</script>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+  a {
+    /* color: #C2783F; */
+    /* text-decoration: underline; */
+  }
+  /* a:link {
+    color: blue;
+    text-decoration: underline;
+  }
+  a:visited {
+    color: purple;
+    text-decoration: underline;
+  } */
+</style>
+
+<Layout
+  title="De kern met Jordi Podcast"
+  description="Op deze pagina alles over De kern met Jordi Podcast. Waar het gaat om zelfontwikkeling, vragen stellen in plaats van antwoorden geven en spiritualiteit. Kom dat beluisteren!!!"
+>
+  <Section>
+    <PaddingTopForPages>
+      <section class="mb-8">
+        <div class="container px-4 mx-auto pt-12 bg-brand-white mb-10">
+          <div class="flex flex-wrap items-center -mx-4">
+            <div class="w-full md:w-1/2 px-4 mb-6 md:mb-0">
+              <h1
+                class=`mt-8 mb-6 lg:mb-12 text-5xl lg:text-6xl font-bold `
+                lang="nl"
+              >
+                De kern met Jordi Podcast
+              </h1>
+              <div class="max-w-lg mb-6 lg:mb-12">
+                <p class=`mb-6 text-2xl`>
+                  Zie op deze pagina alle podcast afleveringen van De kern met
+                  Jordi Podcast. Begin bij het manifest zou ik zeggen ;).
+                </p>
+                <p class=`mb-6 text-2xl`>
+                  De laatste serie gaat over het innerlijk kind en is menig mens
+                  zeer aan te bevelen. Wij hebben namelijk allemaal een kleine
+                  zelf in ons.
+                </p>
+                <p class=`mb-6 text-2xl`>
+                  Zie hier rechts het Podcast Manifest en hieronder de losse
+                  afleveringen.
+                </p>
+              </div>
+              <div class="flex">
+                <a
+                  class="flex justify-center items-center w-10 h-10 mr-4 bg-gray-50 rounded-full"
+                  href="https://open.spotify.com/show/77ko5J6jfeXGoTwybpItY2?si=f0f29e8ecf0745ef"
+                  target="_blank"
+                >
+                  <SpotifyIcon />
+                </a>
+                <a
+                  class="flex justify-center items-center w-10 h-10 mr-4 bg-gray-50 rounded-full"
+                  href="https://www.youtube.com/playlist?list=PL249S2sTkUBSoZbOScOR1aayoajsRF_aQ"
+                  target="_blank"
+                >
+                  <YoutubeIcon />
+                </a>
+              </div>
+            </div>
+            <!-- w-full md:w-1/2 px-4 mb-4 md:mb-0 -->
+            <!-- relative rounded-lg -->
+            <div class="relative w-full md:w-1/2 px-4">
+              <iframe
+                style="border-radius:12px"
+                src="https://open.spotify.com/embed/playlist/293W2TUNdg4D3fVb2zZJ33?utm_source=generator"
+                width="100%"
+                height="352"
+                frameBorder="0"
+                allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-[auto,1fr] gap-x-14 gap-y-3 mb-16 max-lg:grid-cols-1"
+        >
+          <h2 class="font-bold text-5xl">Serie 1: Het innerlijk kind</h2>
+        </div>
+        <div class="mb-12">
+          <!-- Is gecommit omdat er nog geen voldoende blogs zijn. Bij meer dan 6 blogs kan het -->
+          <!-- <Pagination prevURL={page.url.prev} nextURL={page.url.next} /> -->
+        </div>
+        <!-- grid grid-cols-2 gap-x-16 gap-y-32 max-md:grid-cols-1 max-sm:gap-y-14 -->
+        <div
+          class="grid grid-cols-2 gap-x-16 gap-y-32 max-md:grid-cols-1 max-sm:gap-y-14"
+        >
+          <article>
+            <iframe
+              style="border-radius:12px"
+              src="https://open.spotify.com/embed/playlist/5uG4Do2nFAQAYfb3vITAx0?utm_source=generator"
+              width="100%"
+              height="152"
+              frameBorder="0"
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"></iframe>
+            <h2 class="mt-6 mb-10 text-4xl font-semibold font-heading">
+              S1/#0 De voorbeschouwing | De kern met Jordi
+            </h2>
+            <p class="text-xl mb-6 line-clamp-2 TextUnpacked">
+              In deze voorbeschouwing neem ik je mee op een reis naar het
+              innerlijke kind: een krachtbron die ons herinnert aan onze
+              intuïtie, speelsheid, en het vermogen om echt te leven.<br /><br
+              />
+              In deze aflevering deel ik mijn inzichten en persoonlijke ervaringen
+              rondom het innerlijke kind, waarom dit thema de laatste tijd zo veel
+              voorkomt in mijn praktijk, en hoe het van waarde is in ons leven.<br
+              /><br />
+              In de komende afleveringen ga ik in gesprek met coaches en andere experts
+              om samen antwoorden te vinden op prikkelende vragen als: wat is het
+              innerlijke kind echt, hoe weet je of het gelukkig is, en wat heb je
+              eraan? We sluiten de serie af met een reflectie-aflevering, waarin
+              ik mijn eigen inzichten en groei deel die ik onderweg heb opgedaan.
+              Stap je mee in deze reis naar je innerlijk kind?<br /><br />Druk
+              op ‘play’ en ontdek hoe je jouw innerlijke kind opnieuw kunt
+              omarmen!
+            </p>
+          </article>
+          <article>
+            <iframe
+              style="border-radius:12px"
+              src="https://open.spotify.com/embed/playlist/7odeN37OaFCHBYB88hG9JR?utm_source=generator"
+              width="100%"
+              height="152"
+              frameBorder="0"
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"></iframe>
+            <h2 class="mt-6 mb-10 text-4xl font-semibold font-heading">
+              S1/#1 Het innerlijk kind | De kern met Jordi
+            </h2>
+            <p class="text-xl mb-6 line-clamp-2 TextUnpacked">
+              In deze aflevering van De kern met Jordi Podcast duik ik met Karin
+              de Mulder in het onderwerp van het innerlijk kind.<br /><br />Wij
+              gaan bespreken wat het innerlijk kind precies is, hoe het zich
+              ontwikkelt van voor de geboorte (ja echt, dat heeft al impact) tot
+              jongvolwassene, en waarom deze delen van ons zo cruciaal zijn voor
+              ons innerlijk kind. Voor Karin bestaat het innerlijk kind namelijk
+              uit diverse delen en niet maar een deel. Heel interessant.<br
+              /><br />Bij het interview word ik als voorbeeld gebruikt en
+              bespreken wij de impact van vroeggeboorte en hechting op het
+              innerlijk kind en hoe deze ervaringen ons volwassen leven
+              beïnvloeden. Ontdek samen met ons de verschillende
+              ontwikkelingsstadia en hoe we deze delen van onszelf kunnen
+              erkennen en helen.<br /><br /> Ook zal spiritualiteit voorbij komen
+              en hebben wij het boek Map of Consciousness en Het leven waarvoor je
+              geboren bent besproken. Allemaal heel interessant.<br /><br />Tune
+              in voor een boeiende en inzichtelijke bespreking. Je innerlijk
+              kind zal je zeer dankbaar zijn!<br /><br />Aanbevolen bronnen: <br
+              /><br />Websites~<br /><a
+                href="https://www.dekernmetjordi.nl/"
+                target="_blank"
+                >De kern met Jordi (https://www.dekernmetjordi.nl/)</a
+              ><br />
+              <a href="https://www.karindemulder.nl/" target="_blank"
+                >Karin de Mulder (https://www.karindemulder.nl/)</a
+              ><br /><br />Boeken en overige~<br /><a
+                href="https://www.jegeboorteinkaart.nl/"
+                target="_blank"
+              >
+                Geboorte in Kaart en Behoefte in Kaart van
+                ⁠https://www.jegeboorteinkaart.nl/⁠</a
+              ><br /><br><a
+                href="https://www.bol.com/nl/nl/p/het-innerlijke-kind/666820532/"
+                target="_blank"
+                >Het innerlijke kind van Cathryn L. Taylor
+                (https://www.bol.com/nl/nl/p/het-innerlijke-kind/666820532/)</a
+              ><br /><br><a
+                href="https://www.bol.com/nl/nl/p/handboek-energetische-basiskennis/9200000061263454/?bltgh=pnXuY4ee4OEHgNCdl2FNBg.2_12.13.ProductTitle%E2%81%A0"
+                target="_blank"
+                >Handboek energetische basiskennis – Hoe energie voor jou werkt
+                van Wilka Zelders
+                (https://www.bol.com/nl/nl/p/handboek-energetische-basiskennis/9200000061263454/?bltgh=pnXuY4ee4OEHgNCdl2FNBg.2_12.13.ProductTitle%E2%81%A0)</a
+              ><br /><br><a
+                href="https://www.bol.com/nl/nl/p/het-leven-waarvoor-je-geboren-bent/9200000085063707/?bltgh=vaErxySsXEI1jp-Hn7VKIg.2_13.14.ProductTitle%E2%81%A0"
+                target="_blank"
+                >⁠Het leven waarvoor je geboren bent van Dan Millman
+                (https://www.bol.com/nl/nl/p/het-leven-waarvoor-je-geboren-bent/9200000085063707/?bltgh=vaErxySsXEI1jp-Hn7VKIg.2_13.14.ProductTitle%E2%81%A0)</a
+              ><br />
+            </p>
+          </article>
+          <article>
+            <iframe
+              style="border-radius:12px"
+              src="https://open.spotify.com/embed/playlist/6d0zCLGbaki8JLrZO5radf?utm_source=generator"
+              width="100%"
+              height="152"
+              frameBorder="0"
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"></iframe>
+            <h2 class="mt-6 mb-10 text-4xl font-semibold font-heading">
+              S1/#2 Dansen met het innerlijke kind | De kern met Jordi
+            </h2>
+            <p id="textContent" class="text-xl mb-6 line-clamp-2 TextUnpacked">
+              In deze aflevering duiken we weer in het thema van het innerlijke
+              kind en dit keer met innerlijk kind therapeut Carolien Roovers.<br
+              /><br />
+              Wat betekent het om vanuit je innerlijke kind te leven? Hoe kunnen
+              we de pijn en patronen uit onze jeugd herkennen, helen, en uiteindelijk
+              omarmen?<br /><br /> Samen met therapeut Carolien verkennen we hoe
+              je door de wonden van je innerlijke kind aan te kijken juist de vreugde
+              en levenskracht kunt herontdekken.<br /><br /> Heel leuk om te weten
+              dat blijkbaar 90% van ons hele tijd vanuit een gekwetst kind reageert
+              op zijn omgeving. Ook zal Carolien kort vertellen hoe het leven in
+              India anders is en daar zit ook een mooie kern in.<br /><br /> Een
+              inspirerend gesprek over kwetsbaarheid, zelfheling en het vinden van
+              balans in je volwassen leven.<br /><br /> Aanbevolen bronnen:<br
+              /><br /> Websites~<br /><a
+                href="https://www.dekernmetjordi.nl/"
+                target="_blank"
+                >De kern met Jordi (https://www.dekernmetjordi.nl/)</a
+              ><br /><a href="https://praktijkamchi.nl/"
+                >Praktijk Amchi (https://praktijkamchi.nl/)</a
+              >
+            </p>
+          </article>
+          <article>
+            <iframe
+              style="border-radius:12px"
+              src="https://open.spotify.com/embed/playlist/2KEOqc7LSge7Nvvq1OCToy?utm_source=generator"
+              width="100%"
+              height="152"
+              frameBorder="0"
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"></iframe>
+            <h2 class="mt-6 mb-10 text-4xl font-semibold font-heading">
+              S1/#3 Hypnotherapie | De kern met Jordi
+            </h2>
+            <p class="text-xl mb-6 line-clamp-2 TextUnpacked">
+              In deze aflevering van De kern met Jordi duiken we in de
+              fascinerende wereld van hypnotherapie en innerlijk kindwerk met
+              hypnotherapeut Willeke Heerkes.<br /><br /> We bespreken hoe onverwerkte
+              ervaringen uit onze kindertijd ons onbewust kunnen blijven beïnvloeden
+              en hoe het helen van het innerlijke kind ons leven kan transformeren.<br
+              /><br /> Je blijft het namelijk aantrekken tot dat het geheeld is.<br
+              /><br /> Willeke deelt haar unieke werkwijze en laat zien hoe ze volwassenen
+              en kinderen begeleidt om diepe emotionele blokkades te doorbreken,
+              zodat zij vrijer en krachtiger in het leven kunnen staan. Ook bespreken
+              we de verschillen tussen hypnotherapie, EMDR, en zelfhypnose, en wat
+              het innerlijke kind ons te leren heeft over oude patronen en triggers.<br
+              /><br /> Een aflevering die je helpt om op een dieper niveau in contact
+              te komen met jezelf.<br /><br /> Aanbevolen bronnen:<br /><br />
+              Websites~<br /><a
+                href="https://www.dekernmetjordi.nl/"
+                target="_blank"
+                >De kern met Jordi (https://www.dekernmetjordi.nl/)</a
+              ><br /><a href="https://regressietherapeute.nl/" target="_blank"
+                >Regressietherapeute (https://regressietherapeute.nl/)</a
+              >
+            </p>
+          </article>
+          <article>
+            <iframe
+              style="border-radius:12px"
+              src="https://open.spotify.com/embed/playlist/3chsVdezaPYADZOSpy2kEw?utm_source=generator"
+              width="100%"
+              height="152"
+              frameBorder="0"
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"></iframe>
+            <h2 class="mt-6 mb-10 text-4xl font-semibold font-heading">
+              S1/#4 De nabeschouwing | De kern met Jordi
+            </h2>
+            <p class="text-xl mb-6 line-clamp-2 TextUnpacked">
+              In deze laatste aflevering van serie 1 over het innerlijke kind
+              blik ik terug op de inzichten die ik heb opgedaan tijdens de
+              gesprekken met Karin de Mulder, Carolien Roovers en Willeke
+              Heerkes.<br /><br /> Ieder bracht een unieke visie en aanpak, van het
+              belang van geboorte tot aan het helen van gekwetste kindsdelen via
+              beweging en hypnotherapie.<br /><br /> Wat me vooral boeiend is, is
+              dat ieder mens zijn innerlijke kind anders ervaart en daarmee op een
+              andere manier groeit. Het herhaaldelijk reageren vanuit ons gekwetste
+              kind is een patroon dat velen van ons niet herkennen, maar wat heling
+              kan brengen wanneer we het doorbreken. Luister mee voor een afsluitende
+              reflectie, praktische tips en een dankwoord aan de inspirerende vrouwen
+              die hun kennis hebben gedeeld.<br /><br /> Op naar serie 2, waarin
+              we opnieuw op ontdekking gaan in de wereld van zelfontwikkeling en
+              spiritualiteit!<br /><br /> Aanbevolen bronnen:<br /><br /> Websites~<br
+              />
+              <a href="https://www.dekernmetjordi.nl/" target="_blank"
+                >De kern met Jordi (https://www.dekernmetjordi.nl/)</a
+              ><br />
+              <a href="https://www.karindemulder.nl/" target="_blank"
+                >Karin de Mulder (https://www.karindemulder.nl/)</a
+              ><br /><a href="https://praktijkamchi.nl/"
+                >Praktijk Amchi (https://praktijkamchi.nl/)</a
+              ><br /><a href="https://regressietherapeute.nl/" target="_blank"
+                >Regressietherapeute (https://regressietherapeute.nl/)</a
+              ><br>
+              <br />Boeken en overige~<br /><a
+                href="https://www.jegeboorteinkaart.nl/"
+                target="_blank"
+              >
+                Geboorte in Kaart en Behoefte in Kaart van
+                ⁠https://www.jegeboorteinkaart.nl/⁠</a
+              ><br /><br><a
+                href="https://www.bol.com/nl/nl/p/het-innerlijke-kind/666820532/"
+                target="_blank"
+                >Het innerlijke kind van Cathryn L. Taylor
+                (https://www.bol.com/nl/nl/p/het-innerlijke-kind/666820532/)</a
+              ><br /><br><a
+                href="https://www.bol.com/nl/nl/p/handboek-energetische-basiskennis/9200000061263454/?bltgh=pnXuY4ee4OEHgNCdl2FNBg.2_12.13.ProductTitle%E2%81%A0"
+                target="_blank"
+                >Handboek energetische basiskennis – Hoe energie voor jou werkt
+                van Wilka Zelders
+                (https://www.bol.com/nl/nl/p/handboek-energetische-basiskennis/9200000061263454/?bltgh=pnXuY4ee4OEHgNCdl2FNBg.2_12.13.ProductTitle%E2%81%A0)</a
+              ><br /><br><a
+                href="https://www.bol.com/nl/nl/p/het-leven-waarvoor-je-geboren-bent/9200000085063707/?bltgh=vaErxySsXEI1jp-Hn7VKIg.2_13.14.ProductTitle%E2%81%A0"
+                target="_blank"
+                >⁠Het leven waarvoor je geboren bent van Dan Millman
+                (https://www.bol.com/nl/nl/p/het-leven-waarvoor-je-geboren-bent/9200000085063707/?bltgh=vaErxySsXEI1jp-Hn7VKIg.2_13.14.ProductTitle%E2%81%A0)</a
+              >
+            </p>
+          </article>
+        </div>
+      </section>
+    </PaddingTopForPages>
+    <div class="mb-36">
+      <!-- Is gecommit omdat er nog geen voldoende blogs zijn. Bij meer dan 6 blogs kan het -->
+      <!-- <Pagination prevURL={page.url.prev} nextURL={page.url.next} /> -->
+    </div>
+  </Section>
+</Layout>
+
+<Footer />
