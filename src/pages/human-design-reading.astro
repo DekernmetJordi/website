@@ -28,7 +28,7 @@ import Testimonials from "../components/Testimonials.astro";
 import AboutMeForPages from "../components/AboutMeForPages.astro";
 import SocialProof from "../components/SocialProof.astro";
 import FeaturesForPages from "../components/FeaturesForPages.astro";
-import FAQForPages from "../components/FAQForPages.astro";
+import FAQ from "../components/FAQ.astro";
 import BenefitsForPages from "../components/BenefitsForPages.astro";
 
 // Lettertype - Garamond is voor titels en Rubik voor tekst
@@ -149,13 +149,18 @@ const descriptionQuestion1 =
 const titleQuestion2 =
   "Welke informatie heb ik nodig voordat ik kan beginnen met Human Design bij jou?";
 const descriptionQuestion2 =
-  "Als je de 1e keer komt is het belangrijk om je geboortetijd te weten. Deze is namelijk van cruciaal belang voor je Human Design. Vaak weten ouders het en anders staat het op je geboortekaart. Als laatste nood kun je je geboortetijd opvragen bij de gemeente waar je bent geboren. Mocht dat ook allemaal niets uithalen dan kunnen wij een geschatte geboortetijd gebruiken en door te vragen komen wij dan ook bij je Human Design. Kost wellicht meer tijd maar zal ook werken.";
+  "Als je de 1e keer komt is het belangrijk om je geboortetijd te weten. Deze is namelijk van cruciaal belang voor je Human Design. \n\n" +
+  "Vaak weten ouders het en anders staat het op je geboortekaart. Als laatste nood kun je je geboortetijd opvragen bij de gemeente waar je bent geboren. \n\n" +
+  "Mocht dat ook allemaal niets uithalen dan kunnen wij een geschatte geboortetijd gebruiken en door te vragen komen wij dan ook bij je Human Design. Kost wellicht meer tijd maar zal ook werken.";
 const titleQuestion3 = "Waar en hoe vinden de sessies plaats?";
 const descriptionQuestion3 =
   "De sessies kunnen bij mij in de praktijk in Waalwijk of online via videobellen plaatsvinden. Je krijgt na het boeken van de afspraak automatisch een mail met alle gegevens. Daar zal mijn adres te vinden zijn en een Google Meet vergadering. De Google Meet vergadering kun je negeren als de afspraak op locatie is.";
 const titleQuestion4 = "Hoeveel sessies heb ik nodig?";
 const descriptionQuestion4 =
-  "Klinkt flauw maar is wel de waarheid. Maar dat ligt eraan. Mijn advies blijft altijd om voor het traject te gaan. Het is een ding om je design te weten en het is een ander ding om er naar te leven. Het duurt bij de meeste mensen wel ongeveer 6 maanden om de conditioneringen op te sporen en weg te halen. Met het Human Design Traject ga je alle centrums uitgebreid met mij langs en ga je echt de diepte in. Zo word jij je echte zelf. Hoe meer moeite en tijd je in het leren en vooral leven van je design stopt hoe meer jij eruit haalt. Tot snel!";
+  "Klinkt flauw maar is wel de waarheid. Maar dat ligt eraan.\n\n" +
+  "Voor Human Design blijft mijn advies altijd om voor het traject te gaan. Het is een ding om je design te weten en het is een ander ding om er naar te leven. Het duurt bij de meeste mensen wel ongeveer 6 maanden om de conditioneringen op te sporen en weg te halen.\n\n" +
+  "Met het Human Design Traject ga je alle centrums uitgebreid met mij langs en ga je echt de diepte in. Zo word jij je echte zelf. Hoe meer moeite en tijd je in het leren en vooral leven van je design stopt hoe meer jij eruit haalt.\n\n" +
+  "Tot snel!";
 const titleQuestion5 = "Mag ik je even snel iets vragen...?";
 const descriptionQuestion5 =
   "Zeker. Geen probleem. Ook al ben jij nog niet bij mij geweest. Je kan mij mailen op info@dekernmetjordi.com of whatsappen op +31 6 39556179.";
@@ -245,7 +250,7 @@ const descriptionQuestion5 =
       ctaProduct2={ctaProduct2}
     />
     <Nieuwsbrief />
-    <FAQForPages
+    <FAQ
       titleQuestion1={titleQuestion1}
       descriptionQuestion1={descriptionQuestion1}
       titleQuestion2={titleQuestion2}
