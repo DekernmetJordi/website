@@ -12,7 +12,7 @@ const Rubik = "font-sans";
 // "brand-copper": "#C2783F",
 // "prose-text-color": "#374151",
 
-const { descriptionContactForPages } = Astro.props;
+const { descriptionContactForPages, travelDistance } = Astro.props;
 ---
 
 <style>
@@ -39,7 +39,7 @@ const { descriptionContactForPages } = Astro.props;
           <h2 class="mb-4 text-4xl font-semibold font-heading">
             {descriptionContactForPages}
           </h2>
-          <p class="mb-4 text-gray-500">De praktijk is gelegen in het mooie Waalwijk en zit heel dichtbij de snelweg (max 20 min), dus je bent zo bij mij ;).</p>
+          <p class="mb-4 text-gray-500">De praktijk is gelegen in het mooie Waalwijk en zit heel dichtbij de snelweg (max {travelDistance}), dus je bent zo bij mij ;).</p>
           <p class="text-gray-500">p.s. Online kan ook hé.</p>        
         </div>
       </div>

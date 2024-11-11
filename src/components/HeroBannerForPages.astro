@@ -8,28 +8,31 @@ const Garamond = "font-serif";
 const Rubik = "font-sans";
 
 // Merk kleurencode. Gebruik bg-brand-white in class om toe te passen.
-      // "brand-white": "#F1F1F1",
-      // "brand-sage": "#BCBC82",
-      // "brand-copper": "#C2783F",
-      // "brand-orange": "#E28F50",
+// "brand-white": "#F1F1F1",
+// "brand-sage": "#BCBC82",
+// "brand-copper": "#C2783F",
+// "brand-orange": "#E28F50",
 
 // background: linear-gradient(to right, #3a190c, #8b4b2a, #C2783F, #8b4b2a, #3a190c);
 
 const {
   h1 = "Human Design Reading",
   description = "Kom je echte zelf te weten via een Human Design Reading.",
-  cta = "Geef me inzichten"
+  cta = "Geef me inzichten",
 } = Astro.props;
-
 ---
+
+<!-- <style>
+  p {
+    white-space: pre-line;
+  }
+</style> -->
 
 <!-- mb-20 is toegevoegd zodat er een wit strook tussen herobanner en aboutme zit -->
 <div class="container px-4 mx-auto pt-12 bg-brand-white mb-10">
   <div class="flex flex-wrap items-center -mx-4">
     <div class="w-full md:w-1/2 px-4 mb-6 md:mb-0">
-      <h1
-        class=`mt-8 mb-6 lg:mb-12 text-5xl lg:text-6xl font-bold ` lang="nl"
-      >
+      <h1 class=`mt-8 mb-6 lg:mb-12 text-5xl lg:text-6xl font-bold ` lang="nl">
         {h1}
       </h1>
       <div class="max-w-lg mb-6 lg:mb-12">
@@ -50,7 +53,11 @@ const {
     <!-- w-full md:w-1/2 px-4 mb-4 md:mb-0 -->
     <!-- relative rounded-lg -->
     <div class="relative w-full md:w-1/2 px-4">
-      <Image class="relative rounded-lg h-30 w-auto" src={JordiMetTabletHumanDesign} alt="Jordi de coach die Human Design uitlegt aan een klant" />
+      <Image
+        class="relative rounded-lg h-30 w-auto"
+        src={JordiMetTabletHumanDesign}
+        alt="Jordi de coach die Human Design uitlegt aan een klant"
+      />
     </div>
   </div>
 </div>
