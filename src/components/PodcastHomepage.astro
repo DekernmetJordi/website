@@ -1,0 +1,206 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Main from "../components/Main.astro";
+import Footer from "../components/Footer.astro";
+
+import Section from "../components/Section.astro";
+import PaddingTopForPages from "../components/PaddingTopForPages.astro";
+
+import { Image } from "astro:assets";
+// import Isabella from "../../public/images/Isabella.jpg";
+import Jordi from "../../public/images/Jordi_coachen_kleiner.jpg";
+import LogoPodcast from "../../public/images/De_kern_met_Jordi_Podcast_resized_and_compressed.png";
+import LogoPodcast1 from "../../public/images/De_kern_met_Jordi_Podcast.png";
+import AvatarGoogleReviewHDBibi from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Bibi.png";
+import AvatarGoogleReviewHDMieke from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Mieke.png";
+import AvatarGoogleReviewHDHilde from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Hilde.png";
+import AvatarGoogleReviewHDLoes from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Loes.png";
+import AvatarGoogleReviewHDUndine from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Undine.png";
+import AvatarGoogleReviewHDRob from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Rob.png";
+
+import Signature from "../components/Signature.astro";
+import HeroBannerForPages from "../components/HeroBannerForPages.astro";
+import Nieuwsbrief from "../components/Nieuwsbrief.astro";
+import PricingForPages from "../components/PricingForPages.astro";
+import CallToActionForPages from "../components/CallToActionForPages.astro";
+import Testimonials from "../components/Testimonials.astro";
+import AboutMeForPages from "../components/AboutMeForPages.astro";
+import SocialProof from "../components/SocialProof.astro";
+import FeaturesForPages from "../components/FeaturesForPages.astro";
+import FAQForPages from "../components/FAQForPages.astro";
+import BenefitsForPages from "../components/BenefitsForPages.astro";
+import ContactForPages from "../components/ContactForPages.astro";
+
+// Lettertype - Garamond is voor titels en Rubik voor tekst
+const Garamond = "font-serif";
+const Rubik = "font-sans";
+
+// Merk kleurencode. Gebruik bg-brand-white in class om toe te passen.
+// "brand-white": "#F1F1F1",
+// "brand-sage": "#BCBC82",
+// "brand-copper": "#C2783F",
+
+// variable voor hero banner
+const targetKeyword = "Human Design Tilburg";
+const description =
+  "Kom tot je diepste zelf via een Human Design Reading. Praktijk zit in de buurt van Tilburg. Vele uit Tilburg zijn al gekomen. Sessie kan face-to-face of online.";
+const cta = "Geef mij inzichten";
+
+// variable voor de feature gedeelte
+const headTitleFeatures = "De Human Design Reading";
+const titleFeature1 = "Elke reading is op maat gemaakt";
+const descriptionFeature1 =
+  "Tijdens een Human Design Reading van 1 uur kun je zelf aangeven waar je de focus op wilt leggen. Wil je een algemeen overzicht, of juist diepgaand inzicht in een specifiek centrum? Laat vooraf je voorkeuren weten, zodat we alles precies kunnen afstemmen op jouw wensen.";
+const titleFeature2 = "Je mag anderen meenemen";
+const descriptionFeature2 =
+  "Wil iemand anders ook een persoonlijke Human Design lezing ontvangen? Dan kun je dit van tevoren aangeven. Bij extra personen zal een extra uur aan de sessie toegevoegd worden om voldoende tijd te hebben voor alle lezingen.";
+const titleFeature3 = "Fysiek of online is geen probleem";
+const descriptionFeature3 =
+  "Je bent welkom in mijn praktijk in Waalwijk, of we kunnen elkaar online ontmoeten via videobellen, net wat jij het prettigst vindt.";
+
+// variable voor de benefite gedeelte
+const headTitleBenefits = "De redenen";
+const titleBenefite1 =
+  "Je gaat kunnen onderscheiden wat van jou is en van een ander";
+const descriptionBenefite1 =
+  "Iedereen heeft gedefinieerde en ongedefinieerde centrums. De ongedefinieerde centrums zijn voor het waarnemen van de energie van buiten. Buiten de persoon in kwestie. Ze zijn echter wel gevoeliger voor invloed. Het voordeel is wel dat ze gaaf zijn. Er zitten namelijk gaven verborgen in de open centrums. Je zal op jouw manier superkrachten krijgen 😄.";
+const titleBenefite2 =
+  "Je Human Design geeft je een dieper gevoel van vertrouwen en stabiliteit";
+const descriptionBenefite2 =
+  "Door over je design te weten te komen weet je wat je hoort te doen en waar je talenten liggen. Dit zorgt voor vertrouwen en geloof in jezelf. De zelfsabotage zal verminderen. Hiermee ga je veel meer jezelf en het leven accepteren. Je weet namelijk wat de oorsprong is.";
+const CTA = "Laten wij beginnen";
+const titleBenefite3 = "Je gaat leven zoals het hoort voor jou";
+const descriptionBenefite3 =
+  "Het is echt mogelijk. De foto geeft het mooi weer. Je ontwaakt en beklimt de berg op weg naar je ideale zelf. Je gaat niet langer meer een product zijn van je omgeving maar je eigen weg vinden in het leven.";
+
+// variable voor about me gedeelte
+const titleAboutMe = "Hoi, Jordi hier. Je schattige Human Design coach.";
+const descriptionAboutMe1 =
+  "Al een paar jaar bezig met Human Design en er echt aan verknocht.";
+const descriptionAboutMe2 =
+  "Zelf eerst Human Design toegepast op mijzelf door behulp van mijn coach Debbie Bergmann. Deconditionering en weten wat nou echt van mij is stonden centraal. Ook het leren volgen van mijn autoriteit. Ben daar nog steeds ontzettend blij mee en Debbie daar ontzettend dankbaar voor.";
+const descriptionAboutMe3 =
+  "Aangezien het zo hoorde te zijn en nog steeds hoort te zijn ben ik mensen gaan coachen in Human Design. Omdat het hoort bij mijn pad. ";
+const descriptionAboutMe4 =
+  "De mensen zijn tevreden en ik ben dan ook apentrots op de Google Reviews die ik tot nu toe heb mogen krijgen. Zij hebben van mij geleerd maar ik ook van hen. ";
+const descriptionAboutMe5 =
+  "Je zal een enthousiaste lieve jongen tegenover je zien die met passie je design in de praktijk brengt. Want ik gebruik veel praktijk voorbeelden. Zo wordt het voor je tastbaar en begint het te leven. Verbanden worden getrokken en resultaat zal behaald worden. Ook zal naar de kern van je echte zelf gegaan worden tijdens het proces.";
+const descriptionAboutMe6 = "Ik vind het oprecht leuk om te coachen.";
+const AboutMeCTA = "Meer over mij";
+
+// variable Social Proof - AvatarGoogleReviews zijn te vinden in specifieke component omdat het anders niet werkt via de link en om het simpel te houden.
+const Subtitle = "Degenen die je voorgingen:";
+const GoogleReview1 =
+  "Ik ben net bij Jordi geweest en ben meer te weten gekomen over mijzelf via human design. Hij heeft mij heel veel verteld. Jordi vertelt het op een prettige en kundige manier. Een aanrader dus! Ik kan  ermee vooruit. Dankjewel Jordi😃";
+const AvatarGoogleReview1 = AvatarGoogleReviewHDMieke;
+const NameCustomer1 = "Mieke de Vriend";
+const GoogleReview2 =
+  "Jordi heeft een enorme passie voor alles waar Human Design voor staat. Hij kan je op een hele fijne manier uitleggen wat het allemaal betekent en hoe je het kan gebruiken/zien in jouw leven. Zeker een aanrader als je wat meer wilt weten over jou persoonlijke design!";
+const AvatarGoogleReview2 = AvatarGoogleReviewHDBibi;
+const NameCustomer2 = "Bibi";
+const GoogleReview3 =
+  "Bij Jordi stilgestaan bij mijn Human design. Hij legt dit met enthousiasme, kennis en praktische voorbeelden uit. Ik ga zeker nog eens terug om verder te verdiepen.";
+const AvatarGoogleReview3 = AvatarGoogleReviewHDRob;
+const NameCustomer3 = "Rob Timmers";
+const GoogleReview4 =
+  "Human design sessie gehad bij Jordi. Hij heeft veel kennis en kan duidelijk en leuk vertellen hoe jou design werkt. Ook een tarot legging gehad. Ook die was heel waardevol.";
+const AvatarGoogleReview4 = AvatarGoogleReviewHDLoes;
+const NameCustomer4 = "Loes van Kempen";
+const GoogleReview5 =
+  "I recently had a fantastic session with Jordi delving into human design. His explanations were not only knowledgeable but also incredibly easy to understand, making the topic accessible and engaging. If you're interested in learning more about human design, I highly recommend giving one of his sessions a try. Additionally, Jordi also provided coaching on tarot cards in a fun and approachable manner, all while maintaining a high level of expertise. I'm definitely looking forward to scheduling another session with him soon!";
+const NameCustomer5 = "Undine Millere";
+const AvatarGoogleReview5 = AvatarGoogleReviewHDUndine;
+const GoogleReview6 =
+  "Een hele fijne human design reading gehad van Jordi! Ik had al wat ervaring met human design, maar heb van Jordi op een leuke en inspirerende manier nieuwe inzichten gekregen in mijn design. Je merkt dat hij veel kennis heeft en de verschillende onderdelen van jouw design in context kan plaatsen en voorbeelden gebruikt, op een persoonlijke (en gezellige) wijze, met ruimte en aandacht voor het stellen van vragen.";
+const AvatarGoogleReview6 = AvatarGoogleReviewHDHilde;
+const NameCustomer6 = "Hilde van Kessel";
+
+// variable voor Pricing/Product gedeelte
+const titleProduct1 = "Human Design Sessie";
+const descriptionProduct1 =
+  "De Human Design sessie duurt 1 uur en zal bestaan uit het bespreken van het huiswerk, je bevindingen en het nieuwe onderwerp wat aanbod komt. Stap voor stap wordt jij meer jezelf.";
+const checkMark1 = "Integraal";
+const checkMark2 = "Oorzaken en verbanden helder";
+const checkMark3 = "Eigen tempo";
+const checkMark4 = "Toepasbaar en praktisch";
+const priceProduct1 = "59,99";
+const discountProduct1 = "€ 10 korting voor Community leden";
+const ctaProduct1 = "Maak een afspraak";
+//
+const titleProduct2 = "Human Design Traject";
+const descriptionProduct2 =
+  "Lees of hoor niet alleen over Human Design maar leer het ook ontdekken en ga er op een praktische manier met mij mee aan de slag. In 9 sessies zal je alles te weten komen over jouw Human Design. Je leert je echte zelf ontdekken en leert het praktisch toe te passen. Waar je krachten liggen, wat je doel in dit leven is en nog zoveel meer. Het komt allemaal aanbod. Ook zal waarnodig Tarot en/of Reiki toegepast worden in het traject om alles te bespoedigen.";
+const checkMark5 = "Flexibel";
+const checkMark6 = "Doorpakken";
+const checkMark7 = "Eigen tempo";
+const checkMark8 = "Lekker goedkoper ;)";
+const priceProduct2 = "395,-";
+const discountProduct2 = "Voor een heel Human Design Traject!";
+const ctaProduct2 = "Maak een afspraak";
+
+// variable voor CTA gedeelte
+const titleCTA = "Wil jij je echte zelf leren kennen?";
+const descriptionUnderCTATitle = "Kom dan snel :D!";
+const descriptionCTA = "Ja, ik wil mijzelf leren kennen";
+
+// variable voor FAQ gedeelte
+const titleQuestion1 = "Kan ik iemand meenemen?";
+const descriptionQuestion1 =
+  "Zeker. Komt diegene ook voor een Human Design sessie dan wordt daar 1 uur extra voor gereserveerd.";
+const titleQuestion2 =
+  "Welke informatie heb ik nodig voordat ik kan beginnen met Human Design bij jou?";
+const descriptionQuestion2 =
+  "Als je de 1e keer komt is het belangrijk om je geboortetijd te weten. Deze is namelijk van cruciaal belang voor je Human Design. Vaak weten ouders het en anders staat het op je geboortekaart. Als laatste nood kun je je geboortetijd opvragen bij de gemeente waar je bent geboren. Mocht dat ook allemaal niets uithalen dan kunnen wij een geschatte geboortetijd gebruiken en door te vragen komen wij dan ook bij je Human Design. Kost wellicht meer tijd maar zal ook werken.";
+const titleQuestion3 = "Waar en hoe vinden de sessies plaats?";
+const descriptionQuestion3 =
+  "De sessies kunnen bij mij in de praktijk in Waalwijk of online via videobellen plaatsvinden. Je krijgt na het boeken van de afspraak automatisch een mail met alle gegevens. Daar zal mijn adres te vinden zijn en een Google Meet vergadering. De Google Meet vergadering kun je negeren als de afspraak op locatie is.";
+const titleQuestion4 = "Hoeveel sessies heb ik nodig?";
+const descriptionQuestion4 =
+  "Klinkt flauw maar is wel de waarheid. Maar dat ligt eraan. Mijn advies blijft altijd om voor het traject te gaan. Het is een ding om je design te weten en het is een ander ding om er naar te leven. Het duurt bij de meeste mensen wel ongeveer 6 maanden om de conditioneringen op te sporen en weg te halen. Met het Human Design Traject ga je alle centrums uitgebreid met mij langs en ga je echt de diepte in. Zo word jij je echte zelf. Hoe meer moeite en tijd je in het leren en vooral leven van je design stopt hoe meer jij eruit haalt. Tot snel!";
+const titleQuestion5 = "Mag ik je even snel iets vragen...?";
+const descriptionQuestion5 =
+  "Zeker. Geen probleem. Ook al ben jij nog niet bij mij geweest. Je kan mij mailen op info@dekernmetjordi.com of whatsappen op +31 6 39556179.";
+
+// variable voor contact gedeelte
+const descriptionContactForPages = "De kern met Jordi zit in Waalwijk";
+---
+
+<section class="relative py-20">
+  <div class="container px-4 mx-auto">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="mb-10 text-4xl font-semibold font-heading">
+        De kern met Jordi Podcast
+      </h2>
+      <p class="mb-6">
+        Hij is er dan eindelijk! De kern met Jordi Podcast. De 1e serie gaat
+        over het innerlijk kind.<br> Klik <a
+          class="text-lg font-medium underline text-brand-copper hover:no-underline"
+          href="https://www.dekernmetjordi.nl/podcast/">hier</a
+        > om naar de podcast pagina te gaan en de afleveringen te beluisteren. Veel plezier!
+      </p>
+      <div class="flex items-center justify-center">
+        <div class="mr-6">
+            <a href="https://www.dekernmetjordi.nl/podcast/"><Image
+                class="object-cover object-top"
+                src={LogoPodcast}
+                alt="Logo De kern met Jordi Podcast"
+              /></a>
+          
+        </div>
+        <!-- <div class="text-left">
+          <h3 class="mb-2 text-2xl font-semibold font-heading">
+            Esther Bailey
+          </h3>
+          <p class="text-gray-500">February 26, 2021</p>
+        </div> -->
+      </div>
+    </div>
+  </div>
+  <!-- <div class="h-112 lg:h-1/2">
+    <Image
+      class="w-full h-full object-cover object-top"
+      src={LogoPodcast1}
+      alt=""
+    />
+  </div> -->
+</section>
