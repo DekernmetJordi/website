@@ -23,6 +23,8 @@ const {
   titleBenefite3,
   descriptionBenefite3,
   CTA,
+  imageBenefits,
+  imageAltBenefits,
 } = Astro.props;
 ---
 
@@ -38,8 +40,8 @@ const {
         <!-- h-96 -->
         <Image
           class="h-96 lg:h-128 w-full rounded-xl object-cover"
-          src={Zandberg}
-          alt="Man naar boven aan het lopen op een zandberg"
+          src={imageBenefits}
+          alt={imageAltBenefits}
           loading="lazy"
         />
       </div>

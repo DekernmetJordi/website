@@ -8,7 +8,10 @@ import PaddingTopForPages from "../components/PaddingTopForPages.astro";
 
 import { Image } from "astro:assets";
 // import Isabella from "../../public/images/Isabella.jpg";
-import Jordi from "../../public/images/Jordi_coachen_kleiner.jpg";
+// import Jordi from "../../public/images/Jordi_coachen_kleiner.jpg";
+import JordiMetTabletHumanDesign from "../../public/images/Jordi_over_mij_kleiner.jpg";
+import Zandberg from "../../public/images/Persoon_die_zandberg_oploopt.jpg";
+
 import AvatarGoogleReviewHDBibi from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Bibi.png";
 import AvatarGoogleReviewHDMieke from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Mieke.png";
 import AvatarGoogleReviewHDHilde from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Hilde.png";
@@ -43,6 +46,8 @@ const targetKeyword = "Human Design Den Bosch | De kern met Jordi";
 const description =
   "Kom jezelf te weten via een Human Design Reading. Praktijk zit in de buurt van Den Bosch. Je bent niet de 1e uit Den Bosch. Sessie kan face-to-face of online.";
 const cta = "Geef mij inzichten";
+const image = JordiMetTabletHumanDesign;
+const imageAlt = "Jordi de coach die Human Design uitlegt aan een klant";
 
 // variable voor de feature gedeelte
 const headTitleFeatures = "De Human Design Reading";
@@ -58,8 +63,7 @@ const descriptionFeature3 =
 
 // variable voor de benefite gedeelte
 const headTitleBenefits = "De redenen";
-const titleBenefite1 =
-  "Je Human Design geeft je vertrouwen en stabiliteit";
+const titleBenefite1 = "Je Human Design geeft je vertrouwen en stabiliteit";
 const descriptionBenefite1 =
   "Het is echt zo. Door meer kennis van je design te krijgen weet je wat je hoort te doen. Ook weet je waar je talenten liggen. Dit zorgt voor vertrouwen en geloof in jezelf. De zelfsabotage zal afnemen. Hiermee ga je jezelf en het leven accepteren. Je weet namelijk wat de oorsprong is.";
 const titleBenefite2 =
@@ -70,6 +74,8 @@ const titleBenefite3 = "Je gaat leven zoals het hoort voor jou";
 const descriptionBenefite3 =
   "Het is echt mogelijk. De foto geeft het mooi weer. Je ontwaakt en beklimt de berg op weg naar je ideale zelf. Je gaat niet langer meer een product zijn van je omgeving maar je eigen weg vinden in het leven.";
 const CTA = "Laten wij beginnen";
+const imageBenefits = Zandberg;
+const imageAltBenefits = "Man naar boven aan het lopen op een zandberg.";
 
 // variable voor about me gedeelte
 const titleAboutMe = "Hoi, Jordi hier. Je schattige Human Design coach.";
@@ -92,26 +98,32 @@ const GoogleReview1 =
   "Ik ben net bij Jordi geweest en ben meer te weten gekomen over mijzelf via human design. Hij heeft mij heel veel verteld. Jordi vertelt het op een prettige en kundige manier. Een aanrader dus! Ik kan  ermee vooruit. Dankjewel Jordi😃";
 const AvatarGoogleReview1 = AvatarGoogleReviewHDMieke;
 const NameCustomer1 = "Mieke de Vriend";
+const Stars1 = "⭐⭐⭐⭐⭐";
 const GoogleReview2 =
   "Jordi heeft een enorme passie voor alles waar Human Design voor staat. Hij kan je op een hele fijne manier uitleggen wat het allemaal betekent en hoe je het kan gebruiken/zien in jouw leven. Zeker een aanrader als je wat meer wilt weten over jou persoonlijke design!";
 const AvatarGoogleReview2 = AvatarGoogleReviewHDBibi;
 const NameCustomer2 = "Bibi";
+const Stars2 = "⭐⭐⭐⭐⭐";
 const GoogleReview3 =
   "Bij Jordi stilgestaan bij mijn Human design. Hij legt dit met enthousiasme, kennis en praktische voorbeelden uit. Ik ga zeker nog eens terug om verder te verdiepen.";
 const AvatarGoogleReview3 = AvatarGoogleReviewHDRob;
 const NameCustomer3 = "Rob Timmers";
+const Stars3 = "⭐⭐⭐⭐";
 const GoogleReview4 =
   "Human design sessie gehad bij Jordi. Hij heeft veel kennis en kan duidelijk en leuk vertellen hoe jou design werkt. Ook een tarot legging gehad. Ook die was heel waardevol.";
 const AvatarGoogleReview4 = AvatarGoogleReviewHDLoes;
 const NameCustomer4 = "Loes van Kempen";
+const Stars4 = "⭐⭐⭐⭐⭐";
 const GoogleReview5 =
   "I recently had a fantastic session with Jordi delving into human design. His explanations were not only knowledgeable but also incredibly easy to understand, making the topic accessible and engaging. If you're interested in learning more about human design, I highly recommend giving one of his sessions a try. Additionally, Jordi also provided coaching on tarot cards in a fun and approachable manner, all while maintaining a high level of expertise. I'm definitely looking forward to scheduling another session with him soon!";
 const NameCustomer5 = "Undine Millere";
+const Stars5 = "⭐⭐⭐⭐⭐";
 const AvatarGoogleReview5 = AvatarGoogleReviewHDUndine;
 const GoogleReview6 =
   "Een hele fijne human design reading gehad van Jordi! Ik had al wat ervaring met human design, maar heb van Jordi op een leuke en inspirerende manier nieuwe inzichten gekregen in mijn design. Je merkt dat hij veel kennis heeft en de verschillende onderdelen van jouw design in context kan plaatsen en voorbeelden gebruikt, op een persoonlijke (en gezellige) wijze, met ruimte en aandacht voor het stellen van vragen.";
 const AvatarGoogleReview6 = AvatarGoogleReviewHDHilde;
 const NameCustomer6 = "Hilde van Kessel";
+const Stars6 = "⭐⭐⭐⭐⭐";
 
 // variable voor Pricing/Product gedeelte
 const titleProduct1 = "Human Design Sessie";
@@ -179,6 +191,8 @@ const travelDistance = "15 min";
       h1={targetKeyword}
       description={description}
       cta={cta}
+      image={image}
+      imageAlt={imageAlt}
     />
     <FeaturesForPages
       headTitleFeatures={headTitleFeatures}
@@ -198,6 +212,8 @@ const travelDistance = "15 min";
       titleBenefite3={titleBenefite3}
       descriptionBenefite3={descriptionBenefite3}
       CTA={CTA}
+      imageBenefits={imageBenefits}
+      imageAltBenefits={imageAltBenefits}
     />
     <AboutMeForPages
       titleAboutMe={titleAboutMe}
@@ -215,21 +231,27 @@ const travelDistance = "15 min";
       GoogleReview1={GoogleReview1}
       AvatarGoogleReview1={AvatarGoogleReview1}
       NameCustomer1={NameCustomer1}
+      Stars1={Stars1}
       GoogleReview2={GoogleReview2}
       AvatarGoogleReview2={AvatarGoogleReview2}
       NameCustomer2={NameCustomer2}
+      Stars2={Stars2}
       GoogleReview3={GoogleReview3}
       AvatarGoogleReview3={AvatarGoogleReview3}
       NameCustomer3={NameCustomer3}
+      Stars3={Stars3}
       GoogleReview4={GoogleReview4}
       AvatarGoogleReview4={AvatarGoogleReview4}
       NameCustomer4={NameCustomer4}
+      Stars4={Stars4}
       GoogleReview5={GoogleReview5}
       AvatarGoogleReview5={AvatarGoogleReview5}
       NameCustomer5={NameCustomer5}
+      Stars5={Stars5}
       GoogleReview6={GoogleReview6}
       AvatarGoogleReview6={AvatarGoogleReview6}
       NameCustomer6={NameCustomer6}
+      Stars6={Stars6}
     />
 
     <PricingForPages

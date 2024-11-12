@@ -23,41 +23,53 @@ const Rubik = "font-sans";
 const {
   Subtitle,
   GoogleReview1,
-  // AvatarGoogleReview1 = "https://lh3.googleusercontent.com/a-/ALV-UjU7McNgfJ7-J9uXHw6knj8ZIPqxOi1bYOVVKpUEiqvDsnVgM0Ns=w60-h60-p-rp-mo-br100",
   AvatarGoogleReview1,
   NameCustomer1,
+  Stars1,
   GoogleReview2,
-  // AvatarGoogleReview2 = "https://lh3.googleusercontent.com/a/ACg8ocJHYIyEOtpSbQ6UCtr7mwwGhPIOnbs48VHjKF7yzmB3o5rhNQ=w60-h60-p-rp-mo-br100",
   AvatarGoogleReview2,
   NameCustomer2,
+  Stars2,
   GoogleReview3,
   AvatarGoogleReview3,
   NameCustomer3,
+  Stars3,
   GoogleReview4,
   AvatarGoogleReview4,
   NameCustomer4,
+  Stars4,
   GoogleReview5,
   AvatarGoogleReview5,
   NameCustomer5,
+  Stars5,
   GoogleReview6,
   AvatarGoogleReview6,
   NameCustomer6,
+  Stars6,
 } = Astro.props;
 
 console.log("Avatar hieronder");
 console.log(AvatarGoogleReview1);
 ---
 
+<style>
+  p {
+    white-space: pre-line;
+  }
+</style>
+
 <section class="relative py-20">
   <div class="container px-4 mx-auto">
     <div class="max-w-2xl mx-auto mb-12 lg:mb-20 text-center">
       <div class="flex items-center gap-x-4">
-        <Image class="max-w-xs max-h-32 object-contain " src={GoogleLogoTransparent} alt="Google logo" />
-        <p class=" mt-8 mb-10 text-7xl font-semibold font-heading">
-          Reviews
-        </p>
+        <Image
+          class="max-w-xs max-h-32 object-contain"
+          src={GoogleLogoTransparent}
+          alt="Google logo"
+        />
+        <p class="mt-8 mb-10 text-7xl font-semibold font-heading">Reviews</p>
       </div>
-      <div class=" mt-2 mb-5 flex items-center gap-x-1 justify-center">
+      <div class="mt-2 mb-5 flex items-center gap-x-1 justify-center">
         <div class="text-xl">4,9</div>
         <div class="text-yellow-500 text-2xl">⭐⭐⭐⭐⭐</div>
         <div class="text-xl">(+30 reviews)</div>
@@ -81,7 +93,7 @@ console.log(AvatarGoogleReview1);
             <p class="mb-2 text-2xl font-semibold font-heading">
               {NameCustomer1}
             </p>
-            <div class="mb-2 ml-2 text-yellow-500 text-2xl">⭐⭐⭐⭐⭐</div>
+            <div class="mb-2 ml-2 text-yellow-500 text-2xl">{Stars1}</div>
             <!-- <p class="text-gray-500">CEO & Founder</p> -->
           </div>
         </div>
@@ -100,7 +112,7 @@ console.log(AvatarGoogleReview1);
             <p class="mb-2 text-2xl font-semibold font-heading">
               {NameCustomer2}
             </p>
-            <div class="mb-2 ml-2 text-yellow-500 text-2xl">⭐⭐⭐⭐⭐</div>
+            <div class="mb-2 ml-2 text-yellow-500 text-2xl">{Stars2}</div>
             <!-- <p class="text-gray-500">CEO & Founder</p> -->
           </div>
         </div>
@@ -119,7 +131,7 @@ console.log(AvatarGoogleReview1);
             <p class="mb-2 text-2xl font-semibold font-heading">
               {NameCustomer3}
             </p>
-            <div class="mb-2 ml-2 text-yellow-500 text-2xl">⭐⭐⭐⭐⭐</div>
+            <div class="mb-2 ml-2 text-yellow-500 text-2xl">{Stars3}</div>
             <!-- <p class="text-gray-500">CEO & Founder</p> -->
           </div>
         </div>
@@ -138,7 +150,7 @@ console.log(AvatarGoogleReview1);
             <p class="mb-2 text-2xl font-semibold font-heading">
               {NameCustomer4}
             </p>
-            <div class="mb-2 ml-2 text-yellow-500 text-2xl">⭐⭐⭐⭐</div>
+            <div class="mb-2 ml-2 text-yellow-500 text-2xl">{Stars4}</div>
             <!-- <p class="text-gray-500">CEO & Founder</p> -->
           </div>
         </div>
@@ -157,7 +169,7 @@ console.log(AvatarGoogleReview1);
             <p class="mb-2 text-2xl font-semibold font-heading">
               {NameCustomer5}
             </p>
-            <div class="mb-2 ml-2 text-yellow-500 text-2xl">⭐⭐⭐⭐⭐</div>
+            <div class="mb-2 ml-2 text-yellow-500 text-2xl">{Stars5}</div>
             <!-- <p class="text-gray-500">CEO & Founder</p> -->
           </div>
         </div>
@@ -176,7 +188,7 @@ console.log(AvatarGoogleReview1);
             <p class="mb-2 text-2xl font-semibold font-heading">
               {NameCustomer6}
             </p>
-            <div class="mb-2 ml-2 text-yellow-500 text-2xl">⭐⭐⭐⭐</div>
+            <div class="mb-2 ml-2 text-yellow-500 text-2xl">{Stars6}</div>
             <!-- <p class="text-gray-500">CEO & Founder</p> -->
           </div>
         </div>

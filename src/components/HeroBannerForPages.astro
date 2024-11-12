@@ -19,6 +19,8 @@ const {
   h1 = "Human Design Reading",
   description = "Kom je echte zelf te weten via een Human Design Reading.",
   cta = "Geef me inzichten",
+  image,
+  imageAlt,
 } = Astro.props;
 ---
 
@@ -55,7 +57,7 @@ const {
     <div class="relative w-full md:w-1/2 px-4">
       <Image
         class="relative rounded-lg h-30 w-auto"
-        src={JordiMetTabletHumanDesign}
+        src={image}
         alt="Jordi de coach die Human Design uitlegt aan een klant"
       />
     </div>
