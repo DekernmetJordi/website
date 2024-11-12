@@ -8,12 +8,14 @@ interface Props {
   title: string;
   description: string;
   image?: string;
+  canonicalURL:string;
 }
 
 const {
   title = "De kern met Jordi",
   description = "Coachen op een unieke manier zonder poespas daar gaat het om bij De kern met Jordi. De naam zegt het al. Samen gaan wij naar de kern. Alleen de waarheid en niets anders. Samen voor jou. Coachen op onze manier",
   image = "/images/Logo_zonder_achtergrond",
+  canonicalURL,
 } = Astro.props;
 
 // Merk kleurencode. Gebruik bg-brand-white in class om toe te passen.
@@ -78,6 +80,7 @@ const {
 <!-- Eerst stond hier de html tag met lang attribute, maar is een seperate component geworden. Beetje raar, maar prima -->
 <head>
   <link rel="sitemap" href="/sitemap-index.xml" />
+  <link rel="canonical" href={canonicalURL}>
   <!-- Google tag (gtag.js) -->
   <script
     type="text/partytown"
