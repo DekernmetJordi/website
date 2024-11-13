@@ -25,36 +25,44 @@ const Rubik = "font-sans";
 ---
 
 <script>
-  // document.addEventListener("DOMContentLoaded", function () {
-  //   //   // Selecteer het element
-  //   const text = document.getElementById("textContent");
-  //   console.log(text);
-
-  //   // function clickFunction() {
-  //   //   console.log("Ik heb geklikt op de specifieke tekst.");
-  //   // }
-
-  //   // // Voeg de event-listener toe aan elk element met de klasse 'TextUnpacked'
-  //   // text.forEach((element) => {
-  //   //   element.addEventListener("click", clickFunction());
-  //   // });
+  // document.addEventListener("DOMContentLoaded", () => {
+  //   // Select all <p> tags
+  //   const paragraphs = document.querySelectorAll(".Text");
+  //   // Add click event listener to each <p> tag
+  //   paragraphs.forEach((paragraph) => {
+  //     paragraph.addEventListener("click", () => {
+  //       console.log("Paragraph clicked!");
+  //       paragraph.classList.toggle("line-clamp-2");
+  //     });
+  //   });
   // });
 
-  // function toggleText() {
-  //   const text = document.getElementById("textContent");
-  //   console.log(text);
-  //   text.classList.toggle("line-clamp-2");
-  // }
-
   document.addEventListener("DOMContentLoaded", () => {
-    // Select all <p> tags
-    const paragraphs = document.querySelectorAll(".TextUnpacked");
-
+    const text = document.querySelectorAll(".TextUnfold");
     // Add click event listener to each <p> tag
-    paragraphs.forEach((paragraph) => {
-      paragraph.addEventListener("click", () => {
+    text.forEach((text) => {
+      text.addEventListener("click", () => {
         console.log("Paragraph clicked!");
-        paragraph.classList.toggle("line-clamp-2");
+        text.classList.toggle("line-clamp-2");
+      });
+    });
+
+    // Selecteer alle <p> elementen met klasse "TextUnpacked" en de "ReadMore" links
+    const paragraphs = document.querySelectorAll(".TextUnpacked");
+    const readMoreLinks = document.querySelectorAll(".ReadMore");
+
+    // Voeg een klikgebeurtenis toe aan elke "ReadMore" link
+    readMoreLinks.forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault(); // voorkom standaard linkgedrag
+
+        // Vind het bijbehorende paragraaf-element dat naast de "ReadMore" link staat
+        const paragraph = link.previousElementSibling;
+
+        // Toggle de class "line-clamp-2" op de paragraaf
+        if (paragraph) {
+          paragraph.classList.toggle("line-clamp-2");
+        }
       });
     });
   });
@@ -167,7 +175,7 @@ const Rubik = "font-sans";
             <h2 class="mt-6 mb-10 text-4xl font-semibold font-heading">
               S1/#0 De voorbeschouwing | De kern met Jordi
             </h2>
-            <p class="text-xl mb-6 line-clamp-2 TextUnpacked">
+            <p class="text-xl mb-6 line-clamp-2 TextUnfold TextUnpacked">
               In deze voorbeschouwing neem ik je mee op een reis naar het
               innerlijke kind: een krachtbron die ons herinnert aan onze
               intuïtie, speelsheid, en het vermogen om echt te leven.<br /><br
@@ -185,6 +193,9 @@ const Rubik = "font-sans";
               op ‘play’ en ontdek hoe je jouw innerlijke kind opnieuw kunt
               omarmen!
             </p>
+            <a class="underline text-brand-copper hover:no-underline ReadMore"
+              >Lees meer</a
+            >
           </article>
           <article>
             <iframe
@@ -199,7 +210,7 @@ const Rubik = "font-sans";
             <h2 class="mt-6 mb-10 text-4xl font-semibold font-heading">
               S1/#1 Het innerlijk kind | De kern met Jordi
             </h2>
-            <p class="text-xl mb-6 line-clamp-2 TextUnpacked">
+            <p class="text-xl mb-6 line-clamp-2 TextUnfold TextUnpacked">
               In deze aflevering van De kern met Jordi Podcast duik ik met Karin
               de Mulder in het onderwerp van het innerlijk kind.<br /><br />Wij
               gaan bespreken wat het innerlijk kind precies is, hoe het zich
@@ -220,34 +231,45 @@ const Rubik = "font-sans";
               /><br />Websites~<br /><a
                 href="https://www.dekernmetjordi.nl/"
                 target="_blank"
+                class="underline text-brand-copper hover:no-underline"
                 >De kern met Jordi (https://www.dekernmetjordi.nl/)</a
               ><br />
-              <a href="https://www.karindemulder.nl/" target="_blank"
+              <a
+                href="https://www.karindemulder.nl/"
+                target="_blank"
+                class="underline text-brand-copper hover:no-underline"
                 >Karin de Mulder (https://www.karindemulder.nl/)</a
               ><br /><br />Boeken en overige~<br /><a
                 href="https://www.jegeboorteinkaart.nl/"
                 target="_blank"
+                class="underline text-brand-copper hover:no-underline"
               >
                 Geboorte in Kaart en Behoefte in Kaart van
                 ⁠https://www.jegeboorteinkaart.nl/⁠</a
-              ><br /><br><a
+              ><br /><br /><a
                 href="https://www.bol.com/nl/nl/p/het-innerlijke-kind/666820532/"
                 target="_blank"
+                class="underline text-brand-copper hover:no-underline"
                 >Het innerlijke kind van Cathryn L. Taylor
                 (https://www.bol.com/nl/nl/p/het-innerlijke-kind/666820532/)</a
-              ><br /><br><a
+              ><br /><br /><a
                 href="https://www.bol.com/nl/nl/p/handboek-energetische-basiskennis/9200000061263454/?bltgh=pnXuY4ee4OEHgNCdl2FNBg.2_12.13.ProductTitle%E2%81%A0"
                 target="_blank"
+                class="underline text-brand-copper hover:no-underline"
                 >Handboek energetische basiskennis – Hoe energie voor jou werkt
                 van Wilka Zelders
                 (https://www.bol.com/nl/nl/p/handboek-energetische-basiskennis/9200000061263454/?bltgh=pnXuY4ee4OEHgNCdl2FNBg.2_12.13.ProductTitle%E2%81%A0)</a
-              ><br /><br><a
+              ><br /><br /><a
                 href="https://www.bol.com/nl/nl/p/het-leven-waarvoor-je-geboren-bent/9200000085063707/?bltgh=vaErxySsXEI1jp-Hn7VKIg.2_13.14.ProductTitle%E2%81%A0"
                 target="_blank"
+                class="underline text-brand-copper hover:no-underline"
                 >⁠Het leven waarvoor je geboren bent van Dan Millman
                 (https://www.bol.com/nl/nl/p/het-leven-waarvoor-je-geboren-bent/9200000085063707/?bltgh=vaErxySsXEI1jp-Hn7VKIg.2_13.14.ProductTitle%E2%81%A0)</a
               ><br />
             </p>
+            <a class="underline text-brand-copper hover:no-underline ReadMore"
+              >Lees meer</a
+            >
           </article>
           <article>
             <iframe
@@ -262,7 +284,10 @@ const Rubik = "font-sans";
             <h2 class="mt-6 mb-10 text-4xl font-semibold font-heading">
               S1/#2 Dansen met het innerlijke kind | De kern met Jordi
             </h2>
-            <p id="textContent" class="text-xl mb-6 line-clamp-2 TextUnpacked">
+            <p
+              id="textContent"
+              class="text-xl mb-6 line-clamp-2 TextUnfold TextUnpacked"
+            >
               In deze aflevering duiken we weer in het thema van het innerlijke
               kind en dit keer met innerlijk kind therapeut Carolien Roovers.<br
               /><br />
@@ -279,11 +304,18 @@ const Rubik = "font-sans";
               /><br /> Websites~<br /><a
                 href="https://www.dekernmetjordi.nl/"
                 target="_blank"
+                class="underline text-brand-copper hover:no-underline"
                 >De kern met Jordi (https://www.dekernmetjordi.nl/)</a
-              ><br /><a href="https://praktijkamchi.nl/"
+              ><br /><a
+                href="https://praktijkamchi.nl/"
+                target="_blank"
+                class="underline text-brand-copper hover:no-underline"
                 >Praktijk Amchi (https://praktijkamchi.nl/)</a
               >
             </p>
+            <a class="underline text-brand-copper hover:no-underline ReadMore"
+              >Lees meer</a
+            >
           </article>
           <article>
             <iframe
@@ -298,7 +330,7 @@ const Rubik = "font-sans";
             <h2 class="mt-6 mb-10 text-4xl font-semibold font-heading">
               S1/#3 Hypnotherapie | De kern met Jordi
             </h2>
-            <p class="text-xl mb-6 line-clamp-2 TextUnpacked">
+            <p class="text-xl mb-6 line-clamp-2 TextUnfold TextUnpacked">
               In deze aflevering van De kern met Jordi duiken we in de
               fascinerende wereld van hypnotherapie en innerlijk kindwerk met
               hypnotherapeut Willeke Heerkes.<br /><br /> We bespreken hoe onverwerkte
@@ -315,11 +347,18 @@ const Rubik = "font-sans";
               Websites~<br /><a
                 href="https://www.dekernmetjordi.nl/"
                 target="_blank"
+                class="underline text-brand-copper hover:no-underline"
                 >De kern met Jordi (https://www.dekernmetjordi.nl/)</a
-              ><br /><a href="https://regressietherapeute.nl/" target="_blank"
+              ><br /><a
+                href="https://regressietherapeute.nl/"
+                target="_blank"
+                class="underline text-brand-copper hover:no-underline"
                 >Regressietherapeute (https://regressietherapeute.nl/)</a
               >
             </p>
+            <a class="underline text-brand-copper hover:no-underline ReadMore"
+              >Lees meer</a
+            >
           </article>
           <article>
             <iframe
@@ -334,7 +373,7 @@ const Rubik = "font-sans";
             <h2 class="mt-6 mb-10 text-4xl font-semibold font-heading">
               S1/#4 De nabeschouwing | De kern met Jordi
             </h2>
-            <p class="text-xl mb-6 line-clamp-2 TextUnpacked">
+            <p class="text-xl mb-6 line-clamp-2 TextUnfold TextUnpacked">
               In deze laatste aflevering van serie 1 over het innerlijke kind
               blik ik terug op de inzichten die ik heb opgedaan tijdens de
               gesprekken met Karin de Mulder, Carolien Roovers en Willeke
@@ -350,40 +389,59 @@ const Rubik = "font-sans";
               we opnieuw op ontdekking gaan in de wereld van zelfontwikkeling en
               spiritualiteit!<br /><br /> Aanbevolen bronnen:<br /><br /> Websites~<br
               />
-              <a href="https://www.dekernmetjordi.nl/" target="_blank"
+              <a
+                href="https://www.dekernmetjordi.nl/"
+                target="_blank"
+                class="underline text-brand-copper hover:no-underline"
                 >De kern met Jordi (https://www.dekernmetjordi.nl/)</a
               ><br />
-              <a href="https://www.karindemulder.nl/" target="_blank"
+              <a
+                href="https://www.karindemulder.nl/"
+                target="_blank"
+                class="underline text-brand-copper hover:no-underline"
                 >Karin de Mulder (https://www.karindemulder.nl/)</a
-              ><br /><a href="https://praktijkamchi.nl/"
+              ><br /><a
+                href="https://praktijkamchi.nl/"
+                target="_blank"
+                class="underline text-brand-copper hover:no-underline"
                 >Praktijk Amchi (https://praktijkamchi.nl/)</a
-              ><br /><a href="https://regressietherapeute.nl/" target="_blank"
+              ><br /><a
+                href="https://regressietherapeute.nl/"
+                target="_blank"
+                class="underline text-brand-copper hover:no-underline"
                 >Regressietherapeute (https://regressietherapeute.nl/)</a
-              ><br>
+              ><br />
               <br />Boeken en overige~<br /><a
                 href="https://www.jegeboorteinkaart.nl/"
                 target="_blank"
+                class="underline text-brand-copper hover:no-underline"
               >
                 Geboorte in Kaart en Behoefte in Kaart van
                 ⁠https://www.jegeboorteinkaart.nl/⁠</a
-              ><br /><br><a
+              ><br /><br /><a
                 href="https://www.bol.com/nl/nl/p/het-innerlijke-kind/666820532/"
                 target="_blank"
+                class="underline text-brand-copper hover:no-underline"
                 >Het innerlijke kind van Cathryn L. Taylor
                 (https://www.bol.com/nl/nl/p/het-innerlijke-kind/666820532/)</a
-              ><br /><br><a
+              ><br /><br /><a
                 href="https://www.bol.com/nl/nl/p/handboek-energetische-basiskennis/9200000061263454/?bltgh=pnXuY4ee4OEHgNCdl2FNBg.2_12.13.ProductTitle%E2%81%A0"
                 target="_blank"
+                class="underline text-brand-copper hover:no-underline"
                 >Handboek energetische basiskennis – Hoe energie voor jou werkt
                 van Wilka Zelders
                 (https://www.bol.com/nl/nl/p/handboek-energetische-basiskennis/9200000061263454/?bltgh=pnXuY4ee4OEHgNCdl2FNBg.2_12.13.ProductTitle%E2%81%A0)</a
-              ><br /><br><a
+              ><br /><br /><a
                 href="https://www.bol.com/nl/nl/p/het-leven-waarvoor-je-geboren-bent/9200000085063707/?bltgh=vaErxySsXEI1jp-Hn7VKIg.2_13.14.ProductTitle%E2%81%A0"
                 target="_blank"
+                class="underline text-brand-copper hover:no-underline"
                 >⁠Het leven waarvoor je geboren bent van Dan Millman
                 (https://www.bol.com/nl/nl/p/het-leven-waarvoor-je-geboren-bent/9200000085063707/?bltgh=vaErxySsXEI1jp-Hn7VKIg.2_13.14.ProductTitle%E2%81%A0)</a
               >
             </p>
+            <a class="underline text-brand-copper hover:no-underline ReadMore"
+              >Lees meer</a
+            >
           </article>
         </div>
       </section>
