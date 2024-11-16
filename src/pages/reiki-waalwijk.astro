@@ -36,6 +36,7 @@ import FeaturesForPages from "../components/FeaturesForPages.astro";
 import FAQ from "../components/FAQ.astro";
 import BenefitsForPages from "../components/BenefitsForPages.astro";
 import ContactForPages from "../components/ContactForPages.astro";
+import WhatsappChat from "../components/WhatsappChat.astro";
 
 // Lettertype - Garamond is voor titels en Rubik voor tekst
 const Garamond = "font-serif";
@@ -121,8 +122,8 @@ const NameCustomer3 = "Isabelle";
 const Stars3 = "⭐⭐⭐⭐⭐";
 const GoogleReview4 =
   "Jordi brengt inzicht in je eigen leven. Hij is enorm sympathiek en neemt de tijd om zijn kennis te delen en te bespreken. Normaal schrijf ik geen reviews, maar voor jordi maak ik een uitzondering. Zeker 5/5 sterren waard en de moeite om er een uur voor naartoe te rijden. Ik kom alvast terug.";
-  const AvatarGoogleReview4 = AvatarGoogleReviewKatrien;
-  const NameCustomer4 = "Katrien Knapp";
+const AvatarGoogleReview4 = AvatarGoogleReviewKatrien;
+const NameCustomer4 = "Katrien Knapp";
 const Stars4 = "⭐⭐⭐⭐⭐";
 const GoogleReview5 =
   "Jordi is een hele fijne coach waarbij hij met je meedenkt en tot diepgaande inzichten komt. Inzichten waar ik anders zelf nooit aan gedacht zou hebben. Verder is Jordi rustig, vriendelijk en professioneel.";
@@ -130,7 +131,10 @@ const AvatarGoogleReview5 = AvatarGoogleReviewRalph;
 const NameCustomer5 = "Ralph";
 const Stars5 = "⭐⭐⭐⭐";
 const GoogleReview6 =
-  "Hele fijne sessie.\n" + "Jordy neemt echt de tijd voor je. Ziet je. En super interessant wat hij met je deelt.\n"+ "Ik kom zeker terug.\n" + "Dankje Jordy";
+  "Hele fijne sessie.\n" +
+  "Jordy neemt echt de tijd voor je. Ziet je. En super interessant wat hij met je deelt.\n" +
+  "Ik kom zeker terug.\n" +
+  "Dankje Jordy";
 const AvatarGoogleReview6 = AvatarGoogleReviewRasjel;
 const NameCustomer6 = "Rasjel vd Boogaart";
 const Stars6 = "⭐⭐⭐⭐⭐";
@@ -190,7 +194,7 @@ const travelDistance = "10 min";
 <Layout
   title="Reiki Waalwijk | De kern met Jordi"
   description="Op deze pagina is alles te vinden over de Reiki behandeling bij De kern met Jordi gelegen in Waalwijk. De healing kan face-to-face of online."
-  canonicalURL = "https://www.dekernmetjordi.nl/reiki-waalwijk/"
+  canonicalURL="https://www.dekernmetjordi.nl/reiki-waalwijk/"
 >
   <!-- <Section> -->
   <PaddingTopForPages>
@@ -304,6 +308,7 @@ const travelDistance = "10 min";
       descriptionUnderCTATitle={descriptionUnderCTATitle}
       descriptionCTA={descriptionCTA}
     />
+    <!-- <WhatsappChat /> -->
   </PaddingTopForPages>
   <!-- </Section> -->
   <Footer />

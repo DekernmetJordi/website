@@ -2,13 +2,14 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "@fontsource/cabin";
+import WhatsappChat from "../components/WhatsappChat.astro";
 // import { ViewTransitions } from "astro:transitions";
 
 interface Props {
   title: string;
   description: string;
   image?: string;
-  canonicalURL?:string;
+  canonicalURL?: string;
 }
 
 const {
@@ -47,7 +48,6 @@ const {
     line-height: 1.35;
     /* color: #333; */
     /* white-space: pre-line; */
-
   }
   .small-caps {
     font-variant: small-caps;
@@ -80,7 +80,7 @@ const {
 <!-- Eerst stond hier de html tag met lang attribute, maar is een seperate component geworden. Beetje raar, maar prima -->
 <head>
   <link rel="sitemap" href="/sitemap-index.xml" />
-  <link rel="canonical" href={canonicalURL}>
+  <link rel="canonical" href={canonicalURL} />
   <!-- Google tag (gtag.js) -->
   <script
     type="text/partytown"
@@ -163,6 +163,7 @@ const {
   <slot />
   <!-- Footer nog goedmaken!! -->
   <!-- <Footer /> -->
+  <WhatsappChat />
   <script
     async
     src="https://smilejet.com/app/staging-environment/tag.js"
