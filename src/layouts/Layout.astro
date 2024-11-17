@@ -82,7 +82,7 @@ const {
   <link rel="sitemap" href="/sitemap-index.xml" />
   <link rel="canonical" href={canonicalURL} />
   <!-- Google tag (gtag.js) -->
-  <script
+  <!-- <script
     type="text/partytown"
     async
     src="https://www.googletagmanager.com/gtag/js?id=G-BBBWM7MP0C"></script>
@@ -94,7 +94,22 @@ const {
     gtag("js", new Date());
 
     gtag("config", "G-BBBWM7MP0C");
+  </script> -->
+  <!--  -->
+  <!-- Google Tag Manager -->
+  <script type="text/partytown">
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-K5RKDWKM");
   </script>
+  <!-- End Google Tag Manager -->
   <!--  -->
   <!-- Google tag (gtag.js) event - delayed navigation helper -->
   <script>
@@ -179,6 +194,15 @@ const {
   <!-- End MailerLite Universal -->
 </head>
 <body class="min-h-screen grid grid-rows-[auto,1fr,auto] bg-brand-white">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript
+    ><iframe
+      src="https://www.googletagmanager.com/ns.html?id=GTM-K5RKDWKM"
+      height="0"
+      width="0"
+      style="display:none;visibility:hidden"></iframe></noscript
+  >
+  <!-- End Google Tag Manager (noscript) -->
   <Header />
   <slot />
   <!-- Footer nog goedmaken!! -->
