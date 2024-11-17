@@ -7,10 +7,10 @@ const Garamond = "font-serif";
 const Rubik = "font-sans";
 
 // Merk kleurencode. Gebruik bg-brand-white in class om toe te passen.
-      // "brand-white": "#F1F1F1",
-      // "brand-sage": "#BCBC82",
-      // "brand-copper": "#C2783F",
-      // "brand-orange": "#E28F50",
+// "brand-white": "#F1F1F1",
+// "brand-sage": "#BCBC82",
+// "brand-copper": "#C2783F",
+// "brand-orange": "#E28F50",
 
 // background: linear-gradient(to right, #3a190c, #8b4b2a, #C2783F, #8b4b2a, #3a190c);
 ---
@@ -19,9 +19,7 @@ const Rubik = "font-sans";
 <div class="container px-4 mx-auto pt-12 bg-brand-white mb-10">
   <div class="flex flex-wrap items-center -mx-4">
     <div class="w-full md:w-1/2 px-4 mb-6 md:mb-0">
-      <h1
-        class=`mt-8 mb-6 lg:mb-12 text-5xl lg:text-6xl font-bold ` lang="nl"
-      >
+      <h1 class=`mt-8 mb-6 lg:mb-12 text-5xl lg:text-6xl font-bold ` lang="nl">
         Samen gaan wij naar de kern. Dat is coachen.
       </h1>
       <div class="max-w-lg mb-6 lg:mb-12">
@@ -32,6 +30,7 @@ const Rubik = "font-sans";
       <div class="flex flex-wrap">
         <!-- bg-brand-copper hover:bg-brand-sage transition duration-200-->
         <a
+          onclick="return gtag_report_conversion('https://calendar.app.google/oHow2Z6mhSpUVwQUA');"
           class=`small-caps CTA-button inline-block px-6 py-4 mb-3 mr-4 leading-normal rounded gradient-btn`
           href="https://calendar.app.google/oHow2Z6mhSpUVwQUA
           "
@@ -42,7 +41,11 @@ const Rubik = "font-sans";
     <!-- w-full md:w-1/2 px-4 mb-4 md:mb-0 -->
     <!-- relative rounded-lg -->
     <div class="relative w-full md:w-1/2 px-4">
-      <Image class="relative rounded-lg h-30 w-auto" src={Jordi} alt="Jordi de coach aan tafel met een klant" />
+      <Image
+        class="relative rounded-lg h-30 w-auto"
+        src={Jordi}
+        alt="Jordi de coach aan tafel met een klant"
+      />
     </div>
   </div>
 </div>
