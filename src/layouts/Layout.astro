@@ -95,7 +95,43 @@ const {
     })(window, document, "script", "dataLayer", "GTM-K5RKDWKM");
   </script>
   <!-- End Google Tag Manager -->
+  <!-- Google tag (gtag.js) event - delayed navigation helper -->
+  <script>
+    // Helper function to delay opening a URL until a gtag event is sent.
+    // Call it in response to an action that should navigate to a URL.
+    function gtagSendEvent(url) {
+      var callback = function () {
+        if (typeof url === "string") {
+          window.location = url;
+        }
+      };
+      gtag("event", "conversion_event_book_appointment", {
+        event_callback: callback,
+        event_timeout: 2000,
+        // <event_parameters>
+      });
+      return false;
+    }
+  </script>
   <!--  -->
+  <!-- Event snippet for Afspraak maken conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof url != "undefined") {
+          window.location = url;
+        }
+      };
+      gtag("event", "conversion", {
+        send_to: "AW-16778556812/6sHCCLr9wOsZEIzr0cA-",
+        value: 1.0,
+        currency: "EUR",
+        event_callback: callback,
+      });
+      return false;
+    }
+  </script>
 
   <meta charset="UTF-8" />
   <meta name="description" content={description} />
