@@ -1,0 +1,315 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Main from "../components/Main.astro";
+import Footer from "../components/Footer.astro";
+
+import Section from "../components/Section.astro";
+import PaddingTopForPages from "../components/PaddingTopForPages.astro";
+
+import { Image } from "astro:assets";
+// import Isabella from "../../public/images/Isabella.jpg";
+import JordiReiki from "../../public/images/Reiki_met_Alexander_klein.jpg";
+import ReikiEnergy from "../../public/images/Reiki_energy.jpg";
+import JordiTarot from "../../public/images/Jordi_coachen_kleiner.jpg";
+import TarotCards from "../../public/images/Tarot_kleiner.jpg";
+
+import AvatarGoogleReviewHDBibi from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Bibi.png";
+import AvatarGoogleReviewHDMieke from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Mieke.png";
+import AvatarGoogleReviewHDHilde from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Hilde.png";
+import AvatarGoogleReviewHDLoes from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Loes.png";
+import AvatarGoogleReviewHDUndine from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Undine.png";
+import AvatarGoogleReviewHDRob from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Rob.png";
+import AvatarGoogleReviewManouk from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Manouk.png";
+import AvatarGoogleReviewGabrielle from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Gabrielle.png";
+import AvatarGoogleReviewIsabelle from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Isabelle.png";
+import AvatarGoogleReviewKatrien from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Katrien.png";
+import AvatarGoogleReviewRalph from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Ralph.png";
+import AvatarGoogleReviewRasjel from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Rasjel.png";
+import AvatarGoogleReviewMariella from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Mariella.png";
+import AvatarGoogleReviewSydney from "../../public/images/Avatars_Google_Reviews/Avatar_Google_Review_Sydney.png";
+
+import Signature from "../components/Signature.astro";
+import HeroBannerForPages from "../components/HeroBannerForPages.astro";
+import Nieuwsbrief from "../components/Nieuwsbrief.astro";
+import PricingForPages from "../components/PricingForPages.astro";
+import CallToActionForPages from "../components/CallToActionForPages.astro";
+import Testimonials from "../components/Testimonials.astro";
+import AboutMeForPages from "../components/AboutMeForPages.astro";
+import SocialProof from "../components/SocialProof.astro";
+import FeaturesForPages from "../components/FeaturesForPages.astro";
+import FAQ from "../components/FAQ.astro";
+import BenefitsForPages from "../components/BenefitsForPages.astro";
+import ContactForPages from "../components/ContactForPages.astro";
+import WhatsappChat from "../components/WhatsappChat.astro";
+
+// Lettertype - Garamond is voor titels en Rubik voor tekst
+const Garamond = "font-serif";
+const Rubik = "font-sans";
+
+// Merk kleurencode. Gebruik bg-brand-white in class om toe te passen.
+// "brand-white": "#F1F1F1",
+// "brand-sage": "#BCBC82",
+// "brand-copper": "#C2783F",
+
+// variable voor hero banner
+const targetKeyword = "Tarot reading Den Bosch";
+const description =
+  "Kom tot snelle antwoorden met een Tarot reading. Je gaat antwoorden krijgen van boven. Ook gaan wij samen ons onderbewuste gebruiken. Praktijk zit dichtbij Den Bosch. Sessie kan face-to-face of online.";
+const cta = "Geef mij antwoorden";
+const image = JordiTarot;
+const imageAlt = "Jordi die een Tarot reading geeft in Waalwijk dichtbij Den Bosch.";
+
+// variable voor de feature gedeelte
+const headTitleFeatures = "De Tarot reading";
+const titleFeature1 = "Je mag iemand meenemen";
+const descriptionFeature1 =
+  "Iemand meenemen is geen enkel probleem. Al meer mensen zijn in groepen gekomen. Als de persoon die meekomt ook een sessie wilt hoor ik dat graag. Dan zal 30 minuten extra gereserveerd worden voor de sessie. Zo hebben wij voldoende tijd voor allen.";
+  const titleFeature2 = "Elke reading is anders";
+const descriptionFeature2 =
+  "Tijdens de reading worden legvormen gelegd die passen bij jouw vraag. Ook werk ik vanuit intuïtie en gebruik ik mijn gevoel tijdens de leggingen. Dus hier en daar zullen vragen gesteld worden om je te helpen. Ze kunnen verder gaan dan je initiele vraag. Dat maakt de sessies uniek en zal je inzichten geven in je leven.";
+  const titleFeature3 = "De behandeling kan op locatie of online";
+const descriptionFeature3 =
+  "De praktijk is gelegen in Waalwijk wat dichtbij jou is. Het kan op locatie of online via videobellen. Dat is helemaal aan jou.";
+
+// variable voor de benefite gedeelte
+const headTitleBenefits = "De voordelen";
+const titleBenefite1 = "Je krijgt nieuwe inzichten en een steun in de rug";
+const descriptionBenefite1 =
+  "Door het bespreken van de kaarten en je verhaal krijg je nieuwe input die gebruikt kan worden in je leven. Het mooie van Tarot is ook dat je toch altijd de kaarten krijgt die het beste passen bij de legging. Dus in mijn optiek zijn wij dan ook met zijn drieën. Jij, ik en boven. Vaak weet je het ergens al wel en dat mag. Tarot is ook voor steun en een duwtje in de juiste richting. De stap daar naar toe is het enige wat je nog hoeft te doen.";
+  const titleBenefite2 = "Je krijgt snel antwoorden en een gesprek";
+const descriptionBenefite2 =
+  "De kaarten zullen getrokken worden en je zal meteen adequaat antwoord krijgen op je vraag. Gebruik hiervoor je (voornaamste) indruk te gebruiken. Dus waar je voornamelijk aan denkt. Tijdens de legging zullen wij de kaarten en ons gevoel bij het geheel bespreken. Het wordt sowieso leerzaam en interessant.";
+  const titleBenefite3 = "Het is speels en gezellig";
+const descriptionBenefite3 =
+  "Tarot leggingen zijn altijd wel leuk. Iedereen vind het leuk om verrast te worden en de kaarten te interpreteren vanuit gevoel en intuïtie. Weet ook dat je het niet fout kan doen en leidend bent. Het is namelijk een legging voor jou en in mijn ogen heb je daarin ook een bepalende stem. Je onderbewuste weet het vaak namelijk al.";
+const CTA = "Laten wij beginnen";
+const imageBenefits = TarotCards;
+const imageAltBenefits = "Tarotkaarten op dressoir.";
+
+// variable voor about me gedeelte
+const titleAboutMe = "Hoi, Jordi hier. Je zeer blije Tarotcoach.";
+const descriptionAboutMe1 = "Sinds enige tijd beoefen ik Tarot. Eerst voor mijzelf en nou voor anderen.";
+const descriptionAboutMe2 =
+  "Het is op mijn pad gekomen via mijn coach Debbie en wij hebben het dan veelvuldig toegepast tijdens mijn eigen reis. Ben Debbie daar nog steeds dankbaar voor. Was er ook meteen aan verknocht. Het spreekt mijn grootste gaves aan, mijn intuïtie en gevoel. De intuïtie is het kompas en het gevoel de vertaler. Het is gewoon iets wat bij mij hoort.";
+const descriptionAboutMe3 =
+  "De tarotkaarten horen zo bij mij dat ik nou ook met Tarot mensen coach. Sommige leer ik ook Tarot zodat zij zelfstandig Tarot kunnen leggen.";
+const descriptionAboutMe4 =
+  "De mensen zijn tevreden en ik ben dan ook apentrots op de Google Reviews die ik tot nu toe heb mogen krijgen. Zij hebben van mij geleerd, maar ik ook van hen.";
+const descriptionAboutMe5 =
+  "Je zal een enthousiaste lieve jongen tegenover je zien die met passie en zachtheid de Tarotlegging uitlegt. Ook zal je gehoord worden en oprechte aandacht krijgen van mij. Praktijkvoorbeelden zullen hier en daar ook gegeven worden, want ik wil dat je wat hebt aan de lezing. Waar wij uitkomen is nog onbekend, maar dat maakt ook niet uit. De Tarotkaarten wijzen ons wel de weg 😊.";
+const descriptionAboutMe6 =
+  "Ik vind het oprecht leuk om je te helpen met je pad.";
+const descriptionAboutMe7 =
+  "";
+const AboutMeCTA = "Meer over mij";
+
+// variable Social Proof - AvatarGoogleReviews zijn te vinden in specifieke component omdat het anders niet werkt via de link en om het simpel te houden.
+const Subtitle = "Degenen die je voorgingen:";
+const GoogleReview1 =
+  "Mijn moeder en ik hadden onlangs een reiki- en tarot-sessie bij Jordi. We zijn heel tevreden! Hij was vriendelijk en zorgzaam, en stelde ons direct op ons gemak. De ruimte was rustig en ontspannen, wat hielp om te ontspannen. Tijdens de reiki-sessie voelden we ons beide ontspannen. De tarot-sessie gaf ons veel inzicht en nuttige adviezen. Hij legde alles duidelijk uit en nam de tijd voor ons. We voelden ons gehoord en begrepen. We zouden hem zeker aanraden voor reiki en tarot. Bedankt, Jordi, voor deze bijzondere ervaring!";
+const AvatarGoogleReview1 = AvatarGoogleReviewManouk;
+const NameCustomer1 = "Manouk";
+const Stars1 = "⭐⭐⭐⭐⭐";
+const GoogleReview2 =
+  "- Jordi is een boodschapper tussen jou en het universum.\n\n" +
+  "Jordi kwam ik tegen op een markt en heb toen een tarotreading bij hem gehad. Hierin nam hij uitgebreid de tijd voor me en ik kon alle vragen m.b.t de kaarten aan hem stellen. Omdat dit zo goed voelde heb ik een privé sessie bij hem geboekt. In het verleden heb ik al ervaring opgedaan met Reiki dus het voelde vertrouwd om hiervoor te kiezen. Alleen zoals geen een kaas hetzelfde is… Zo is elke Reiki sessie dat ook niet.\n\n" +
+  "Gedurende de sessie krijgt Jordi via energie-uitwisseling met het universum informatie door die jou verder kan helpen in je (spirituele)ontwikkeling. Mits je ervoor open staat deze info met een open, nieuwsgierige mind te ontvangen en er niet een oordeel over te hebben richting jezelf. Want wat je hebt meegemaakt in je verleden hoeft geen struikelblok te zijn in de toekomst!\n\n" +
+  "De sessie die ik heb gehad heb ik als prettig ervaren. Jordi heeft mij waardevolle dingen verteld over de oorsprong van waar ik tegen aan loop en ik kan je zeggen dat hij gelijk had! Aangezien ikzelf ook erg open sta en deze dingen ook al voelde diep van binnen, alleen soms is het fijn om daarin bevestiging te krijgen van iemand die buiten jou en je sociale kringen staat. Ook vertelde hij me waar mijn energie geblokkeerd zit en welke lichaamsdelen in mij wat meer zelfliefde mogen krijgen en heeft hij me advies meegegeven die ik kan toepassen voor na de sessie.\n\n" +
+  "Ook voor nazorg staat hij open en ik weet dat als ik vragen heb ik hem altijd een berichtje kan sturen. Hij begrijpt als geen ander dat een sessie met hem confronterend kan zijn en dat verandering met kleine stapjes komt.";
+const AvatarGoogleReview2 = AvatarGoogleReviewGabrielle;
+const NameCustomer2 = "Gabriëlle ";
+const Stars2 = "⭐⭐⭐⭐⭐";
+const GoogleReview3 =
+  "Hele fijne reiki behandeling en legging van tarot kaarten gehad bij Jordi. Jordi straalt rust, warmte en professionaliteit uit. Waardevolle inzichten en tips gekregen t.b.v. mijn persoonlijke ontwikkeling.";
+const AvatarGoogleReview3 = AvatarGoogleReviewIsabelle;
+const NameCustomer3 = "Isabelle";
+const Stars3 = "⭐⭐⭐⭐⭐";
+const GoogleReview4 =
+  "Jordi brengt inzicht in je eigen leven. Hij is enorm sympathiek en neemt de tijd om zijn kennis te delen en te bespreken. Normaal schrijf ik geen reviews, maar voor jordi maak ik een uitzondering. Zeker 5/5 sterren waard en de moeite om er een uur voor naartoe te rijden. Ik kom alvast terug.";
+const AvatarGoogleReview4 = AvatarGoogleReviewKatrien;
+const NameCustomer4 = "Katrien Knapp";
+const Stars4 = "⭐⭐⭐⭐⭐";
+const GoogleReview5 =
+  "Voor de 1e keer ooit de tarotkaarten laten leggen. Jordi straalt rust, openheid en bescheidenheid uit. Dat beviel me goed! Hij gaf een duidelijke uitleg zonder zweverig te zijn en ik ben erg nieuwsgierig geworden naar het human Design principe. Voor herhaling vatbaar!";
+const AvatarGoogleReview5 = AvatarGoogleReviewMariella;
+const NameCustomer5 = "Mariella eijkenboom";
+const Stars5 = "⭐⭐⭐⭐⭐";
+const GoogleReview6 =
+  "Samen met twee vriendinnen voor het eerst een tarotkaarten lezing gehad. Super leuke eerste ervaring. Jordi was erg vriendelijk en stelde ons erg op ons gemak. Ook nam hij de tijd voor ons, we waren iets uitgelopen. Al met al een fijne ervaring!";
+const AvatarGoogleReview6 = AvatarGoogleReviewSydney;
+const NameCustomer6 = "Sydney Kamstra";
+const Stars6 = "⭐⭐⭐⭐⭐";
+
+// variable voor Pricing/Product gedeelte
+const titleProduct1 = "Tarot";
+const descriptionProduct1 =
+  "Elke Tarot reading duurt 1 uur. Je zal tijdens de sessie antwoorden en nieuwe inzichten krijgen. Ook mag je Tarot combineren met Reiki en/of Human Design. Zo worden zaken van diverse kanten belicht.";
+const checkMark1 = "Resultaat gericht";
+const checkMark2 = "Diverse invalkshoeken";
+const checkMark3 = "Oorzaken ophelderen";
+const checkMark4 = "Toepasbaar en praktisch";
+const priceProduct1 = "69,99";
+const discountProduct1 = "€ 10 korting voor Community leden";
+const ctaProduct1 = "Maak een afspraak";
+//
+const titleProduct2 = "Tarot combi deal";
+const descriptionProduct2 =
+  "Mocht je het willen dan kun je ook gaan voor de Tarot combi deal. Dan ben je ervan verzekert dat je aandacht en tijd geeft aan jezelf en kan Tarot je meerdere antwoorden geven over tijd heen. Een Tarot legging is namelijk altijd een moment opname en door ze over tijd te leggen kun je veranderingen waarnemen en zal het je steunen. Geldt voor 3 behandelingen.";
+const checkMark5 = "Flexibel";
+const checkMark6 = "Doorpakken";
+const checkMark7 = "Eigen tempo";
+const checkMark8 = "Lekker goedkoper ;)";
+const priceProduct2 = "180,-";
+const discountProduct2 = "Voor 3 behandelingen!";
+const ctaProduct2 = "Maak een afspraak";
+
+// variable voor CTA gedeelte
+const titleCTA = "Wil jij antwoorden krijgen?";
+const descriptionUnderCTATitle = "Kom dan snel :D!";
+const descriptionCTA = "Ja, geef mij antwoorden";
+
+// variable voor FAQ gedeelte
+const titleQuestion1 = "Kan ik iemand meenemen?";
+const descriptionQuestion1 =
+  "Zeker. Komt diegene ook voor een Tarot Reading dan wordt daar 30 minuten extra voor gereserveerd.";
+const titleQuestion2 = "Dien ik mij van te voren voor te bereiden?";
+const descriptionQuestion2 =
+  "Nee, niets hoeft. Het enige wat handig is, is dat je de vragen die je hebt duidelijk hebt. Ook is het aan te raden om alvast te weten waarom je de vragen überhaupt hebt. Zo kom je namelijk meer tot de kern bij de Tarot reading.";
+const titleQuestion3 = "Waar en hoe vinden de sessies plaats?";
+const descriptionQuestion3 =
+  "De sessies kunnen bij mij in de praktijk in Waalwijk of online via videobellen plaatsvinden. Je krijgt na het boeken van de afspraak automatisch een mail met alle gegevens. Daar zal mijn adres te vinden zijn en een Google Meet vergadering. De Google Meet vergadering kun je negeren als de afspraak op locatie is.";
+const titleQuestion4 = "Hoeveel sessies heb ik nodig?";
+const descriptionQuestion4 =
+  "Klinkt flauw maar is wel de waarheid. Maar dat ligt eraan.\n\n" +
+  "Voor Tarot is dat moeilijk te zeggen. Dat ligt aan jou vragen en waar je behoefte aan hebt. Sommige mensen komen voor 1 vraag en andere hebben 10 vragen. Ook coach ik doormiddel van Tarot en komen de mensen 5 tot 8 keer.\n\n" +
+  "Je hoeft het ook niet van te voren te weten.";
+const titleQuestion5 = "Mag ik je even snel iets vragen...?";
+const descriptionQuestion5 =
+  "Zeker. Geen probleem. Ook al ben jij nog niet bij mij geweest. Je kan mij mailen op info@dekernmetjordi.com of whatsappen op +31 6 39556179.";
+
+// variable voor contact gedeelte
+const descriptionContactForPages = "De kern met Jordi zit in Waalwijk";
+const travelDistance = "15 min";
+---
+
+<Layout
+  title="Tarot reading Den Bosch | De kern met Jordi"
+  description="Op deze pagina is alles te vinden over de Tarot reading bij De kern met Jordi gelegen in Waalwijk dichtbij Den Bosch. De sessie kan face-to-face of online."
+>
+  <!-- <Section> -->
+  <PaddingTopForPages>
+    <HeroBannerForPages
+      h1={targetKeyword}
+      description={description}
+      cta={cta}
+      image={image}
+      imageAlt={imageAlt}
+    />
+    <FeaturesForPages
+      headTitleFeatures={headTitleFeatures}
+      titleFeature1={titleFeature1}
+      descriptionFeature1={descriptionFeature1}
+      titleFeature2={titleFeature2}
+      descriptionFeature2={descriptionFeature2}
+      titleFeature3={titleFeature3}
+      descriptionFeature3={descriptionFeature3}
+    />
+    <BenefitsForPages
+      headTitleBenefits={headTitleBenefits}
+      titleBenefite1={titleBenefite1}
+      descriptionBenefite1={descriptionBenefite1}
+      titleBenefite2={titleBenefite2}
+      descriptionBenefite2={descriptionBenefite2}
+      titleBenefite3={titleBenefite3}
+      descriptionBenefite3={descriptionBenefite3}
+      CTA={CTA}
+      imageBenefits={imageBenefits}
+      imageAltBenefits={imageAltBenefits}
+    />
+    <AboutMeForPages
+      titleAboutMe={titleAboutMe}
+      descriptionAboutMe1={descriptionAboutMe1}
+      descriptionAboutMe2={descriptionAboutMe2}
+      descriptionAboutMe3={descriptionAboutMe3}
+      descriptionAboutMe4={descriptionAboutMe4}
+      descriptionAboutMe5={descriptionAboutMe5}
+      descriptionAboutMe6={descriptionAboutMe6}
+      descriptionAboutMe7={descriptionAboutMe7}
+      AboutMeCTA={AboutMeCTA}
+    />
+    <!-- <Testimonials /> -->
+    <SocialProof
+      Subtitle={Subtitle}
+      GoogleReview1={GoogleReview1}
+      AvatarGoogleReview1={AvatarGoogleReview1}
+      NameCustomer1={NameCustomer1}
+      Stars1={Stars1}
+      GoogleReview2={GoogleReview2}
+      AvatarGoogleReview2={AvatarGoogleReview2}
+      NameCustomer2={NameCustomer2}
+      Stars2={Stars2}
+      GoogleReview3={GoogleReview3}
+      AvatarGoogleReview3={AvatarGoogleReview3}
+      NameCustomer3={NameCustomer3}
+      Stars3={Stars3}
+      GoogleReview4={GoogleReview4}
+      AvatarGoogleReview4={AvatarGoogleReview4}
+      NameCustomer4={NameCustomer4}
+      Stars4={Stars4}
+      GoogleReview5={GoogleReview5}
+      AvatarGoogleReview5={AvatarGoogleReview5}
+      NameCustomer5={NameCustomer5}
+      Stars5={Stars5}
+      GoogleReview6={GoogleReview6}
+      AvatarGoogleReview6={AvatarGoogleReview6}
+      NameCustomer6={NameCustomer6}
+      Stars6={Stars6}
+    />
+
+    <PricingForPages
+      titleProduct1={titleProduct1}
+      descriptionProduct1={descriptionProduct1}
+      checkMark1={checkMark1}
+      checkMark2={checkMark2}
+      checkMark3={checkMark3}
+      checkMark4={checkMark4}
+      priceProduct1={priceProduct1}
+      discountProduct1={discountProduct1}
+      ctaProduct1={ctaProduct1}
+      titleProduct2={titleProduct2}
+      descriptionProduct2={descriptionProduct2}
+      checkMark5={checkMark5}
+      checkMark6={checkMark6}
+      checkMark7={checkMark7}
+      checkMark8={checkMark8}
+      priceProduct2={priceProduct2}
+      discountProduct2={discountProduct2}
+      ctaProduct2={ctaProduct2}
+    />
+    <Nieuwsbrief />
+    <FAQ
+      titleQuestion1={titleQuestion1}
+      descriptionQuestion1={descriptionQuestion1}
+      titleQuestion2={titleQuestion2}
+      descriptionQuestion2={descriptionQuestion2}
+      titleQuestion3={titleQuestion3}
+      descriptionQuestion3={descriptionQuestion3}
+      titleQuestion4={titleQuestion4}
+      descriptionQuestion4={descriptionQuestion4}
+      titleQuestion5={titleQuestion5}
+      descriptionQuestion5={descriptionQuestion5}
+    />
+    <ContactForPages
+      descriptionContactForPages={descriptionContactForPages}
+      travelDistance={travelDistance}
+    />
+    <CallToActionForPages
+      titleCTA={titleCTA}
+      descriptionUnderCTATitle={descriptionUnderCTATitle}
+      descriptionCTA={descriptionCTA}
+    />
+    <!-- <WhatsappChat /> -->
+  </PaddingTopForPages>
+  <!-- </Section> -->
+  <Footer />
+</Layout>
