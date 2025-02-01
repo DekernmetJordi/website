@@ -82,7 +82,7 @@ const {
   <link rel="sitemap" href="/sitemap-index.xml" />
   <link rel="canonical" href={canonicalURL} />
   <!-- Google Tag Manager -->
-  <script>
+  <!-- <script>
     (function (w, d, s, l, i) {
       w[l] = w[l] || [];
       w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
@@ -93,10 +93,10 @@ const {
       j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
       f.parentNode.insertBefore(j, f);
     })(window, document, "script", "dataLayer", "GTM-K5RKDWKM");
-  </script>
+  </script> -->
   <!-- End Google Tag Manager -->
   <!-- Google tag (gtag.js) event - delayed navigation helper -->
-  <script>
+  <!-- <script>
     // Helper function to delay opening a URL until a gtag event is sent.
     // Call it in response to an action that should navigate to a URL.
     function gtagSendEvent(url) {
@@ -112,7 +112,17 @@ const {
       });
       return false;
     }
-  </script>
+  </script> -->
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BBBWM7MP0C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BBBWM7MP0C');
+</script>
+
   <!--  -->
   <!-- Event snippet for Afspraak maken conversion page
 In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
