@@ -1,0 +1,87 @@
+---
+import "@fontsource/cabin";
+import WhatsappChat from "../components/WhatsappChat.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  canonicalURL?: string;
+}
+
+const {
+  title = "De kern met Jordi",
+  description = "Coachen op een unieke manier zonder poespas daar gaat het om bij De kern met Jordi.",
+  image = "/images/Logo_zonder_achtergrond",
+  canonicalURL,
+} = Astro.props;
+---
+
+<style is:global>
+  * { color:#333; }
+  h1,h2,h3,h4,h5,h6 { color:#111827; }
+  a { font-size:1.125rem; line-height:1.35; }
+  p { font-size:1.125rem; line-height:1.35; }
+
+  .small-caps { font-variant: small-caps; font-weight:600; }
+  .gradient-btn {
+    position: relative;
+    background-image: linear-gradient(to right, #e28f50, #c2783f);
+    z-index: 1;
+  }
+  .gradient-btn::before {
+    position:absolute; content:""; inset:0;
+    background-image: linear-gradient(to right, #c2783f, #c2783f);
+    z-index:-1; transition: opacity .5s linear; opacity:0;
+  }
+  .gradient-btn:hover::before { opacity:1; }
+</style>
+
+<head>
+  <link rel="sitemap" href="/sitemap-index.xml" />
+  {canonicalURL && <link rel="canonical" href={canonicalURL} />}
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BBBWM7MP0C"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-BBBWM7MP0C");
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="description" content={description} />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="generator" content={Astro.generator} />
+  <title>{title}</title>
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={Astro.url} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={image} />
+  <meta property="og:image:alt" content={description} />
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content={Astro.url} />
+  <meta property="twitter:title" content={title} />
+  <meta property="twitter:description" content={description} />
+  <meta property="twitter:image" content={image} />
+  <meta property="twitter:image:alt" content={title} />
+
+  <!-- jouw globale CSS -->
+  <link rel="stylesheet" href="https://www.dekernmetjordi.nl/style.css" />
+</head>
+
+<body class="min-h-screen grid grid-rows-[auto,1fr,auto] bg-brand-white">
+  <!-- Geen Header / Footer op checkout -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K5RKDWKM" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+
+  <slot />
+
+  <!-- <WhatsappChat /> -->
+
+  <script async src="https://go.smilejet.com/tag.js" data-smj-id="1112PcsogmJ4Vg" crossorigin="anonymous"></script>
+</body>

@@ -16,7 +16,7 @@ export default defineConfig({
   // compress()
   ],
   site: "https://dekernmetjordi.nl",
-  output: "hybrid",
+  output: "static",
   adapter: netlify(),
   redirects: {
     '/over-jordi': '/over-mij'
